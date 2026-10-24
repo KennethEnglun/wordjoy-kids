@@ -39,6 +39,15 @@ export function pickRound(words, n = 8) {
   return shuffle(words).slice(0, n)
 }
 
+/** Put words from this week's school themes first, shuffled within each group. */
+export function prioritizeWords(words, weeklyThemes = []) {
+  const themes = new Set(Array.isArray(weeklyThemes) ? weeklyThemes : [])
+  if (!themes.size) return shuffle(words)
+  const priority = words.filter((w) => themes.has(w.theme))
+  const rest = words.filter((w) => !themes.has(w.theme))
+  return [...shuffle(priority), ...shuffle(rest)]
+}
+
 export function distractors(all, correct, count = 3) {
   const pool = shuffle(all.filter((w) => w.id !== correct.id))
   return pool.slice(0, count)

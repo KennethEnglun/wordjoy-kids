@@ -8,6 +8,19 @@ import { BAND_META } from '../lib/vocab.js'
 import { momoImg, MASCOT_NAME_ZH } from '../lib/mascot.js'
 import * as audio from '../lib/audio.js'
 
+function todayKey() {
+  const d = new Date()
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+}
+
+function nudgeDismissed() {
+  try {
+    return sessionStorage.getItem(`wordjoy-nudge-dismissed-${todayKey()}`) === '1'
+  } catch {
+    return false
+  }
+}
+
 export function renderHome(root, nav) {
   const p = getActiveProfile()
   const streak = p?.streak?.count || 0
@@ -16,6 +29,7 @@ export function renderHome(root, nav) {
   const today = getTodayStars()
   const goalPct = Math.min(100, Math.round((today / dailyGoalStars) * 100))
   const gate = checkSessionAllowed()
+  const showNudge = today < dailyGoalStars && !nudgeDismissed()
 
   root.innerHTML = `
     <div class="screen home-screen">
@@ -47,6 +61,17 @@ export function renderHome(root, nav) {
         }
       </div>
       ${
+        showNudge
+          ? `<div class="nudge-banner" role="status">
+              <div class="nudge-copy">
+                <strong>「毛毛話：今日目標未完成，玩一局再嚟？」</strong>
+                <span>一局大約 5 分鐘，好快搞掂！</span>
+              </div>
+              <button type="button" class="nudge-dismiss" data-nudge-dismiss aria-label="關閉提示">知道啦</button>
+            </div>`
+          : ''
+      }
+      ${
         !gate.allowed
           ? `<p class="notice">${gate.reason}</p>`
           : gate.remainingSec != null
@@ -67,6 +92,18 @@ export function renderHome(root, nav) {
     </div>
   `
   audio.unlockAudio()
+  const dismiss = root.querySelector('[data-nudge-dismiss]')
+  if (dismiss) {
+    dismiss.onclick = () => {
+      audio.tap()
+      try {
+        sessionStorage.setItem(`wordjoy-nudge-dismissed-${todayKey()}`, '1')
+      } catch {
+        /* session storage may be unavailable */
+      }
+      root.querySelector('.nudge-banner')?.remove()
+    }
+  }
   const grid = root.querySelector('#bands')
   ;['prek', 'p1', 'p2', 'p3'].forEach((code) => {
     const m = BAND_META[code]

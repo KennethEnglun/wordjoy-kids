@@ -58,7 +58,7 @@ test('review bag play from seeded storage', async ({ page }) => {
     )
   })
   await page.goto('/')
-  await expect(page.getByText(/今日目標/)).toBeVisible()
+  await expect(page.locator('.goal-label')).toBeVisible()
   await page.getByRole('button', { name: /複習袋/ }).click()
   const choice = page.locator('button.choice').first()
   await expect(choice).toBeVisible({ timeout: 10000 })
@@ -110,4 +110,31 @@ test('parent weekly digest behind optional PIN', async ({ page }) => {
   await expect(page.getByText(/本週摘要/)).toBeVisible()
   await expect(page.getByText(/每日目標同時間上限/)).toBeVisible()
   await expect(page.getByLabel(/每日星星目標|goal/i).or(page.locator('#goal-stars'))).toBeVisible()
+})
+
+test('cafe order game starts', async ({ page }) => {
+  await page.goto('/#/play/prek/food/cafe_order')
+  await expect(page.locator('.cafe-order')).toBeVisible({ timeout: 10000 })
+  await expect(page.locator('.order-line')).toContainText('我想要')
+  await expect(page.locator('button.choice').first()).toBeVisible({ timeout: 10000 })
+  await page.locator('button.choice').first().click()
+  await expect(page.locator('#app')).toContainText(/小食店|我想要|金幣|題/)
+})
+
+test('parent sees weekly school themes when no PIN', async ({ page }) => {
+  await page.goto('/')
+  await page.getByRole('button', { name: /^家長$/ }).click()
+  await expect(page.getByText('本週學校主題')).toBeVisible()
+  const food = page.locator('[data-theme-pick="food"]')
+  const animals = page.locator('[data-theme-pick="animals"]')
+  await expect(food).toBeVisible()
+  await food.click()
+  await animals.click()
+  await page.getByRole('button', { name: /儲存本週主題/ }).click()
+  await expect(page.getByText(/已儲存本週學校主題/)).toBeVisible()
+  const themes = await page.evaluate(() => {
+    const raw = JSON.parse(localStorage.getItem('wordjoy-progress'))
+    return raw.weeklyThemes
+  })
+  expect(themes).toEqual(['food', 'animals'])
 })

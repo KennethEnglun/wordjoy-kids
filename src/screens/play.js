@@ -1,14 +1,16 @@
-import { loadVocab, filterByBandTheme } from '../lib/vocab.js'
+import { loadVocab, filterByBandTheme, prioritizeWords } from '../lib/vocab.js'
 import { createPicMatch } from '../games/picMatch.js'
 import { createSpeedStar } from '../games/speedStar.js'
 import { createTreasureTap } from '../games/treasureTap.js'
 import { createWordRace } from '../games/wordRace.js'
 import { createFishWords } from '../games/fishWords.js'
+import { createCafeOrder } from '../games/cafeOrder.js'
 import {
   getActiveProfile,
   clearReviewed,
   checkSessionAllowed,
   startPlaySession,
+  getWeeklyThemes,
 } from '../lib/storage.js'
 import { momoImg } from '../lib/mascot.js'
 
@@ -73,6 +75,8 @@ export async function renderPlay(root, state, nav) {
     }
   }
 
+  words = prioritizeWords(words, getWeeklyThemes())
+
   root.innerHTML = `<div class="screen" id="game-root"></div>`
   const mount = root.querySelector('#game-root')
 
@@ -94,6 +98,7 @@ export async function renderPlay(root, state, nav) {
   else if (g === 'treasure_tap') game = createTreasureTap(opts)
   else if (g === 'word_race') game = createWordRace(opts)
   else if (g === 'fish_words') game = createFishWords(opts)
+  else if (g === 'cafe_order') game = createCafeOrder(opts)
   else game = createPicMatch(opts)
 
   game.mount(mount)

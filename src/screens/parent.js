@@ -7,6 +7,8 @@ import {
   setParentSettings,
   getWeeklyDigest,
   getTodayStars,
+  getWeeklyThemes,
+  setWeeklyThemes,
 } from '../lib/storage.js'
 import { THEME_META, BAND_META } from '../lib/vocab.js'
 import { momoImg, MASCOT_NAME_ZH } from '../lib/mascot.js'
@@ -36,6 +38,8 @@ export function renderParent(root, state, nav) {
   let pin = ''
   let error = ''
   let notice = ''
+  let themeNotice = ''
+  let selectedThemes = getWeeklyThemes()
 
   function drawGate() {
     root.innerHTML = `
@@ -159,6 +163,23 @@ export function renderParent(root, state, nav) {
         </div>
 
         <div class="parent-card">
+          <h3>本週學校主題</h3>
+          <p class="hint">揀最多 2 個主題，玩遊戲時會優先出相關字詞。</p>
+          <div class="theme-pick-grid">
+            ${Object.entries(THEME_META)
+              .map(
+                ([t, m]) => `<button type="button" class="theme-pick${
+                  selectedThemes.includes(t) ? ' selected' : ''
+                }" data-theme-pick="${t}"><span>${m.zh}</span><span class="en">${m.en}</span></button>`,
+              )
+              .join('')}
+          </div>
+          <p class="hint theme-limit"></p>
+          ${themeNotice ? `<p class="notice">${esc(themeNotice)}</p>` : ''}
+          <button type="button" class="primary" data-save-themes>儲存本週主題</button>
+        </div>
+
+        <div class="parent-card">
           <h3>${hasParentPin() ? '更改家長 PIN' : '設定家長 PIN'}</h3>
           <p class="hint">用 4 位數字保護家長摘要（只存喺呢部手機）。</p>
           <div class="pin-set-row">
@@ -186,6 +207,34 @@ export function renderParent(root, state, nav) {
       const c = Number(root.querySelector('#cap-min').value)
       setParentSettings({ dailyGoalStars: g, sessionCapMinutes: c })
       notice = '已儲存每日目標同時間上限。'
+      drawPanel()
+    }
+    root.querySelectorAll('[data-theme-pick]').forEach((btn) => {
+      btn.onclick = () => {
+        audio.tap()
+        const t = btn.dataset.themePick
+        const idx = selectedThemes.indexOf(t)
+        if (idx >= 0) {
+          selectedThemes.splice(idx, 1)
+        } else if (selectedThemes.length < 2) {
+          selectedThemes.push(t)
+        } else {
+          const lim = root.querySelector('.theme-limit')
+          if (lim) lim.textContent = '最多揀 2 個主題。'
+          return
+        }
+        themeNotice = ''
+        root.querySelectorAll('[data-theme-pick]').forEach((b) => {
+          b.classList.toggle('selected', selectedThemes.includes(b.dataset.themePick))
+        })
+        const lim = root.querySelector('.theme-limit')
+        if (lim) lim.textContent = ''
+      }
+    })
+    root.querySelector('[data-save-themes]').onclick = () => {
+      audio.tap()
+      setWeeklyThemes(selectedThemes)
+      themeNotice = '已儲存本週學校主題。'
       drawPanel()
     }
     root.querySelector('[data-save-pin]').onclick = () => {

@@ -73,8 +73,13 @@ function migrate(raw) {
     parentPin: null,
     dailyGoalStars: 15,
     sessionCapMinutes: 0,
+    weeklyThemes: [],
     profiles: { kid1: prof },
   }
+}
+
+function normalizeWeeklyThemes(list) {
+  return uniqueIds(list).slice(0, 2)
 }
 
 function normalize(raw) {
@@ -97,7 +102,11 @@ function normalize(raw) {
       : null
   const dailyGoalStars = Math.max(1, Number(raw.dailyGoalStars) || 15)
   const sessionCapMinutes = Math.max(0, Number(raw.sessionCapMinutes) || 0)
-  return { state: { activeProfileId, parentPin, dailyGoalStars, sessionCapMinutes, profiles }, migrated: false }
+  const weeklyThemes = normalizeWeeklyThemes(raw.weeklyThemes)
+  return {
+    state: { activeProfileId, parentPin, dailyGoalStars, sessionCapMinutes, weeklyThemes, profiles },
+    migrated: false,
+  }
 }
 
 export function getState() {
@@ -283,7 +292,19 @@ export function getParentSettings() {
   return {
     dailyGoalStars: Math.max(1, Number(state.dailyGoalStars) || 15),
     sessionCapMinutes: Math.max(0, Number(state.sessionCapMinutes) || 0),
+    weeklyThemes: getWeeklyThemes(),
   }
+}
+
+export function getWeeklyThemes() {
+  return normalizeWeeklyThemes(getState().weeklyThemes)
+}
+
+export function setWeeklyThemes(themes) {
+  const state = getState()
+  state.weeklyThemes = normalizeWeeklyThemes(themes)
+  saveState(state)
+  return state.weeklyThemes
 }
 
 export function setParentSettings({ dailyGoalStars, sessionCapMinutes }) {

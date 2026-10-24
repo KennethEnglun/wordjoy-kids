@@ -293,3 +293,56 @@ button:disabled { opacity: 0.45; }
 }
 .pin-set-row { display: flex; gap: 8px; align-items: center; }
 .pin-set-row .pin-input { flex: 1; }
+
+/* R4 — gentle nudge, café order, school themes */
+.nudge-banner {
+  display: flex; align-items: center; gap: 10px;
+  background: #fff7d6; border: 2px solid #ffd54f;
+  border-radius: 16px; padding: 10px 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+.nudge-copy { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.nudge-copy strong { font-size: 15px; color: #7a5b00; line-height: 1.35; }
+.nudge-copy span { font-size: 12px; color: var(--muted); }
+.nudge-dismiss {
+  background: #fff; color: #7a5b00; font-size: 14px; font-weight: 800;
+  padding: 8px 12px; min-height: 40px; border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08); white-space: nowrap;
+}
+.cafe-scene {
+  background: linear-gradient(180deg, #fff3e0, #ffe0b2);
+  border-radius: 24px; padding: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+.cafe-order { display: flex; align-items: center; gap: 12px; }
+.cafe-momo { font-size: 42px; line-height: 1; }
+.cafe-bubble {
+  position: relative; flex: 1; background: #fff; border-radius: 16px;
+  padding: 10px 12px; display: flex; align-items: center;
+  justify-content: space-between; gap: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.06);
+}
+.cafe-bubble::before {
+  content: ''; position: absolute; left: -8px; top: 50%;
+  transform: translateY(-50%);
+  border: 8px solid transparent; border-right-color: #fff; border-left: 0;
+}
+.order-line { margin: 0; font-size: 18px; font-weight: 800; }
+.order-word { color: var(--pink); }
+.order-img {
+  width: 72px; height: 72px; object-fit: contain;
+  border-radius: 12px; background: #fff8e7; flex: none;
+}
+.cafe-choices .choice img { width: 76px; height: 76px; }
+.theme-pick-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0;
+}
+.theme-pick {
+  background: #fff; color: var(--ink); padding: 10px;
+  font-weight: 700; font-size: 15px; border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+}
+.theme-pick .en { font-size: 12px; color: var(--muted); font-weight: 500; }
+.theme-pick.selected { outline: 3px solid var(--pink); background: #ffeef5; }
+.theme-limit { color: var(--pink); min-height: 18px; margin: 0; }
