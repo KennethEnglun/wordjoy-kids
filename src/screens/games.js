@@ -6,6 +6,8 @@ const GAMES = [
   { id: 'pic_match', zh: '對對碰', en: 'Pic Match', emoji: '🖼️', desc: '圖同字配對' },
   { id: 'speed_star', zh: '閃電答題', en: 'Speed Star', emoji: '⚡', desc: '又快又準' },
   { id: 'treasure_tap', zh: '開寶箱', en: 'Treasure Tap', emoji: '💎', desc: '答啱開寶箱' },
+  { id: 'word_race', zh: '詞語賽跑', en: 'Word Race', emoji: '🏁', desc: '答啱向前跑' },
+  { id: 'fish_words', zh: '釣單字', en: 'Fish Words', emoji: '🎣', desc: '釣起英文魚' },
 ]
 
 export function renderGames(root, state, nav) {
@@ -19,7 +21,7 @@ export function renderGames(root, state, nav) {
         <div class="stats">${band.zh} · ${theme.zh}</div>
       </div>
       <h1>揀遊戲</h1>
-      <p class="hint">一局大約 5 分鐘</p>
+      <p class="hint">一局大約 5 分鐘 · 有 ${GAMES.length} 種玩法</p>
       <div class="game-grid" id="games" style="grid-template-columns:1fr"></div>
       ${
         bag

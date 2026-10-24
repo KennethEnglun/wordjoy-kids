@@ -7,9 +7,12 @@ import {
   getActiveProfile,
   bumpStreak,
   clearReviewed,
+  addTodayStars,
+  getParentSettings,
+  getTodayStars,
 } from '../lib/storage.js'
 import { THEME_META, BAND_META } from '../lib/vocab.js'
-import { joyImg } from '../lib/mascot.js'
+import { momoImg, MASCOT_NAME_ZH } from '../lib/mascot.js'
 import * as audio from '../lib/audio.js'
 
 function starCount(correct, total) {
@@ -26,6 +29,7 @@ export function renderResults(root, state, nav) {
   const coins = result.coins || 0
   addCoins(coins)
   addStars(stars)
+  addTodayStars(stars)
   const key = `${band}:${theme}:${game}`
   recordBest(key, result.correct)
   if (result.missed?.length) pushReview(result.missed)
@@ -44,6 +48,8 @@ export function renderResults(root, state, nav) {
     missed: result.missed || [],
   })
   const p = getActiveProfile()
+  const { dailyGoalStars } = getParentSettings()
+  const today = getTodayStars()
   const starStr = '⭐'.repeat(stars) + '☆'.repeat(3 - stars)
   const isReview = theme === 'review' || theme === '__review__' || band === 'review'
   const tmeta = isReview ? { zh: '複習袋' } : THEME_META[theme] || { zh: theme }
@@ -55,11 +61,15 @@ export function renderResults(root, state, nav) {
       <div class="celebrate" aria-hidden="true">
         <span>✨</span><span>🎉</span><span>⭐</span><span>💫</span><span>🌟</span>
       </div>
-      ${joyImg(pose, 'Joy', 'joy-mascot joy-results')}
+      ${momoImg(pose, MASCOT_NAME_ZH, 'momo-mascot joy-results')}
       <h1>做得好！</h1>
       <div class="stars-row">${starStr}</div>
       <p class="coins">+${coins} 金幣 · 正確 ${result.correct}/${result.total}</p>
       <p class="streak-pill big">🔥 連續 ${streak.count || 1} 日</p>
+      <div class="goal-card">
+        <div class="goal-label">今日目標 ⭐ ${today}/${dailyGoalStars}</div>
+        <div class="goal-bar"><i style="width:${Math.min(100, Math.round((today / dailyGoalStars) * 100))}%"></i></div>
+      </div>
       <div class="parent-card">
         <h3>家長摘要</h3>
         <div>今日練咗：${bmeta.zh} · ${tmeta.zh}</div>

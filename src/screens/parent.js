@@ -3,18 +3,19 @@ import {
   hasParentPin,
   verifyParentPin,
   setParentPin,
+  getParentSettings,
+  setParentSettings,
+  getWeeklyDigest,
+  getTodayStars,
 } from '../lib/storage.js'
 import { THEME_META, BAND_META } from '../lib/vocab.js'
+import { momoImg, MASCOT_NAME_ZH } from '../lib/mascot.js'
 import * as audio from '../lib/audio.js'
 
 function esc(s) {
-  return String(s || '').replace(/[&<>"']/g, (c) => ({
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#39;',
-  })[c])
+  return String(s || '').replace(/[&<>"']/g, (c) =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c],
+  )
 }
 
 function fmtDate(ts) {
@@ -43,11 +44,10 @@ export function renderParent(root, state, nav) {
           <button type="button" class="back" data-back>← 返去</button>
           <div class="stats">🔒 家長專區</div>
         </div>
+        ${momoImg('front', MASCOT_NAME_ZH, 'momo-mascot momo-small')}
         <h1>家長 PIN</h1>
-        <p class="hint">輸入 4 位數字，睇小朋友嘅學習摘要。</p>
-        <div class="pin-dots" aria-label="已輸入 ${pin.length} 位">${'●'
-          .repeat(pin.length)
-          .padEnd(0)}${'○'.repeat(4 - pin.length)}</div>
+        <p class="hint">輸入 4 位數字，睇學習摘要同設定。</p>
+        <div class="pin-dots">${'●'.repeat(pin.length)}${'○'.repeat(4 - pin.length)}</div>
         ${error ? `<p class="pin-error">${esc(error)}</p>` : ''}
         <div class="pin-pad" id="pin-pad"></div>
       </div>
@@ -107,33 +107,57 @@ export function renderParent(root, state, nav) {
     const last = p?.sessions?.[0]
     const reviewCount = p?.reviewBag?.length || 0
     const streak = p?.streak || { count: 0, lastDate: null }
+    const settings = getParentSettings()
+    const weekly = getWeeklyDigest()
+    const today = getTodayStars()
     const tmeta = last ? THEME_META[last.theme] || { zh: last.theme } : null
     const bmeta = last ? BAND_META[last.band] || { zh: last.band } : null
+    const themeNames = weekly.themes
+      .map((t) => THEME_META[t]?.zh || t)
+      .filter(Boolean)
+      .join('、') || '—'
+
     root.innerHTML = `
       <div class="screen">
         <div class="topbar">
           <button type="button" class="back" data-back>← 返去</button>
           <div class="stats">家長專區</div>
         </div>
-        <h1>${esc(p?.avatar || '🐻')} ${esc(p?.name || '小朋友')}</h1>
-        <div class="streak-pill">🔥 連續 ${streak.count || 0} 日${
-          streak.lastDate ? ` · 最後 ${esc(streak.lastDate)}` : ''
-        }</div>
+        <h1>${esc(p?.avatar || '🐱')} ${esc(p?.name || '小朋友')}</h1>
+        <div class="streak-pill">🔥 連續 ${streak.count || 0} 日</div>
+
         <div class="parent-card">
-          <h3>最近一局</h3>
+          <h3>本週摘要（7 日）</h3>
+          <div>玩咗 ${weekly.sessions} 局 · 正確率 ${weekly.accuracy}%</div>
+          <div>練習題數：${weekly.correct}/${weekly.total || 0}</div>
+          <div>本週星星：⭐${weekly.stars} · 連續日數 🔥${weekly.streak}</div>
+          <div>主題：${esc(themeNames)}</div>
+          <div>複習袋：${weekly.reviewBag} 個字</div>
+        </div>
+
+        <div class="parent-card">
+          <h3>今日</h3>
+          <div>目標進度：⭐ ${today}/${settings.dailyGoalStars}</div>
           ${
             last
-              ? `<div>${fmtDate(last.at)} · ${esc(bmeta?.zh)} · ${esc(tmeta?.zh)}</div>
-                 <div>正確率：${last.total ? Math.round((last.correct / last.total) * 100) : 0}%（${last.correct}/${last.total}）</div>
-                 <div>獎勵：⭐${last.stars || 0} · 🪙${last.coins || 0}</div>`
-              : '<div>仲未開始玩，快啲揀個程度試吓。</div>'
+              ? `<div>最近一局：${fmtDate(last.at)} · ${esc(bmeta?.zh)} · ${esc(tmeta?.zh)}（${
+                  last.total ? Math.round((last.correct / last.total) * 100) : 0
+                }%）</div>`
+              : '<div>仲未開始玩。</div>'
           }
+          <div>複習袋：${reviewCount} · 累積 ⭐${p?.stars || 0} · 🪙${p?.coins || 0}</div>
         </div>
+
         <div class="parent-card">
-          <h3>複習袋</h3>
-          <div>${reviewCount ? `有 ${reviewCount} 個字等緊複習。` : '暫時係空嘅，好棒！'}</div>
-          <div>累積：⭐${p?.stars || 0} · 🪙${p?.coins || 0}</div>
+          <h3>每日目標同時間上限</h3>
+          <p class="hint">對準香港家庭螢幕時間焦慮：短局、可見目標。</p>
+          <label class="field-label" for="goal-stars">每日星星目標</label>
+          <input id="goal-stars" class="name-input" type="number" min="1" max="100" value="${settings.dailyGoalStars}" />
+          <label class="field-label" for="cap-min">每次／今日遊戲上限（分鐘，0＝唔限制）</label>
+          <input id="cap-min" class="name-input" type="number" min="0" max="120" value="${settings.sessionCapMinutes}" />
+          <button type="button" class="primary" data-save-settings>儲存設定</button>
         </div>
+
         <div class="parent-card">
           <h3>${hasParentPin() ? '更改家長 PIN' : '設定家長 PIN'}</h3>
           <p class="hint">用 4 位數字保護家長摘要（只存喺呢部手機）。</p>
@@ -156,10 +180,17 @@ export function renderParent(root, state, nav) {
       audio.tap()
       nav({ screen: 'home' })
     }
+    root.querySelector('[data-save-settings]').onclick = () => {
+      audio.tap()
+      const g = Number(root.querySelector('#goal-stars').value)
+      const c = Number(root.querySelector('#cap-min').value)
+      setParentSettings({ dailyGoalStars: g, sessionCapMinutes: c })
+      notice = '已儲存每日目標同時間上限。'
+      drawPanel()
+    }
     root.querySelector('[data-save-pin]').onclick = () => {
       audio.tap()
-      const input = root.querySelector('#pin-input')
-      const value = (input.value || '').trim()
+      const value = (root.querySelector('#pin-input').value || '').trim()
       if (!/^\d{4}$/.test(value)) {
         notice = '請輸入 4 位數字。'
         drawPanel()

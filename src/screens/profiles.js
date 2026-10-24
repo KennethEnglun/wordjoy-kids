@@ -8,6 +8,7 @@ import {
 } from '../lib/storage.js'
 import { BAND_META } from '../lib/vocab.js'
 import * as audio from '../lib/audio.js'
+import { momoImg, MASCOT_NAME_ZH } from '../lib/mascot.js'
 
 function esc(s) {
   return String(s || '').replace(/[&<>"']/g, (c) => ({
@@ -34,6 +35,7 @@ export function renderProfiles(root, state, nav) {
           <button type="button" class="back" data-back>← 返去</button>
           <div class="stats">👨‍👩‍👧‍👦 ${profiles.length}/${MAX_PROFILES}</div>
         </div>
+        <div style="text-align:center">${momoImg('happy', MASCOT_NAME_ZH, 'momo-mascot momo-small')}</div>
         <h1>揀小朋友</h1>
         <p class="hint">一個手機，每人有自己嘅星、金幣同複習袋。</p>
         ${notice ? `<p class="notice">${esc(notice)}</p>` : ''}

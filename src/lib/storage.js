@@ -27,6 +27,9 @@ function blankProfile(id, name = '小朋友1', avatar = '🐻', band = 'p1') {
     reviewBag: [],
     sessions: [],
     streak: { count: 0, lastDate: null },
+    todayKey: null,
+    todayStars: 0,
+    sessionStartedAt: null,
   }
 }
 
@@ -51,6 +54,9 @@ function normalizeProfile(raw, fallbackId) {
       count: Math.max(0, Number(p.streak?.count) || 0),
       lastDate: typeof p.streak?.lastDate === 'string' ? p.streak.lastDate : null,
     },
+    todayKey: typeof p.todayKey === 'string' ? p.todayKey : null,
+    todayStars: Math.max(0, Number(p.todayStars) || 0),
+    sessionStartedAt: typeof p.sessionStartedAt === 'number' ? p.sessionStartedAt : null,
   }
 }
 
@@ -65,6 +71,8 @@ function migrate(raw) {
   return {
     activeProfileId: 'kid1',
     parentPin: null,
+    dailyGoalStars: 15,
+    sessionCapMinutes: 0,
     profiles: { kid1: prof },
   }
 }
@@ -87,7 +95,9 @@ function normalize(raw) {
     typeof raw.parentPin === 'string' && /^\d{4}$/.test(raw.parentPin)
       ? raw.parentPin
       : null
-  return { state: { activeProfileId, parentPin, profiles }, migrated: false }
+  const dailyGoalStars = Math.max(1, Number(raw.dailyGoalStars) || 15)
+  const sessionCapMinutes = Math.max(0, Number(raw.sessionCapMinutes) || 0)
+  return { state: { activeProfileId, parentPin, dailyGoalStars, sessionCapMinutes, profiles }, migrated: false }
 }
 
 export function getState() {
@@ -265,4 +275,103 @@ export function clearParentPin() {
   state.parentPin = null
   saveState(state)
   return state
+}
+
+
+export function getParentSettings() {
+  const state = getState()
+  return {
+    dailyGoalStars: Math.max(1, Number(state.dailyGoalStars) || 15),
+    sessionCapMinutes: Math.max(0, Number(state.sessionCapMinutes) || 0),
+  }
+}
+
+export function setParentSettings({ dailyGoalStars, sessionCapMinutes }) {
+  const state = getState()
+  if (dailyGoalStars != null) state.dailyGoalStars = Math.max(1, Math.min(100, Number(dailyGoalStars) || 15))
+  if (sessionCapMinutes != null) {
+    const n = Number(sessionCapMinutes)
+    state.sessionCapMinutes = Number.isFinite(n) ? Math.max(0, Math.min(120, n)) : 0
+  }
+  saveState(state)
+  return getParentSettings()
+}
+
+function todayKey() {
+  const d = new Date()
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`
+}
+
+export function getTodayStars() {
+  const p = getActiveProfile()
+  if (!p) return 0
+  if (p.todayKey !== todayKey()) return 0
+  return Math.max(0, Number(p.todayStars) || 0)
+}
+
+export function addTodayStars(n) {
+  mutate((p) => {
+    const key = todayKey()
+    if (p.todayKey !== key) {
+      p.todayKey = key
+      p.todayStars = 0
+    }
+    p.todayStars = Math.max(0, (p.todayStars || 0) + (Number(n) || 0))
+  })
+  return getTodayStars()
+}
+
+export function startPlaySession() {
+  mutate((p) => {
+    if (!p.sessionStartedAt) p.sessionStartedAt = Date.now()
+  })
+  return getActiveProfile()?.sessionStartedAt
+}
+
+export function clearPlaySession() {
+  mutate((p) => {
+    p.sessionStartedAt = null
+  })
+}
+
+/** Returns { allowed, reason, remainingSec } */
+export function checkSessionAllowed() {
+  const { sessionCapMinutes } = getParentSettings()
+  if (!sessionCapMinutes) return { allowed: true, reason: '', remainingSec: null }
+  const p = getActiveProfile()
+  const started = p?.sessionStartedAt
+  if (!started) return { allowed: true, reason: '', remainingSec: sessionCapMinutes * 60 }
+  const elapsed = (Date.now() - started) / 1000
+  const limit = sessionCapMinutes * 60
+  if (elapsed >= limit) {
+    return { allowed: false, reason: `今日遊戲時間已到（${sessionCapMinutes} 分鐘）。休息一下啦！`, remainingSec: 0 }
+  }
+  return { allowed: true, reason: '', remainingSec: Math.max(0, Math.floor(limit - elapsed)) }
+}
+
+export function getWeeklyDigest() {
+  const p = getActiveProfile()
+  const sessions = p?.sessions || []
+  const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000
+  const recent = sessions.filter((s) => (s.at || 0) >= weekAgo)
+  let correct = 0
+  let total = 0
+  let stars = 0
+  const themes = new Set()
+  recent.forEach((s) => {
+    correct += Number(s.correct) || 0
+    total += Number(s.total) || 0
+    stars += Number(s.stars) || 0
+    if (s.theme) themes.add(s.theme)
+  })
+  return {
+    sessions: recent.length,
+    correct,
+    total,
+    accuracy: total ? Math.round((correct / total) * 100) : 0,
+    stars,
+    themes: [...themes],
+    streak: p?.streak?.count || 0,
+    reviewBag: p?.reviewBag?.length || 0,
+  }
 }

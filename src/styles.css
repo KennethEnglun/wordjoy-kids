@@ -247,3 +247,49 @@ h1 { margin: 0; font-size: 32px; line-height: 1.2; }
 .empty-emoji { font-size: 64px; }
 .trust-line { text-align: center; }
 button:disabled { opacity: 0.45; }
+
+/* R3 + Momo */
+.momo-mascot, .joy-mascot {
+  width: 96px; height: 96px; object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,.12));
+}
+.momo-small { width: 72px; height: 72px; margin: 0 auto; }
+.goal-card {
+  background: #fff; border-radius: 16px; padding: 12px 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+.goal-label { font-weight: 800; font-size: 18px; margin-bottom: 8px; }
+.goal-bar {
+  height: 12px; background: #f0f0f5; border-radius: 999px; overflow: hidden;
+}
+.goal-bar > i {
+  display: block; height: 100%; background: linear-gradient(90deg, #ffd54f, #ff6b9d);
+  border-radius: 999px;
+}
+.ok-hint { color: #2e7d32; font-weight: 700; }
+.race-track { background: #e8f5e9; border-radius: 16px; padding: 12px; position: relative; }
+.race-lane {
+  position: relative; height: 56px; background: #c8e6c9; border-radius: 12px;
+  margin-bottom: 6px;
+}
+.race-runner {
+  position: absolute; top: 4px; width: 48px; height: 48px;
+  transform: translateX(-50%); transition: left .45s ease;
+  object-fit: contain;
+}
+.race-finish { position: absolute; right: 8px; top: 10px; font-size: 28px; }
+.race-progress { text-align: center; font-weight: 800; }
+.fish-pond {
+  background: linear-gradient(180deg, #b3e5fc, #4fc3f7);
+  border-radius: 20px; padding: 16px; text-align: center;
+  position: relative;
+}
+.fish-pond.caught { animation: splash .5s ease; }
+.fish-bob { font-size: 32px; }
+@keyframes splash {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+.pin-set-row { display: flex; gap: 8px; align-items: center; }
+.pin-set-row .pin-input { flex: 1; }

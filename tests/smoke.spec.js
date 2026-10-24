@@ -3,6 +3,7 @@ import { test, expect } from '@playwright/test'
 test('home to pic match play', async ({ page }) => {
   await page.goto('/')
   await expect(page.getByRole('heading', { name: '英樂寶' })).toBeVisible()
+  await expect(page.locator('img.momo-mascot, img.joy-mascot').first()).toBeVisible()
   await page.getByRole('button', { name: /學前/ }).click()
   await expect(page.getByText(/揀主題/)).toBeVisible()
   await page.getByRole('button', { name: /我同家人|Family/i }).first().click()
@@ -35,6 +36,8 @@ test('review bag play from seeded storage', async ({ page }) => {
       JSON.stringify({
         activeProfileId: 'kid1',
         parentPin: null,
+        dailyGoalStars: 15,
+        sessionCapMinutes: 0,
         profiles: {
           kid1: {
             id: 'kid1',
@@ -47,15 +50,64 @@ test('review bag play from seeded storage', async ({ page }) => {
             reviewBag: ['mom', 'dad', 'cat'],
             sessions: [],
             streak: { count: 2, lastDate: new Date().toISOString().slice(0, 10) },
+            todayKey: new Date().toISOString().slice(0, 10),
+            todayStars: 3,
           },
         },
       }),
     )
   })
   await page.goto('/')
-  await expect(page.getByRole('button', { name: /複習袋/ })).toBeVisible()
+  await expect(page.getByText(/今日目標/)).toBeVisible()
   await page.getByRole('button', { name: /複習袋/ }).click()
   const choice = page.locator('button.choice').first()
   await expect(choice).toBeVisible({ timeout: 10000 })
-  await expect(page.locator('#app')).toContainText(/題|揀啱|mom|dad|cat|聽英文/i)
+})
+
+test('word race game starts', async ({ page }) => {
+  await page.goto('/')
+  await page.getByRole('button', { name: /學前/ }).click()
+  await page.getByRole('button', { name: /動物|Animals/i }).first().click()
+  await page.getByRole('button', { name: /詞語賽跑|Word Race/i }).click()
+  await expect(page.locator('button.choice').first()).toBeVisible({ timeout: 10000 })
+  await expect(page.locator('#app')).toContainText(/賽跑|向前|題/)
+})
+
+test('parent weekly digest behind optional PIN', async ({ page }) => {
+  await page.addInitScript(() => {
+    const day = new Date().toISOString().slice(0, 10)
+    localStorage.setItem(
+      'wordjoy-progress',
+      JSON.stringify({
+        activeProfileId: 'kid1',
+        parentPin: null,
+        dailyGoalStars: 15,
+        sessionCapMinutes: 20,
+        profiles: {
+          kid1: {
+            id: 'kid1',
+            name: '樂樂',
+            avatar: '🐱',
+            band: 'p1',
+            coins: 10,
+            stars: 8,
+            best: {},
+            reviewBag: [],
+            sessions: [
+              { at: Date.now(), band: 'p1', theme: 'animals', game: 'word_race', correct: 7, total: 8, stars: 2, coins: 8, missed: [] },
+              { at: Date.now() - 86400000, band: 'p1', theme: 'food', game: 'fish_words', correct: 5, total: 8, stars: 1, coins: 5, missed: ['milk'] },
+            ],
+            streak: { count: 4, lastDate: day },
+            todayKey: day,
+            todayStars: 4,
+          },
+        },
+      }),
+    )
+  })
+  await page.goto('/')
+  await page.getByRole('button', { name: /^家長$/ }).click()
+  await expect(page.getByText(/本週摘要/)).toBeVisible()
+  await expect(page.getByText(/每日目標同時間上限/)).toBeVisible()
+  await expect(page.getByLabel(/每日星星目標|goal/i).or(page.locator('#goal-stars'))).toBeVisible()
 })

@@ -2,10 +2,15 @@ import { loadVocab, filterByBandTheme } from '../lib/vocab.js'
 import { createPicMatch } from '../games/picMatch.js'
 import { createSpeedStar } from '../games/speedStar.js'
 import { createTreasureTap } from '../games/treasureTap.js'
+import { createWordRace } from '../games/wordRace.js'
+import { createFishWords } from '../games/fishWords.js'
 import {
   getActiveProfile,
   clearReviewed,
+  checkSessionAllowed,
+  startPlaySession,
 } from '../lib/storage.js'
+import { momoImg } from '../lib/mascot.js'
 
 function isReviewState(state) {
   return (
@@ -17,6 +22,22 @@ function isReviewState(state) {
 }
 
 export async function renderPlay(root, state, nav) {
+  const gate = checkSessionAllowed()
+  if (!gate.allowed) {
+    root.innerHTML = `
+      <div class="screen empty-state">
+        ${momoImg('think', '毛毛', 'momo-mascot joy-results')}
+        <h1>時間到啦</h1>
+        <p class="hint">${gate.reason}</p>
+        <div class="actions">
+          <button type="button" class="primary" data-home>返主頁</button>
+        </div>
+      </div>`
+    root.querySelector('[data-home]').onclick = () => nav({ screen: 'home' })
+    return
+  }
+  startPlaySession()
+
   const all = await loadVocab()
   const review = isReviewState(state)
   let words
@@ -68,8 +89,11 @@ export async function renderPlay(root, state, nav) {
   const onCorrect = (w) => clearReviewed([w.id])
   const opts = { words, pool, onDone, onCorrect, roundSize: 8 }
   let game
-  if (!review && state.game === 'speed_star') game = createSpeedStar(opts)
-  else if (!review && state.game === 'treasure_tap') game = createTreasureTap(opts)
+  const g = review ? 'pic_match' : state.game
+  if (g === 'speed_star') game = createSpeedStar(opts)
+  else if (g === 'treasure_tap') game = createTreasureTap(opts)
+  else if (g === 'word_race') game = createWordRace(opts)
+  else if (g === 'fish_words') game = createFishWords(opts)
   else game = createPicMatch(opts)
 
   game.mount(mount)
