@@ -3,9 +3,10 @@ import {
   getParentSettings,
   getTodayStars,
   checkSessionAllowed,
+  getWeeklyDigest,
 } from '../lib/storage.js'
-import { BAND_META } from '../lib/vocab.js'
 import { momoImg, MASCOT_NAME_ZH } from '../lib/mascot.js'
+import { mountShell } from '../lib/shell.js'
 import * as audio from '../lib/audio.js'
 
 function todayKey() {
@@ -24,116 +25,121 @@ function nudgeDismissed() {
 export function renderHome(root, nav) {
   const p = getActiveProfile()
   const streak = p?.streak?.count || 0
-  const bag = p?.reviewBag?.length || 0
   const { dailyGoalStars } = getParentSettings()
   const today = getTodayStars()
-  const goalPct = Math.min(100, Math.round((today / dailyGoalStars) * 100))
   const gate = checkSessionAllowed()
   const showNudge = today < dailyGoalStars && !nudgeDismissed()
+  const weekly = getWeeklyDigest()
+  const lv = Math.max(1, Math.floor((p?.stars || 0) / 10) + 1)
 
-  root.innerHTML = `
-    <div class="screen home-screen">
-      <div class="topbar">
-        <button type="button" class="profile-chip" data-profiles>
-          <span class="avatar">${p?.avatar || '🐱'}</span>
-          <span>${p?.name || '小朋友'}</span>
-        </button>
-        <div class="stats">
-          ${streak > 0 ? `<span class="streak-pill">🔥 ${streak}</span>` : ''}
-          <span><img src="/art/ui/star.svg" alt="" /> ${p?.stars || 0}</span>
-          <span><img src="/art/ui/coin.svg" alt="" /> ${p?.coins || 0}</span>
+  const body = `
+    <div class="screen tab-screen home-screen">
+      <div class="home-top">
+        <button type="button" class="parent-pill" data-parent>🔒 進入家長端</button>
+        <div class="stats soft">
+          <span>⭐ ${p?.stars || 0}</span>
+          <span>🪙 ${p?.coins || 0}</span>
         </div>
       </div>
-      <div class="hero">
-        ${momoImg('front', MASCOT_NAME_ZH, 'momo-mascot joy-hero')}
+
+      <div class="scroll-banner">
+        ${momoImg('front', MASCOT_NAME_ZH, 'momo-mascot banner-momo')}
+        <div class="scroll-titles">
+          <p class="brand-en">WordJoy</p>
+          <h1 class="brand-zh">英樂寶</h1>
+          <p class="hint">同 ${MASCOT_NAME_ZH} 一齊學英文</p>
+        </div>
+      </div>
+
+      <div class="cream-card profile-strip">
+        <span class="avatar-lg">${p?.avatar || '🐱'}</span>
         <div>
-          <h1>英樂寶</h1>
-          <p class="subtitle">WordJoy · ${MASCOT_NAME_ZH}</p>
+          <strong>${p?.name || '小朋友'}</strong>
+          <span>Lv. ${lv} 英文旅者 · 🔥 連續 ${streak} 日</span>
         </div>
+        <button type="button" class="text-btn" data-profiles>切換</button>
       </div>
-      <div class="goal-card">
-        <div class="goal-label">今日目標 ⭐ ${today}/${dailyGoalStars}</div>
-        <div class="goal-bar"><i style="width:${goalPct}%"></i></div>
-        ${
-          today >= dailyGoalStars
-            ? '<p class="hint ok-hint">今日目標達成！好棒！</p>'
-            : '<p class="hint">再攞多啲星星啦～</p>'
-        }
-      </div>
+
       ${
         showNudge
           ? `<div class="nudge-banner" role="status">
               <div class="nudge-copy">
-                <strong>「毛毛話：今日目標未完成，玩一局再嚟？」</strong>
-                <span>一局大約 5 分鐘，好快搞掂！</span>
+                <strong>毛毛話：今日目標未完成，玩一局再嚟？</strong>
+                <span>一局大約 5 分鐘</span>
               </div>
-              <button type="button" class="nudge-dismiss" data-nudge-dismiss aria-label="關閉提示">知道啦</button>
+              <button type="button" class="nudge-dismiss" data-nudge-dismiss>知道啦</button>
             </div>`
           : ''
       }
-      ${
-        !gate.allowed
-          ? `<p class="notice">${gate.reason}</p>`
-          : gate.remainingSec != null
-            ? `<p class="hint">今日剩餘遊戲約 ${Math.ceil(gate.remainingSec / 60)} 分鐘</p>`
-            : ''
-      }
-      <p class="subtitle">用遊戲學英文 · 貼近香港小學主題</p>
-      <p class="hint">揀程度開始（唔使註冊）</p>
-      <div class="band-grid" id="bands"></div>
-      <div class="home-actions">
-        <button type="button" class="secondary" data-review ${bag ? '' : 'disabled'}>
-          🧺 複習袋 ${bag ? `(${bag})` : '(空)'}
+
+      <button type="button" class="cta-journey" data-start ${gate.allowed ? '' : 'disabled'}>
+        <span>開始英文之旅</span>
+      </button>
+      ${!gate.allowed ? `<p class="notice">${gate.reason}</p>` : ''}
+
+      <h2 class="section-title">今天的任務</h2>
+      <div class="task-grid">
+        <button type="button" class="cream-card mini task-tap" data-tasks>
+          <div class="mini-ico">⭐</div>
+          <strong>${today}/${dailyGoalStars}</strong>
+          <span>今日星星</span>
         </button>
-        <button type="button" class="secondary" data-profiles2>切換小朋友</button>
-        <button type="button" class="secondary" data-parent>家長</button>
+        <button type="button" class="cream-card mini task-tap" data-tasks>
+          <div class="mini-ico">📅</div>
+          <strong>${weekly.sessions}/7</strong>
+          <span>本週學習</span>
+        </button>
       </div>
-      <p class="hint trust-line">家長放心：無廣告 · 資料只存你部手機</p>
+
+      <button type="button" class="link-card" data-report>
+        <div>
+          <strong>我的學習報告</strong>
+          <span>睇進度、本週摘要（家長）</span>
+        </div>
+        <span class="chev">›</span>
+      </button>
+      <button type="button" class="link-card" data-vault>
+        <div>
+          <strong>詞彙寶庫</strong>
+          <span>按主題學香港小學常見單元詞</span>
+        </div>
+        <span class="chev">›</span>
+      </button>
     </div>
   `
+
+  const shellBody = mountShell(root, { screen: 'home', nav, bodyHtml: body })
   audio.unlockAudio()
-  const dismiss = root.querySelector('[data-nudge-dismiss]')
+
+  const go = (fn) => (e) => {
+    e?.preventDefault?.()
+    audio.tap()
+    audio.unlockAudio()
+    fn()
+  }
+  shellBody.querySelector('[data-parent]').onclick = go(() => nav({ screen: 'parent' }))
+  shellBody.querySelector('[data-profiles]').onclick = go(() => nav({ screen: 'profiles' }))
+  shellBody.querySelector('[data-start]').onclick = go(() => {
+    if (!gate.allowed) return
+    nav({ screen: 'adventure', band: p?.band || 'p1' })
+  })
+  shellBody.querySelectorAll('[data-tasks]').forEach((el) => {
+    el.onclick = go(() => nav({ screen: 'tasks' }))
+  })
+  shellBody.querySelector('[data-report]').onclick = go(() => nav({ screen: 'parent' }))
+  shellBody.querySelector('[data-vault]').onclick = go(() =>
+    nav({ screen: 'themes', band: p?.band || 'p1' }),
+  )
+  const dismiss = shellBody.querySelector('[data-nudge-dismiss]')
   if (dismiss) {
     dismiss.onclick = () => {
       audio.tap()
       try {
         sessionStorage.setItem(`wordjoy-nudge-dismissed-${todayKey()}`, '1')
       } catch {
-        /* session storage may be unavailable */
+        /* ignore */
       }
-      root.querySelector('.nudge-banner')?.remove()
+      shellBody.querySelector('.nudge-banner')?.remove()
     }
-  }
-  const grid = root.querySelector('#bands')
-  ;['prek', 'p1', 'p2', 'p3'].forEach((code) => {
-    const m = BAND_META[code]
-    const b = document.createElement('button')
-    b.type = 'button'
-    b.className = `big-btn ${code}`
-    b.dataset.band = code
-    b.disabled = !gate.allowed
-    b.innerHTML = `<span>${m.zh}</span><span class="en">${m.en}</span>`
-    b.addEventListener('click', () => {
-      if (!gate.allowed) return
-      audio.tap()
-      audio.unlockAudio()
-      nav({ screen: 'themes', band: code })
-    })
-    grid.appendChild(b)
-  })
-  const goProfiles = () => {
-    audio.tap()
-    nav({ screen: 'profiles' })
-  }
-  root.querySelector('[data-profiles]').onclick = goProfiles
-  root.querySelector('[data-profiles2]').onclick = goProfiles
-  root.querySelector('[data-parent]').onclick = () => {
-    audio.tap()
-    nav({ screen: 'parent' })
-  }
-  root.querySelector('[data-review]').onclick = () => {
-    if (!bag || !gate.allowed) return
-    audio.tap()
-    nav({ screen: 'play', band: 'review', theme: '__review__', game: 'review' })
   }
 }

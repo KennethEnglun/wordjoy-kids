@@ -30,7 +30,7 @@ export async function renderThemes(root, state, nav) {
   `
   root.querySelector('[data-back]').onclick = () => {
     audio.tap()
-    nav({ screen: 'home' })
+    nav({ screen: 'adventure', band: state.band })
   }
   const grid = root.querySelector('#themes')
   themes.forEach((t) => {
@@ -47,7 +47,13 @@ export async function renderThemes(root, state, nav) {
     `
     b.addEventListener('click', () => {
       audio.tap()
-      nav({ screen: 'games', band: state.band, theme: t })
+      {
+      if (state.pendingGame) {
+        nav({ screen: 'play', band: state.band, theme: t, game: state.pendingGame })
+      } else {
+        nav({ screen: 'games', band: state.band, theme: t })
+      }
+    }
     })
     grid.appendChild(b)
   })

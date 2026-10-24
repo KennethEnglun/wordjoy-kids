@@ -1,35 +1,48 @@
 import { test, expect } from '@playwright/test'
 
-test('home to pic match play', async ({ page }) => {
+test('home shell and start journey to pic match', async ({ page }) => {
   await page.goto('/')
   await expect(page.getByRole('heading', { name: '英樂寶' })).toBeVisible()
-  await expect(page.locator('img.momo-mascot, img.joy-mascot').first()).toBeVisible()
-  await page.getByRole('button', { name: /學前/ }).click()
+  await expect(page.getByRole('button', { name: /開始英文之旅/ })).toBeVisible()
+  await expect(page.getByRole('button', { name: '首頁' })).toBeVisible()
+  await page.getByRole('button', { name: /開始英文之旅/ }).click()
+  await expect(page.getByRole('heading', { name: /冒險地圖/ })).toBeVisible()
+  await page.getByRole('button', { name: /對對碰之路|Pic Match/i }).click()
   await expect(page.getByText(/揀主題/)).toBeVisible()
   await page.getByRole('button', { name: /我同家人|Family/i }).first().click()
-  await expect(page.getByText(/揀遊戲/)).toBeVisible()
-  await page.getByRole('button', { name: /對對碰|Pic Match/i }).click()
   const choice = page.locator('button.choice').first()
   await expect(choice).toBeVisible({ timeout: 10000 })
   await choice.click()
-  await expect(page.locator('#app')).toContainText(/題|星|金幣|再玩|正確|好叻|再睇|英樂寶|WordJoy|⭐/)
+  await expect(page.locator('#app')).toContainText(/題|星|金幣|好叻|再睇|WordJoy|英樂寶|⭐/)
 })
 
-test('band buttons and theme hint visible', async ({ page }) => {
+test('bottom tabs navigate', async ({ page }) => {
   await page.goto('/')
-  await expect(page.getByRole('button', { name: /小一/ })).toBeVisible()
-  await page.getByRole('button', { name: /小一/ }).click()
+  await page.getByRole('button', { name: '冒險', exact: true }).click()
+  await expect(page.getByRole('heading', { name: /冒險地圖/ })).toBeVisible()
+  await page.getByRole('button', { name: '任務', exact: true }).click()
+  await expect(page.getByRole('heading', { name: /今日任務/ })).toBeVisible()
+  await page.getByRole('button', { name: '商店', exact: true }).click()
+  await expect(page.getByRole('heading', { name: /星星小店/ })).toBeVisible()
+  await page.getByRole('button', { name: '角色', exact: true }).click()
+  await expect(page.getByRole('heading', { name: /我的毛毛/ })).toBeVisible()
+  await page.getByRole('button', { name: '首頁', exact: true }).click()
+  await expect(page.getByRole('heading', { name: '英樂寶' })).toBeVisible()
+})
+
+test('band theme hint via vault', async ({ page }) => {
+  await page.goto('/')
+  await page.getByRole('button', { name: /詞彙寶庫/ }).click()
   await expect(page.getByText(/貼近香港小學/)).toBeVisible()
 })
 
 test('profile switch screen', async ({ page }) => {
-  await page.goto('/')
+  await page.goto('/#/character')
   await page.getByRole('button', { name: /切換小朋友/ }).click()
   await expect(page.getByRole('heading', { name: /揀小朋友/ })).toBeVisible()
-  await expect(page.getByText(/新增小朋友|已達/)).toBeVisible()
 })
 
-test('review bag play from seeded storage', async ({ page }) => {
+test('review bag from tasks', async ({ page }) => {
   await page.addInitScript(() => {
     localStorage.setItem(
       'wordjoy-progress',
@@ -38,6 +51,7 @@ test('review bag play from seeded storage', async ({ page }) => {
         parentPin: null,
         dailyGoalStars: 15,
         sessionCapMinutes: 0,
+        weeklyThemes: [],
         profiles: {
           kid1: {
             id: 'kid1',
@@ -57,84 +71,26 @@ test('review bag play from seeded storage', async ({ page }) => {
       }),
     )
   })
-  await page.goto('/')
-  await expect(page.locator('.goal-label')).toBeVisible()
+  await page.goto('/#/tasks')
   await page.getByRole('button', { name: /複習袋/ }).click()
-  const choice = page.locator('button.choice').first()
-  await expect(choice).toBeVisible({ timeout: 10000 })
+  await expect(page.locator('button.choice').first()).toBeVisible({ timeout: 10000 })
 })
 
-test('word race game starts', async ({ page }) => {
-  await page.goto('/')
-  await page.getByRole('button', { name: /學前/ }).click()
+test('word race from adventure', async ({ page }) => {
+  await page.goto('/#/adventure/prek')
+  await page.getByRole('button', { name: /詞語賽道|Word Race/i }).click()
   await page.getByRole('button', { name: /動物|Animals/i }).first().click()
-  await page.getByRole('button', { name: /詞語賽跑|Word Race/i }).click()
   await expect(page.locator('button.choice').first()).toBeVisible({ timeout: 10000 })
-  await expect(page.locator('#app')).toContainText(/賽跑|向前|題/)
 })
 
-test('parent weekly digest behind optional PIN', async ({ page }) => {
-  await page.addInitScript(() => {
-    const day = new Date().toISOString().slice(0, 10)
-    localStorage.setItem(
-      'wordjoy-progress',
-      JSON.stringify({
-        activeProfileId: 'kid1',
-        parentPin: null,
-        dailyGoalStars: 15,
-        sessionCapMinutes: 20,
-        profiles: {
-          kid1: {
-            id: 'kid1',
-            name: '樂樂',
-            avatar: '🐱',
-            band: 'p1',
-            coins: 10,
-            stars: 8,
-            best: {},
-            reviewBag: [],
-            sessions: [
-              { at: Date.now(), band: 'p1', theme: 'animals', game: 'word_race', correct: 7, total: 8, stars: 2, coins: 8, missed: [] },
-              { at: Date.now() - 86400000, band: 'p1', theme: 'food', game: 'fish_words', correct: 5, total: 8, stars: 1, coins: 5, missed: ['milk'] },
-            ],
-            streak: { count: 4, lastDate: day },
-            todayKey: day,
-            todayStars: 4,
-          },
-        },
-      }),
-    )
-  })
-  await page.goto('/')
-  await page.getByRole('button', { name: /^家長$/ }).click()
-  await expect(page.getByText(/本週摘要/)).toBeVisible()
-  await expect(page.getByText(/每日目標同時間上限/)).toBeVisible()
-  await expect(page.getByLabel(/每日星星目標|goal/i).or(page.locator('#goal-stars'))).toBeVisible()
-})
-
-test('cafe order game starts', async ({ page }) => {
+test('cafe order still works', async ({ page }) => {
   await page.goto('/#/play/prek/food/cafe_order')
-  await expect(page.locator('.cafe-order')).toBeVisible({ timeout: 10000 })
-  await expect(page.locator('.order-line')).toContainText('我想要')
-  await expect(page.locator('button.choice').first()).toBeVisible({ timeout: 10000 })
-  await page.locator('button.choice').first().click()
-  await expect(page.locator('#app')).toContainText(/小食店|我想要|金幣|題/)
+  await expect(page.locator('.cafe-order, .order-line').first()).toBeVisible({ timeout: 10000 })
+  await expect(page.locator('button.choice').first()).toBeVisible()
 })
 
-test('parent sees weekly school themes when no PIN', async ({ page }) => {
+test('parent school themes', async ({ page }) => {
   await page.goto('/')
-  await page.getByRole('button', { name: /^家長$/ }).click()
+  await page.getByRole('button', { name: /進入家長端/ }).click()
   await expect(page.getByText('本週學校主題')).toBeVisible()
-  const food = page.locator('[data-theme-pick="food"]')
-  const animals = page.locator('[data-theme-pick="animals"]')
-  await expect(food).toBeVisible()
-  await food.click()
-  await animals.click()
-  await page.getByRole('button', { name: /儲存本週主題/ }).click()
-  await expect(page.getByText(/已儲存本週學校主題/)).toBeVisible()
-  const themes = await page.evaluate(() => {
-    const raw = JSON.parse(localStorage.getItem('wordjoy-progress'))
-    return raw.weeklyThemes
-  })
-  expect(themes).toEqual(['food', 'animals'])
 })

@@ -84,7 +84,7 @@ WordJoy 定位：**「香港家庭版詞彙 Blooket」**——手機單手玩、
 | R2 | 發音 TTS／預錄、複習袋、家長摘要卡 | 追 Lingokids 基礎可信 |
 | R3 | 多子女檔、每日目標、streak | 追 Duolingo 習慣 |
 | R4 | +3 遊戲模式、詞庫→200+ | 追 Blooket 新鮮感 |
-| R5 | 「本週學校主題」建議（家長自選單元） | 半步向 GoAsk／朗文家信任 |
+| R5 | UI shell 對齊字學貓樂園（cream/sage tab IA）+ 本週學校主題 | 姐妹 app 宇宙 + GoAsk／朗文家信任 |
 
 ---
 
@@ -94,3 +94,15 @@ WordJoy 定位：**「香港家庭版詞彙 Blooket」**——手機單手玩、
 2. **不及清單**（最多 5 條，下一輪必改）
 3. **亮點放大**（本輪加強咗邊樣香港痛點）
 4. **下一輪改進程**
+
+---
+
+## R5 姐妹 app 對齊（字學貓樂園）
+
+- **視覺**：cream 卡、sage 主色、暖棕字、天空／山丘漸變（水彩感 placeholder；ChatGPT 美術後續換）
+- **IA**：底部 5 tab — 首頁／冒險／任務／商店／角色（英文學習標籤）
+- **首頁**：捲軸 banner + 毛毛 +「開始英文之旅」+ 今日任務卡 + 學習報告／詞彙寶庫
+- **冒險**：遊戲作任務卡（pic_match…cafe_order），唔再用 emoji 網格主入口
+- **商店／角色換裝**：stub only（唔做 gacha／全換裝）
+- 詳見 `SISTER_APP_ALIGN.md`；參考圖 `art/reference/zijimao/`
+
