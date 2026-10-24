@@ -1,0 +1,12 @@
+{
+  "name": "英樂寶 WordJoy",
+  "short_name": "WordJoy",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFE6F2",
+  "theme_color": "#FF6B9D",
+  "icons": [
+    { "src": "/art/ui/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

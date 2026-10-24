@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <circle cx="64" cy="64" r="54" fill="#FFC107" stroke="#FF8F00" stroke-width="8"/>
+  <text x="64" y="80" text-anchor="middle" font-size="56" font-weight="700" fill="#FFF8E1">$</text>
+</svg>
