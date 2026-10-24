@@ -7,10 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "playwright test"
+    "test": "playwright test",
+    "start": "serve dist -s -l tcp://0.0.0.0:$PORT"
   },
   "devDependencies": {
     "@playwright/test": "^1.49.1",
     "vite": "^6.0.7"
+  },
+  "dependencies": {
+    "serve": "^14.2.6"
   }
 }
