@@ -2,6 +2,7 @@ import { distractors, shuffle } from '../lib/vocab.js'
 import * as audio from '../lib/audio.js'
 
 const ART = {
+  bg: '/art/games/treasure/treasure_bg_forest.webp',
   chests: {
     wood: {
       closed: '/art/games/treasure/treasure_chest_wood_closed.webp',
@@ -162,7 +163,7 @@ export function createTreasureTap({ words, pool, onDone, onCorrect, roundSize = 
 
   function shell(content, subtitle = '') {
     return `
-      <main class="treasure-game">
+      <main class="treasure-game" style="--treasure-bg: url('${ART.bg}')">
         <header class="treasure-topline">
           <div class="treasure-title"><span aria-hidden="true">✦</span><div><strong>寶箱森林</strong><small>${escapeHtml(subtitle || '第 ' + Math.min(roundIndex + 1, rounds.length) + ' / ' + rounds.length + ' 回合')}</small></div></div>
           <div class="treasure-gold-pill"><img src="${ART.coin}" alt="" /><span>金幣</span><b data-player-gold>${playerGold}</b></div>

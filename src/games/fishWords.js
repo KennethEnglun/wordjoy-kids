@@ -2,6 +2,7 @@ import { distractors, shuffle } from '../lib/vocab.js'
 import * as audio from '../lib/audio.js'
 
 const ART = {
+  bg: '/art/games/fishing/fishing_bg_lake.webp',
   pier: '/art/games/fishing/fishing_pier.webp',
   bucket: '/art/games/fishing/fishing_bucket.webp',
   mascot: '/art/games/fishing/fishing_mascot_cast.webp',
@@ -165,7 +166,7 @@ export function createFishWords({ words, pool, onDone, onCorrect, roundSize = 8 
   function shell(content, footer = '') {
     const remainingBait = Math.max(0, rounds.length - roundIndex - (baitUsed ? 1 : 0))
     return `
-      <main class="fish-game">
+      <main class="fish-game" style="--fish-bg: url('${ART.bg}')">
         <header class="fish-topline">
           <div class="fish-title"><span aria-hidden="true">🎣</span><div><strong>釣魚湖</strong><small>第 ${Math.min(roundIndex + 1, rounds.length)} / ${rounds.length} 竿</small></div></div>
           <div class="fish-hud">

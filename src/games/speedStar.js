@@ -3,6 +3,7 @@ import * as audio from '../lib/audio.js'
 
 const ROUND_MS = 8000
 const ART = {
+  bg: '/art/games/speed/speed_bg_forest_path.webp',
   flashcard: '/art/games/speed/speed_flashcard_frame.webp',
   tile: '/art/games/speed/speed_letter_tile.webp',
   combo: {
@@ -169,7 +170,7 @@ export function createSpeedStar({ words, pool, onDone, onCorrect, roundSize = 8 
 
   function shell(content, subtitle = '') {
     return `
-      <main class="speed-game">
+      <main class="speed-game" style="--speed-bg: url('${ART.bg}')">
         <header class="speed-topline">
           <div class="speed-title"><span aria-hidden="true">✦</span><div><strong>閃電谷</strong><small>${escapeHtml(subtitle || `第 ${Math.min(roundIndex + 1, rounds.length)} / ${rounds.length} 題`)}</small></div></div>
           <div class="speed-hud">

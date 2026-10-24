@@ -2,6 +2,7 @@ import { distractors, shuffle } from '../lib/vocab.js'
 import * as audio from '../lib/audio.js'
 
 const ART = {
+  bg: '/art/games/race/race_bg_track.webp',
   playerRun: [1, 2, 3, 4].map((i) => `/art/games/anim/zxm_run_0${i}.webp`),
   rivals: {
     bunny: [1, 2, 3, 4].map((i) => `/art/games/anim/rival_bunny_run_0${i}.webp`),
@@ -353,7 +354,7 @@ export function createWordRace({ words, pool, onDone, onCorrect, roundSize = 8 }
       return
     }
     rootEl.innerHTML = `
-      <div class="race-game">
+      <div class="race-game" style="--race-bg: url('${ART.bg}')">
         <div class="race-topline">
           <div class="race-title"><span class="race-flag">🏁</span><span>詞語賽道</span></div>
           <div class="race-stats">

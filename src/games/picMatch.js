@@ -4,6 +4,7 @@ import * as audio from '../lib/audio.js'
 const CLEAR_BONUS = 5
 const PAIR_REWARD = 2
 const ART = {
+  bg: '/art/games/memory/memory_bg_clearing.webp',
   board: '/art/games/memory/memory_board_frame.webp',
   back: '/art/games/memory/memory_tile_back.webp',
   face: '/art/games/memory/memory_tile_face_frame.webp',
@@ -133,7 +134,7 @@ export function createPicMatch({ words, pool, onDone, onCorrect, roundSize = 8 }
 
   function shell(content, subtitle = '') {
     return `
-      <main class="memory-game">
+      <main class="memory-game" style="--memory-bg: url('${ART.bg}')">
         <header class="memory-topline">
           <div class="memory-title"><span aria-hidden="true">✿</span><div><strong>對對碰</strong><small>${escapeHtml(subtitle || '翻開圖卡，搵出英文配對')}</small></div></div>
           <div class="memory-stats">
