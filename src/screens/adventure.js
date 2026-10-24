@@ -9,7 +9,7 @@ const ROUTES = [
   { id: 'treasure_tap', zh: '寶箱森林', en: 'Treasure Tap', blurb: '答啱開寶箱', emoji: '💎' },
   { id: 'word_race', zh: '詞語賽道', en: 'Word Race', blurb: '答啱向前跑', emoji: '🏁' },
   { id: 'fish_words', zh: '釣魚湖', en: 'Fish Words', blurb: '釣起英文魚', emoji: '🎣' },
-  { id: 'cafe_order', zh: '小食店', en: 'Café Order', blurb: '睇訂單揀食物', emoji: '🍽️' },
+  { id: 'cafe_order', zh: '小食店', en: 'Café Order', blurb: '答題攞材料砌餐 · 闖關解鎖新菜式', emoji: '🍽️' },
 ]
 
 export function renderAdventure(root, state, nav) {

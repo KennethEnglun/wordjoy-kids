@@ -40,10 +40,27 @@ const DISHES = [
 
 const INGREDIENT_BY_ID = Object.fromEntries(INGREDIENTS.map((ingredient) => [ingredient.id, ingredient]))
 const DISH_BY_ID = Object.fromEntries(DISHES.map((dish) => [dish.id, dish]))
-const MAX_QUEUE = 3
-const PATIENCE_MS = 36000
+const STAGES = [
+  { stage: 1, dishes: ['sandwich'], maxQueue: 1, serveGoal: 3, patienceMs: 40000 },
+  { stage: 2, dishes: ['sandwich'], maxQueue: 2, serveGoal: 4, patienceMs: 36000 },
+  { stage: 3, dishes: ['sandwich', 'burger'], maxQueue: 2, serveGoal: 5, patienceMs: 34000 },
+  { stage: 4, dishes: ['sandwich', 'burger', 'coffee'], maxQueue: 3, serveGoal: 6, patienceMs: 32000 },
+  { stage: 5, dishes: ['sandwich', 'burger', 'coffee'], maxQueue: 3, serveGoal: 6, patienceMs: 30000 },
+]
 const PATIENCE_TICK_MS = 150
 const WRONG_PATIENCE_LOSS = 22
+
+function stageRules(stage) {
+  if (stage <= STAGES.length) return STAGES[stage - 1]
+  const stepsAfterFive = stage - 5
+  return {
+    stage,
+    dishes: STAGES[4].dishes,
+    maxQueue: STAGES[4].maxQueue,
+    serveGoal: Math.min(10, 6 + stepsAfterFive),
+    patienceMs: Math.max(22000, 30000 - stepsAfterFive * 1500),
+  }
+}
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/g, (char) => ({
@@ -83,16 +100,6 @@ function pickCafeWords(words, pool, roundSize = 8) {
   return uniqueWords([...food, ...base.filter((word) => word.theme !== 'food'), ...fullPool])
 }
 
-function makeRounds(source, requestedRounds) {
-  if (!source.length || requestedRounds <= 0) return []
-  const food = source.filter((word) => word.theme === 'food')
-  const fallback = source.filter((word) => word.theme !== 'food')
-  const ordered = food.length && food.length < requestedRounds
-    ? [...shuffle(food), ...shuffle(fallback)]
-    : shuffle(source)
-  return ordered.slice(0, requestedRounds)
-}
-
 /** Vocab answers earn ingredients; players assemble each customer's dish before serving it. */
 export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 }) {
   const requestedRounds = Number.isFinite(Number(roundSize))
@@ -100,8 +107,8 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     : 8
   const answerPool = uniqueWords(Array.isArray(pool) && pool.length ? pool : (Array.isArray(words) ? words : []))
   const source = pickCafeWords(words, answerPool, requestedRounds)
-  const rounds = makeRounds(source, requestedRounds)
-  const customerLimit = rounds.length ? Math.min(MAX_QUEUE, Math.max(1, Math.ceil(rounds.length / 4))) : 0
+  let deck = shuffle(source)
+  let deckCursor = 0
 
   let rootEl = null
   let queue = []
@@ -110,6 +117,9 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
   let questionIndex = 0
   let vocabCorrect = 0
   let served = 0
+  let stage = 1
+  let stageServed = 0
+  let stageReached = 1
   let left = 0
   let coins = 0
   let answerLocked = false
@@ -123,6 +133,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
   let departureTimer = null
   let chefStopTimer = null
   let questionAdvanceTimer = null
+  let celebrationTimer = null
   let lastCustomerType = null
   const timers = new Set()
   const inventory = Object.fromEntries(INGREDIENTS.map((ingredient) => [ingredient.id, 0]))
@@ -151,6 +162,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     departureTimer = null
     chefStopTimer = null
     questionAdvanceTimer = null
+    celebrationTimer = null
     if (patienceInterval) clearInterval(patienceInterval)
     if (customerAnimationInterval) clearInterval(customerAnimationInterval)
     if (chefAnimationInterval) clearInterval(chefAnimationInterval)
@@ -161,6 +173,15 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
 
   function activeCustomer() {
     return queue[0] && !queue[0].leaving ? queue[0] : null
+  }
+
+  function currentWord() {
+    if (!source.length) return null
+    if (deckCursor >= deck.length) {
+      deck = shuffle(source)
+      deckCursor = 0
+    }
+    return deck[deckCursor]
   }
 
   function recipeFor(customer) {
@@ -178,19 +199,22 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
 
   function updateHud() {
     if (!rootEl) return
-    const servedCount = rootEl.querySelector('[data-served]')
+    const stageProgress = rootEl.querySelector('[data-stage-progress]')
     const coinCount = rootEl.querySelector('[data-coins]')
     const queueCount = rootEl.querySelector('[data-queue-count]')
-    if (servedCount) servedCount.textContent = `${served}/${customerLimit}`
+    const rules = stageRules(stage)
+    if (stageProgress) stageProgress.textContent = `關卡 ${stage} · 出餐 ${stageServed}/${rules.serveGoal}`
     if (coinCount) coinCount.textContent = String(coins)
-    if (queueCount) queueCount.textContent = `${queue.filter((customer) => !customer.leaving).length}/${MAX_QUEUE}`
+    if (queueCount) queueCount.textContent = `${queue.filter((customer) => !customer.leaving).length}/${rules.maxQueue}`
   }
 
   function renderQueue() {
     if (!rootEl) return
     const queueEl = rootEl.querySelector('[data-queue]')
     if (!queueEl) return
-    queueEl.innerHTML = Array.from({ length: MAX_QUEUE }, (_, index) => {
+    const rules = stageRules(stage)
+    queueEl.style.gridTemplateColumns = `repeat(${rules.maxQueue}, minmax(0, 1fr))`
+    queueEl.innerHTML = Array.from({ length: rules.maxQueue }, (_, index) => {
       const customer = queue[index]
       if (!customer) {
         return '<div class="cafe-customer cafe-customer-empty" aria-hidden="true"><span>等候位</span><i>✿</i></div>'
@@ -249,6 +273,8 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
   }
 
   function chooseIngredient() {
+    const unlockedIngredients = [...new Set(stageRules(stage).dishes.flatMap((dishId) => DISH_BY_ID[dishId].ingredients))]
+    const availableIngredients = INGREDIENTS.filter((ingredient) => unlockedIngredients.includes(ingredient.id))
     const activeDemand = Object.fromEntries(INGREDIENTS.map((ingredient) => [ingredient.id, 0]))
     const waitingDemand = Object.fromEntries(INGREDIENTS.map((ingredient) => [ingredient.id, 0]))
     queue.filter((customer) => !customer.leaving).forEach((customer, index) => {
@@ -259,14 +285,14 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     })
 
     const weighted = []
-    INGREDIENTS.forEach((ingredient) => {
+    availableIngredients.forEach((ingredient) => {
       const activeGap = Math.max(0, activeDemand[ingredient.id] - inventory[ingredient.id])
       const inventoryForWaiting = Math.max(0, inventory[ingredient.id] - activeDemand[ingredient.id])
       const waitingGap = Math.max(0, waitingDemand[ingredient.id] - inventoryForWaiting)
       const weight = activeGap * 4 + waitingGap
       for (let index = 0; index < weight; index++) weighted.push(ingredient)
     })
-    const choices = weighted.length ? weighted : INGREDIENTS
+    const choices = weighted.length ? weighted : availableIngredients
     return choices[Math.floor(Math.random() * choices.length)]
   }
 
@@ -274,19 +300,13 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     if (!rootEl || finished || destroyed) return
     const section = rootEl.querySelector('[data-question]')
     if (!section) return
-    if (questionIndex >= rounds.length) {
-      section.innerHTML = `
-        <div class="cafe-question-done">
-          <span class="cafe-question-done-icon" aria-hidden="true">📚</span>
-          <div><strong>詞語答完啦！</strong><span>繼續完成手上的餐單，就可以出餐賺金幣。</span></div>
-        </div>
-        <div class="cafe-feedback" data-feedback aria-live="polite">食材已放入櫃檯，記得放進餐單。</div>
-      `
+    const word = currentWord()
+    if (!word) {
+      section.innerHTML = '<div class="cafe-feedback" data-feedback aria-live="polite">暫時沒有可練習的詞語。</div>'
       updateHud()
       return
     }
 
-    const word = rounds[questionIndex]
     const options = shuffle([word, ...distractors(answerPool, word, 3)])
     const promptImage = word.image
       ? `<img class="cafe-prompt-img" src="${escapeHtml(imagePath(word.image))}" alt="${escapeHtml(word.zhHant)}" />`
@@ -296,7 +316,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
         <div class="cafe-order-prompt">
           ${promptImage}
           <div class="cafe-prompt-copy">
-            <span class="cafe-prompt-eyebrow">詞語獎勵 · 第 ${questionIndex + 1}/${rounds.length} 題</span>
+            <span class="cafe-prompt-eyebrow">詞語獎勵 · 第 ${questionIndex + 1} 題</span>
             <strong>${escapeHtml(word.zhHant)}</strong>
             <span class="cafe-prompt-caption">答啱獲得一款食材</span>
           </div>
@@ -374,7 +394,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
 
     workbench.innerHTML = `
       <div class="cafe-workbench-head">
-        <div><strong>${dish.emoji} ${escapeHtml(dish.zh)}餐單</strong><span>${escapeHtml(ART.customers[customer.type].name)} · 訂單 ${customer.orderNo}/${customerLimit}</span></div>
+        <div><strong>${dish.emoji} ${escapeHtml(dish.zh)}餐單</strong><span>${escapeHtml(ART.customers[customer.type].name)} · 訂單 ${customer.orderNo}</span></div>
         <span class="cafe-stock-total">櫃檯 ${Object.values(inventory).reduce((sum, amount) => sum + amount, 0)} 件</span>
       </div>
       <div class="cafe-recipe-slots" aria-label="${escapeHtml(dish.zh)}食譜">${slots}</div>
@@ -467,6 +487,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     if (destroyed || finished || activeCustomer()?.id !== customer.id || !customer.crafted) return
     audio.tap()
     served++
+    stageServed++
     coins += 3
     customer.leaving = true
     customer.wasServed = true
@@ -478,7 +499,45 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     renderWorkbench()
     announce(`<img src="${ART.sparkle}" alt="" /> ${escapeHtml(recipeFor(customer).zh)}出餐成功！ +3 金幣`, 'good')
     animateChef()
+    if (stageServed >= stageRules(stage).serveGoal) advanceStage()
     scheduleDeparture()
+  }
+
+  function celebrateStage(nextStage, unlocks) {
+    if (!rootEl) return
+    clearTracked(celebrationTimer)
+    const unlockText = unlocks.length ? `<b>🔓 ${unlocks.join(' · ')}</b>` : ''
+    const overlay = document.createElement('div')
+    overlay.className = 'cafe-stage-celebration'
+    overlay.setAttribute('role', 'status')
+    overlay.setAttribute('aria-live', 'polite')
+    overlay.innerHTML = `
+      <div class="cafe-stage-card">
+        <img src="${ART.sparkle}" alt="" />
+        <strong>闖關成功！升上關卡 ${nextStage}</strong>
+        ${unlockText}
+        <span>字學貓：「做得好，繼續幫客人砌餐！」</span>
+      </div>
+    `
+    rootEl.querySelector('.cafe-game')?.appendChild(overlay)
+    celebrationTimer = schedule(() => {
+      celebrationTimer = null
+      overlay.remove()
+    }, 1900)
+  }
+
+  function advanceStage() {
+    const previousRules = stageRules(stage)
+    stage++
+    stageServed = 0
+    stageReached = Math.max(stageReached, stage)
+    const nextRules = stageRules(stage)
+    const unlocks = nextRules.dishes
+      .filter((dishId) => !previousRules.dishes.includes(dishId))
+      .map((dishId) => `解鎖${DISH_BY_ID[dishId].zh}`)
+    if (nextRules.maxQueue > previousRules.maxQueue) unlocks.push('新增等候位')
+    renderAll()
+    celebrateStage(stage, unlocks)
   }
 
   function markMissed(word) {
@@ -486,8 +545,9 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
   }
 
   function answer(option, chosenButton) {
-    if (finished || destroyed || answerLocked || questionIndex >= rounds.length) return
-    const word = rounds[questionIndex]
+    if (finished || destroyed || answerLocked) return
+    const word = currentWord()
+    if (!word) return
     const isCorrect = String(option.id) === String(word.id)
     const section = rootEl?.querySelector('[data-question]')
     const buttons = [...(section?.querySelectorAll('.cafe-choice') || [])]
@@ -495,6 +555,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     answerLocked = true
     buttons.forEach((button) => { button.disabled = true })
     questionIndex++
+    deckCursor++
 
     if (isCorrect) {
       vocabCorrect++
@@ -524,16 +585,16 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
       answerLocked = false
       renderQuestion()
       renderWorkbench()
-      if (questionIndex >= rounds.length) finishIfDone()
     }, isCorrect ? 720 : 950)
   }
 
   function createCustomer() {
-    if (nextOrderIndex >= customerLimit) return null
     const typeChoices = Object.keys(ART.customers).filter((type) => type !== lastCustomerType)
     const type = typeChoices[Math.floor(Math.random() * typeChoices.length)] || 'rabbit'
     lastCustomerType = type
-    const dish = DISHES[Math.floor(Math.random() * DISHES.length)]
+    const rules = stageRules(stage)
+    const dishId = rules.dishes[Math.floor(Math.random() * rules.dishes.length)]
+    const dish = DISH_BY_ID[dishId]
     const customer = {
       id: nextCustomerId++,
       type,
@@ -550,10 +611,10 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
   }
 
   function scheduleArrival(delay) {
-    if (arrivalTimer || destroyed || finished || queue.length >= MAX_QUEUE || nextOrderIndex >= customerLimit) return
+    if (arrivalTimer || destroyed || finished || queue.length >= stageRules(stage).maxQueue) return
     arrivalTimer = schedule(() => {
       arrivalTimer = null
-      if (destroyed || finished || queue.length >= MAX_QUEUE || nextOrderIndex >= customerLimit) return
+      if (destroyed || finished || queue.length >= stageRules(stage).maxQueue) return
       const customer = createCustomer()
       if (customer) queue.push(customer)
       renderAll()
@@ -562,7 +623,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
   }
 
   function ensureArrival(delay = 450) {
-    if (queue.length < MAX_QUEUE && nextOrderIndex < customerLimit) scheduleArrival(delay)
+    if (queue.length < stageRules(stage).maxQueue) scheduleArrival(delay)
   }
 
   function releaseCustomerIngredients(customer) {
@@ -576,7 +637,6 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     queue = queue.filter((customer) => !customer.leaving)
     renderAll()
     ensureArrival()
-    finishIfDone()
   }
 
   function scheduleDeparture() {
@@ -590,7 +650,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     queue.forEach((customer, index) => {
       if (customer.leaving) return
       const waitFactor = index === 0 ? 1 : 0.32
-      customer.patience = Math.max(0, customer.patience - (PATIENCE_TICK_MS / PATIENCE_MS) * 100 * waitFactor)
+      customer.patience = Math.max(0, customer.patience - (PATIENCE_TICK_MS / stageRules(stage).patienceMs) * 100 * waitFactor)
       if (customer.patience <= 0) expired.push(customer)
     })
     expired.forEach((customer) => {
@@ -615,37 +675,18 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     }
   }
 
-  function finishIfDone() {
+  function finishSession() {
     if (finished || destroyed) return
-    const questionsDone = questionIndex >= rounds.length && !answerLocked
-    const customersDone = queue.length === 0 && nextOrderIndex >= customerLimit
-    if (!questionsDone || !customersDone) return
     finished = true
     clearTimers()
-    updateHud()
-    if (rootEl) {
-      rootEl.querySelectorAll('button').forEach((button) => { button.disabled = true })
-      const question = rootEl.querySelector('[data-question]')
-      if (question) {
-        question.innerHTML = `
-          <div class="cafe-finish-card">
-            <img src="${ART.sparkle}" alt="" />
-            <div><strong>收工啦！</strong><span>字學貓完成了 ${served} 張餐單</span></div>
-            <b>+${coins} 金幣</b>
-          </div>
-        `
-      }
-      const workbench = rootEl.querySelector('[data-workbench]')
-      if (workbench) workbench.innerHTML = `<div class="cafe-finish-note">今日已完成 · 答啱 ${vocabCorrect}/${rounds.length} 題 · 出餐 ${served} 份</div>`
-    }
     onDone?.({
       correct: vocabCorrect,
       served,
-      total: rounds.length,
+      total: questionIndex,
       coins,
       missed: [...missedIds],
       correctIds,
-      meta: { served, left, orders: customerLimit, vocabCorrect },
+      meta: { served, left, orders: nextOrderIndex, vocabCorrect, stageReached },
     })
   }
 
@@ -657,15 +698,16 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
         <header class="cafe-topline">
           <div class="cafe-title"><span class="cafe-title-icon" aria-hidden="true">☕</span><div><strong>小食店</strong><small>字學貓廚房</small></div></div>
           <div class="cafe-stats">
-            <span class="cafe-stat cafe-progress"><b data-served>0/${customerLimit}</b><small>已出餐</small></span>
+            <span class="cafe-stat cafe-progress"><b data-stage-progress>關卡 1 · 出餐 0/3</b></span>
             <span class="cafe-stat cafe-coin"><img src="${ART.coin}" alt="" /><b data-coins>0</b><small>金幣</small></span>
+            <button type="button" class="cafe-finish" data-finish>收工</button>
           </div>
         </header>
 
         <section class="cafe-counter" aria-label="字學貓小食店櫃檯">
           <div class="cafe-wall-window" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
           <div class="cafe-shelf" aria-hidden="true"><i>✿</i><i>🍃</i><i>✿</i></div>
-          <div class="cafe-queue-label">等候客人 <b data-queue-count>0/${MAX_QUEUE}</b></div>
+          <div class="cafe-queue-label">等候客人 <b data-queue-count>0/1</b></div>
           <div class="cafe-queue" data-queue role="list" aria-label="顧客隊伍"></div>
           <img class="cafe-sparkle" data-sparkle src="${ART.sparkle}" alt="" />
           <img class="cafe-chef" data-chef src="${ART.chefIdle}" alt="字學貓廚師" draggable="false" />
@@ -680,9 +722,11 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     renderQueue()
     renderQuestion()
     renderWorkbench()
-    if (!rounds.length) {
-      questionIndex = 0
-      finishIfDone()
+    rootEl.querySelector('[data-finish]')?.addEventListener('click', () => {
+      audio.tap()
+      finishSession()
+    })
+    if (!source.length) {
       return
     }
 

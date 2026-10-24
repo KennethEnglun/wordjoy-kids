@@ -513,7 +513,7 @@ button:disabled { opacity: 0.45; }
 }
 .fish-pond.caught { animation: splash .5s ease; }
 @keyframes splash { 50% { transform: scale(1.03); } }
-.cafe-game { display: flex; flex-direction: column; gap: 7px; min-height: 100%; padding-bottom: 4px; }
+.cafe-game { position: relative; display: flex; flex-direction: column; gap: 7px; min-height: 100%; padding-bottom: 4px; }
 .cafe-topline { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 39px; }
 .cafe-title { display: flex; align-items: center; gap: 7px; min-width: 0; }
 .cafe-title-icon {
@@ -532,6 +532,9 @@ button:disabled { opacity: 0.45; }
 }
 .cafe-stat b { font-size: 13px; font-variant-numeric: tabular-nums; }
 .cafe-stat small { color: var(--muted); font-size: 9px; font-weight: 750; }
+.cafe-progress { flex: 0 1 auto; min-width: 0; padding-inline: 7px; }
+.cafe-progress b { overflow: hidden; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.cafe-finish { min-width: 0; min-height: 32px; padding: 4px 8px; color: #76533c; background: #f3e4cf; border: 1px solid rgba(92, 64, 51, .1); border-radius: 999px; font-size: 9px; font-weight: 900; }
 .cafe-coin img { width: 21px; height: 21px; object-fit: contain; }
 .cafe-counter {
   position: relative; isolation: isolate; height: clamp(205px, 29vh, 245px); min-height: 205px;
@@ -653,11 +656,6 @@ button:disabled { opacity: 0.45; }
 .cafe-feedback.is-good { color: var(--sage-deep); }
 .cafe-feedback.is-missed { color: #a85e4b; }
 .cafe-feedback img { width: 19px; height: 19px; object-fit: contain; }
-.cafe-question-done { min-height: 112px; display: flex; align-items: center; justify-content: center; gap: 9px; padding: 10px; }
-.cafe-question-done-icon { font-size: 36px; }
-.cafe-question-done strong, .cafe-question-done span { display: block; }
-.cafe-question-done strong { font-size: 15px; }
-.cafe-question-done div span { max-width: 230px; margin-top: 2px; color: var(--muted); font-size: 10px; font-weight: 700; }
 .cafe-workbench { padding: 8px; }
 .cafe-workbench-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 6px; }
 .cafe-workbench-head > div { min-width: 0; display: flex; flex-direction: column; gap: 1px; }
@@ -705,13 +703,14 @@ button:disabled { opacity: 0.45; }
 .cafe-workbench-actions button { min-width: 63px; min-height: 38px; padding: 4px 9px; border-radius: 11px; font-size: 10px; font-weight: 900; }
 .cafe-craft { color: #56775a; background: #e5efdf; border: 1px solid rgba(95, 133, 100, .24); }
 .cafe-serve { color: #75542f; background: #f8e6b6; border: 1px solid rgba(196, 151, 68, .3); }
-.cafe-finish-card { min-height: 152px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center; }
-.cafe-finish-card img { width: 42px; height: 42px; object-fit: contain; }
-.cafe-finish-card strong, .cafe-finish-card span { display: block; }
-.cafe-finish-card strong { font-size: 18px; }
-.cafe-finish-card span { color: var(--muted); font-size: 10px; font-weight: 750; }
-.cafe-finish-card b { margin-top: 3px; color: #a76b2f; font-size: 15px; }
-.cafe-finish-note { padding: 25px 8px; color: var(--sage-deep); text-align: center; font-size: 12px; font-weight: 850; }
+.cafe-stage-celebration { position: absolute; z-index: 10; inset: 0; display: grid; place-items: center; padding: 16px; background: rgba(70, 52, 36, .23); animation: cafe-stage-in .18s ease-out; }
+.cafe-stage-card { width: min(100%, 320px); display: flex; flex-direction: column; align-items: center; gap: 7px; padding: 18px 16px; color: var(--ink); background: #fff9e9; border: 2px solid rgba(230, 179, 90, .65); border-radius: 22px; box-shadow: 0 12px 35px rgba(67, 48, 33, .23); text-align: center; animation: cafe-stage-pop .32s cubic-bezier(.2, .8, .25, 1.25); }
+.cafe-stage-card img { width: 42px; height: 42px; object-fit: contain; }
+.cafe-stage-card strong { color: var(--sage-deep); font-size: 17px; }
+.cafe-stage-card b { color: #a76b2f; font-size: 12px; }
+.cafe-stage-card span { color: var(--muted); font-size: 11px; font-weight: 800; }
+@keyframes cafe-stage-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes cafe-stage-pop { from { transform: scale(.85) translateY(8px); } to { transform: scale(1) translateY(0); } }
 .cafe-empty { min-height: 130px; display: grid; place-items: center; text-align: center; font-weight: 850; }
 @media (max-height: 720px) {
   .cafe-game { gap: 5px; }

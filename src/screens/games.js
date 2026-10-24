@@ -8,7 +8,7 @@ const GAMES = [
   { id: 'treasure_tap', zh: '開寶箱', en: 'Treasure Tap', emoji: '💎', desc: '答啱開寶箱' },
   { id: 'word_race', zh: '詞語賽跑', en: 'Word Race', emoji: '🏁', desc: '答啱向前跑' },
   { id: 'fish_words', zh: '釣單字', en: 'Fish Words', emoji: '🎣', desc: '釣起英文魚' },
-  { id: 'cafe_order', zh: '小食店', en: 'Café Order', emoji: '🍽️', desc: '睇訂單揀食物' },
+  { id: 'cafe_order', zh: '小食店', en: 'Café Order', emoji: '🍽️', desc: '答題攞材料砌餐 · 闖關解鎖新菜式' },
 ]
 
 export function renderGames(root, state, nav) {
