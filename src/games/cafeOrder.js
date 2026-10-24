@@ -18,6 +18,14 @@ const ART = {
       name: '柯基',
       frames: [1, 2, 3, 4].map((frame) => `/art/games/anim/customer_corgi_idle_0${frame}.webp`),
     },
+    penguin: {
+      name: '企鵝',
+      frames: [1, 2, 3, 4].map((frame) => `/art/games/anim/customer_penguin_idle_0${frame}.webp`),
+    },
+    squirrel: {
+      name: '松鼠',
+      frames: [1, 2, 3, 4].map((frame) => `/art/games/anim/customer_squirrel_idle_0${frame}.webp`),
+    },
   },
   coin: '/art/games/shared/hud_coin_icon.webp',
   sparkle: '/art/games/shared/fx_sparkle_gold.webp',
