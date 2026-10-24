@@ -85,7 +85,7 @@
     "zhHant": "紅色",
     "band": "prek",
     "theme": "colours",
-    "image": "art/words/red.svg"
+    "image": "art/words/red.webp"
   },
   {
     "id": "blue",
@@ -93,7 +93,7 @@
     "zhHant": "藍色",
     "band": "prek",
     "theme": "colours",
-    "image": "art/words/blue.svg"
+    "image": "art/words/blue.webp"
   },
   {
     "id": "yellow",
@@ -101,7 +101,7 @@
     "zhHant": "黃色",
     "band": "prek",
     "theme": "colours",
-    "image": "art/words/yellow.svg"
+    "image": "art/words/yellow.webp"
   },
   {
     "id": "green",
@@ -109,7 +109,7 @@
     "zhHant": "綠色",
     "band": "p1",
     "theme": "colours",
-    "image": "art/words/green.svg"
+    "image": "art/words/green.webp"
   },
   {
     "id": "pink",
@@ -117,7 +117,7 @@
     "zhHant": "粉紅色",
     "band": "p1",
     "theme": "colours",
-    "image": "art/words/pink.svg"
+    "image": "art/words/pink.webp"
   },
   {
     "id": "orange",
@@ -125,7 +125,7 @@
     "zhHant": "橙色",
     "band": "p1",
     "theme": "colours",
-    "image": "art/words/orange.svg"
+    "image": "art/words/orange.webp"
   },
   {
     "id": "purple",
@@ -133,7 +133,7 @@
     "zhHant": "紫色",
     "band": "p2",
     "theme": "colours",
-    "image": "art/words/purple.svg"
+    "image": "art/words/purple.webp"
   },
   {
     "id": "brown",
@@ -141,7 +141,7 @@
     "zhHant": "啡色",
     "band": "p2",
     "theme": "colours",
-    "image": "art/words/brown.svg"
+    "image": "art/words/brown.webp"
   },
   {
     "id": "black",
@@ -149,7 +149,7 @@
     "zhHant": "黑色",
     "band": "p3",
     "theme": "colours",
-    "image": "art/words/black.svg"
+    "image": "art/words/black.webp"
   },
   {
     "id": "white",
@@ -157,7 +157,7 @@
     "zhHant": "白色",
     "band": "p3",
     "theme": "colours",
-    "image": "art/words/white.svg"
+    "image": "art/words/white.webp"
   },
   {
     "id": "one",
