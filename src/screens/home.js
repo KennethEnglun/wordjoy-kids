@@ -43,7 +43,7 @@ export function renderHome(root, nav) {
       </div>
 
       <div class="scroll-banner">
-        ${momoImg('front', MASCOT_NAME_ZH, 'momo-mascot banner-momo')}
+        ${momoImg('wave', MASCOT_NAME_ZH, 'momo-mascot banner-momo')}
         <div class="scroll-titles">
           <p class="brand-en">WordJoy</p>
           <h1 class="brand-zh">英樂寶</h1>

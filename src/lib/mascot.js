@@ -5,11 +5,17 @@ export const MASCOT_NAME_ZH = '字學貓'
 /** Display name is Chinese-first; keep EN as same brand for alt text. */
 export const MASCOT_NAME_EN = '字學貓'
 
+/** All 9 canon poses (filenames cat_<pose>.webp). */
 export const Momo = {
   front: `${BASE}/cat_front.webp`,
+  wave: `${BASE}/cat_wave.webp`,
   happy: `${BASE}/cat_happy.webp`,
   think: `${BASE}/cat_think.webp`,
   celebrate: `${BASE}/cat_celebrate.webp`,
+  sad: `${BASE}/cat_sad.webp`,
+  proud: `${BASE}/cat_proud.webp`,
+  wizard: `${BASE}/cat_wizard.webp`,
+  school: `${BASE}/cat_school.webp`,
 }
 
 /** @deprecated alias — bird Joy retired; maps to 字學貓 assets */

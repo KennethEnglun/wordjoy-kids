@@ -22,7 +22,7 @@ export function renderCharacter(root, state, nav) {
         <p class="hint">WordJoy 樂園夥伴 · 同中文 app 同一隻貓</p>
       </header>
       <div class="cream-card center char-hero">
-        ${momoImg('front', MASCOT_NAME_ZH, 'momo-mascot char-momo')}
+        ${momoImg('wizard', MASCOT_NAME_ZH, 'momo-mascot char-momo')}
         <h2>${p?.name || '小朋友'} 嘅 ${MASCOT_NAME_ZH}</h2>
         <p class="level-pill">Lv. ${lv} 英文旅者</p>
         <p class="stats-inline">⭐ ${stars} · 🪙 ${p?.coins || 0} · 🔥 ${streak} 日</p>

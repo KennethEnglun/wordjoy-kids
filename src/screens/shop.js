@@ -11,7 +11,7 @@ export function renderShop(root, state, nav) {
         <p class="hint">用星星幫 ${MASCOT_NAME_ZH} 換裝扮（即將開放）</p>
       </header>
       <div class="cream-card center">
-        ${momoImg('happy', MASCOT_NAME_ZH, 'momo-mascot shop-momo')}
+        ${momoImg('proud', MASCOT_NAME_ZH, 'momo-mascot shop-momo')}
         <p class="stats-inline">⭐ ${p?.stars || 0} · 🪙 ${p?.coins || 0}</p>
         <p class="hint">裝扮／貼紙商店製作中，同「字學貓樂園」一樣用星星換裝。</p>
         <div class="stub-grid">

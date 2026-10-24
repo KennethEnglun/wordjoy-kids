@@ -54,7 +54,7 @@ export function renderResults(root, state, nav) {
   const isReview = theme === 'review' || theme === '__review__' || band === 'review'
   const tmeta = isReview ? { zh: '複習袋' } : THEME_META[theme] || { zh: theme }
   const bmeta = isReview ? { zh: '複習' } : BAND_META[band] || { zh: band }
-  const pose = stars >= 2 ? 'celebrate' : stars === 1 ? 'happy' : 'think'
+  const pose = stars >= 2 ? 'celebrate' : stars === 1 ? 'proud' : 'sad'
 
   root.innerHTML = `
     <div class="screen results">
