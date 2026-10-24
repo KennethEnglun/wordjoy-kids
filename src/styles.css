@@ -539,12 +539,14 @@ button:disabled { opacity: 0.45; }
 .cafe-counter {
   position: relative; isolation: isolate; height: clamp(205px, 29vh, 245px); min-height: 205px;
   overflow: hidden; border: 1px solid rgba(109, 80, 51, .12); border-radius: 22px;
-  background:
-    radial-gradient(ellipse at 8% 70%, rgba(255, 255, 255, .46) 0 3%, transparent 3.5%),
-    radial-gradient(ellipse at 92% 18%, rgba(255, 251, 227, .72), transparent 30%),
-    linear-gradient(180deg, #f7e8c8 0%, #f7edd8 52%, #dac092 53%, #c59a64 73%, #ead4a7 100%);
+  background-color: #f7ead1;
+  background-image: linear-gradient(rgba(255, 249, 231, .32), rgba(255, 247, 224, .2)), var(--cafe-bg-interior);
+  background-size: cover;
+  background-position: center 57%;
+  background-repeat: no-repeat;
   box-shadow: inset 0 0 0 4px rgba(255, 255, 255, .26), 0 5px 14px rgba(92, 64, 51, .1);
 }
+.cafe-wall-window, .cafe-shelf { display: none; }
 .cafe-wall-window {
   position: absolute; z-index: -1; left: 8%; right: 23%; top: 8%; height: 43%; overflow: hidden;
   border: 7px solid #b7804e; border-bottom-width: 9px; border-radius: 12px 12px 3px 3px;
@@ -588,17 +590,14 @@ button:disabled { opacity: 0.45; }
 .cafe-thought {
   position: absolute; z-index: 2; top: 0; left: 50%; width: min(101px, 98%); min-height: 86px;
   display: flex; flex-direction: column; align-items: stretch; justify-content: center; gap: 3px;
-  transform: translateX(-50%); padding: 5px 5px 6px; background: #fffdf4;
-  border: 1px solid rgba(126, 92, 54, .17); border-radius: 14px 14px 12px 14px;
-  box-shadow: 0 2px 5px rgba(92, 64, 51, .09);
+  transform: translateX(-50%); padding: 8px 10px 14px; background-color: transparent;
+  background-image: var(--cafe-bubble-frame); background-position: center; background-size: 100% 100%; background-repeat: no-repeat;
 }
 .cafe-thought::after {
-  content: ""; position: absolute; bottom: -5px; left: 50%; width: 9px; height: 9px;
-  background: #fffdf4; border-right: 1px solid rgba(126, 92, 54, .14); border-bottom: 1px solid rgba(126, 92, 54, .14);
-  transform: translateX(-50%) rotate(45deg);
+  display: none;
 }
 .cafe-thought-dish { display: flex; align-items: center; justify-content: center; gap: 3px; color: var(--sage-deep); line-height: 1; }
-.cafe-thought-dish span { font-size: 13px; }
+.cafe-thought-dish-art { width: 24px; height: 24px; flex: 0 0 auto; object-fit: contain; }
 .cafe-thought-dish strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 9px; }
 .cafe-thought-checklist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 3px; }
 .cafe-thought-item { min-width: 0; display: flex; align-items: center; gap: 2px; overflow: hidden; color: #896f5b; font-size: 7px; line-height: 1.1; white-space: nowrap; }
@@ -606,7 +605,9 @@ button:disabled { opacity: 0.45; }
 .cafe-thought-item.is-filled { color: var(--sage-deep); }
 .cafe-thought-item.is-filled i { color: var(--sage-deep); }
 .cafe-customer-sprite { width: min(66px, 100%); height: 61px; margin-top: 78px; object-fit: contain; user-select: none; -webkit-user-drag: none; }
-.cafe-patience { width: 78%; height: 6px; overflow: hidden; margin-top: 1px; border: 1px solid rgba(110, 79, 50, .12); border-radius: 999px; background: rgba(255, 251, 235, .78); }
+.cafe-patience { width: 78%; display: flex; align-items: center; gap: 2px; margin-top: 1px; }
+.cafe-patience-heart { width: 14px; height: 14px; flex: 0 0 auto; object-fit: contain; user-select: none; -webkit-user-drag: none; }
+.cafe-patience-track { min-width: 0; flex: 1; height: 6px; overflow: hidden; border: 1px solid rgba(110, 79, 50, .12); border-radius: 999px; background: rgba(255, 251, 235, .78); }
 .cafe-patience-fill { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #89b37d, #e5bd67 75%, #d58c69); transition: width .12s linear; }
 .cafe-customer-label { margin-top: 2px; color: #704f37; font-size: 8px; line-height: 1; font-weight: 850; }
 .cafe-customer.is-active .cafe-customer-label { color: #537f58; }
@@ -656,10 +657,13 @@ button:disabled { opacity: 0.45; }
 .cafe-feedback.is-good { color: var(--sage-deep); }
 .cafe-feedback.is-missed { color: #a85e4b; }
 .cafe-feedback img { width: 19px; height: 19px; object-fit: contain; }
+.cafe-feedback .cafe-feedback-dish-art { width: 23px; height: 23px; }
+.cafe-feedback .cafe-feedback-ingredient-art { width: 20px; height: 20px; }
 .cafe-workbench { padding: 8px; }
 .cafe-workbench-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 6px; }
 .cafe-workbench-head > div { min-width: 0; display: flex; flex-direction: column; gap: 1px; }
-.cafe-workbench-head strong { overflow: hidden; color: var(--sage-deep); text-overflow: ellipsis; white-space: nowrap; font-size: 13px; line-height: 1.1; }
+.cafe-workbench-head strong { min-width: 0; display: flex; align-items: center; gap: 4px; overflow: hidden; color: var(--sage-deep); text-overflow: ellipsis; white-space: nowrap; font-size: 13px; line-height: 1.1; }
+.cafe-dish-art { width: 23px; height: 23px; flex: 0 0 auto; object-fit: contain; }
 .cafe-workbench-head span { color: var(--muted); font-size: 9px; font-weight: 750; }
 .cafe-workbench-head .cafe-stock-total { flex: 0 0 auto; padding: 4px 7px; color: #8d693f; background: #fff1d2; border-radius: 999px; font-size: 9px; }
 .cafe-recipe-slots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; margin-bottom: 7px; }
@@ -671,7 +675,7 @@ button:disabled { opacity: 0.45; }
 .cafe-recipe-slot.is-filled { color: var(--sage-deep); background: #e6efdf; border: 1px solid rgba(95, 133, 100, .35); }
 .cafe-recipe-slot i { position: absolute; align-self: flex-start; margin: -2px 0 0 3px; color: #b38b6d; font-size: 8px; font-style: normal; }
 .cafe-recipe-slot.is-filled i { color: var(--sage-deep); }
-.cafe-recipe-slot span { font-size: 15px; line-height: 1; }
+.cafe-recipe-art { width: 22px; height: 22px; object-fit: contain; }
 .cafe-recipe-slot b { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 8px; line-height: 1; }
 .cafe-inventory-label { display: flex; align-items: baseline; justify-content: space-between; gap: 5px; margin: 0 1px 4px; }
 .cafe-inventory-label strong { color: var(--sage-deep); font-size: 11px; }
@@ -684,7 +688,8 @@ button:disabled { opacity: 0.45; }
 .cafe-ingredient:disabled { opacity: .5; }
 .cafe-ingredient.is-needed { border-color: rgba(95, 133, 100, .57); box-shadow: inset 0 0 0 1px rgba(95, 133, 100, .14), 0 2px 5px rgba(92, 64, 51, .07); }
 .cafe-ingredient.is-empty { filter: saturate(.65); }
-.cafe-ingredient-emoji { font-size: 17px; line-height: 1; }
+.cafe-ingredient-art { width: 23px; height: 23px; flex: 0 0 auto; object-fit: contain; user-select: none; -webkit-user-drag: none; }
+.cafe-recipe-art, .cafe-thought-dish-art, .cafe-dish-art, .cafe-feedback-dish-art, .cafe-feedback-ingredient-art { user-select: none; -webkit-user-drag: none; }
 .cafe-ingredient-copy { min-width: 0; max-width: 100%; display: flex; flex-direction: column; align-items: center; line-height: 1.05; }
 .cafe-ingredient-copy b { max-width: 100%; overflow: hidden; color: #654b3a; text-overflow: ellipsis; white-space: nowrap; font-size: 8px; }
 .cafe-ingredient-copy small { max-width: 100%; overflow: hidden; color: #927968; text-overflow: ellipsis; white-space: nowrap; font-size: 6px; font-weight: 700; }
@@ -723,7 +728,7 @@ button:disabled { opacity: 0.45; }
 }
 @media (max-width: 360px) {
   .cafe-queue { right: 30%; }
-  .cafe-thought { width: min(88px, 98%); padding-inline: 3px; }
+  .cafe-thought { width: min(88px, 98%); padding: 7px 8px 14px; }
   .cafe-thought-item { font-size: 6px; }
   .cafe-customer-sprite { height: 56px; margin-top: 80px; }
   .cafe-prompt-img { width: 45px; height: 45px; }

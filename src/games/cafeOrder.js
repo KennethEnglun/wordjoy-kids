@@ -2,6 +2,11 @@ import { distractors, shuffle } from '../lib/vocab.js'
 import * as audio from '../lib/audio.js'
 
 const ART = {
+  bgInterior: '/art/games/cafe/cafe_bg_interior.webp',
+  bubbleFrame: '/art/games/cafe/cafe_bubble_frame.webp',
+  patienceHeart: '/art/games/cafe/cafe_patience_heart.webp',
+  ingredientArt: (id) => `/art/games/cafe/cafe_ing_${id}.webp`,
+  dishArt: (id) => `/art/games/cafe/cafe_dish_${id}.webp`,
   chefIdle: '/art/games/cafe/cafe_mascot_chef.webp',
   chefCook: [1, 2, 3, 4].map((frame) => `/art/games/anim/zxm_chef_0${frame}.webp`),
   customers: {
@@ -233,12 +238,12 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
         : customer.crafted ? '等候出餐' : isActive ? '前枱' : '排隊'
       return `
         <article class="cafe-customer${isActive ? ' is-active' : ''}${customer.leaving ? ' is-leaving' : ''}" data-customer-id="${escapeHtml(customer.id)}" role="listitem" aria-label="${escapeHtml(type.name)}訂了${escapeHtml(dish.zh)}">
-          <div class="cafe-thought">
-            <div class="cafe-thought-dish"><span aria-hidden="true">${dish.emoji}</span><strong>${escapeHtml(dish.zh)}</strong></div>
+          <div class="cafe-thought" style="--cafe-bubble-frame: url('${ART.bubbleFrame}')">
+            <div class="cafe-thought-dish"><img class="cafe-thought-dish-art" src="${ART.dishArt(dish.id)}" alt="" /><strong>${escapeHtml(dish.zh)}</strong></div>
             <div class="cafe-thought-checklist">${checklist}</div>
           </div>
           <img class="cafe-customer-sprite" data-customer-type="${escapeHtml(customer.type)}" src="${escapeHtml(imageFor(customer))}" alt="${escapeHtml(type.name)}" draggable="false" />
-          <div class="cafe-patience" aria-label="耐性 ${Math.round(patience)}%"><span class="cafe-patience-fill" style="width:${patience}%"></span></div>
+          <div class="cafe-patience" aria-label="耐性 ${Math.round(patience)}%"><img class="cafe-patience-heart" src="${ART.patienceHeart}" alt="" /><span class="cafe-patience-track"><span class="cafe-patience-fill" style="width:${patience}%"></span></span></div>
           <span class="cafe-customer-label">${status}</span>
         </article>
       `
@@ -354,7 +359,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     if (!customer) {
       workbench.innerHTML = `
         <div class="cafe-workbench-head"><div><strong>食材櫃檯</strong><span>等下一位客人到埗</span></div><span class="cafe-stock-total">${Object.values(inventory).reduce((sum, amount) => sum + amount, 0)} 件食材</span></div>
-        <div class="cafe-inventory" aria-label="食材庫">${INGREDIENTS.map((ingredient) => `<span class="cafe-ingredient is-empty cafe-${ingredient.color}" aria-label="${escapeHtml(ingredient.zh)}，${inventory[ingredient.id]} 件"><span class="cafe-ingredient-emoji">${ingredient.emoji}</span><span class="cafe-ingredient-copy"><b>${escapeHtml(ingredient.zh)}</b><small>${escapeHtml(ingredient.en)}</small></span><i>${inventory[ingredient.id]}</i></span>`).join('')}</div>
+        <div class="cafe-inventory" aria-label="食材庫">${INGREDIENTS.map((ingredient) => `<span class="cafe-ingredient is-empty cafe-${ingredient.color}" aria-label="${escapeHtml(ingredient.zh)}，${inventory[ingredient.id]} 件"><img class="cafe-ingredient-art" src="${ART.ingredientArt(ingredient.id)}" alt="" /><span class="cafe-ingredient-copy"><b>${escapeHtml(ingredient.zh)}</b><small>${escapeHtml(ingredient.en)}</small></span><i>${inventory[ingredient.id]}</i></span>`).join('')}</div>
         <div class="cafe-feedback cafe-workbench-note">有食材就會保留在櫃檯，下一位客人來了再用。</div>
       `
       updateHud()
@@ -368,7 +373,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
       const filled = customer.slots.includes(id)
       return `
         <button type="button" class="cafe-recipe-slot${filled ? ' is-filled' : ''}" data-slot="${escapeHtml(id)}" ${!filled || customer.crafted ? 'disabled' : ''} aria-label="${filled ? `取回${ingredient.zh}` : `需要${ingredient.zh}`}；${filled ? '已完成' : '待加入'}">
-          <i>${filled ? '✓' : '○'}</i><span>${ingredient.emoji}</span><b>${escapeHtml(ingredient.zh)}</b>
+          <i>${filled ? '✓' : '○'}</i><img class="cafe-recipe-art" src="${ART.ingredientArt(ingredient.id)}" alt="" /><b>${escapeHtml(ingredient.zh)}</b>
         </button>
       `
     }).join('')
@@ -378,7 +383,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
       const disabled = amount <= 0 || !needed || customer.crafted
       return `
         <button type="button" class="cafe-ingredient cafe-${ingredient.color}${amount ? '' : ' is-empty'}${needed && amount ? ' is-needed' : ''}" data-ingredient="${escapeHtml(ingredient.id)}" ${disabled ? 'disabled' : ''} aria-label="${escapeHtml(ingredient.zh)}，${amount} 件${needed ? '，客人需要' : ''}">
-          <span class="cafe-ingredient-emoji">${ingredient.emoji}</span>
+          <img class="cafe-ingredient-art" src="${ART.ingredientArt(ingredient.id)}" alt="" />
           <span class="cafe-ingredient-copy"><b>${escapeHtml(ingredient.zh)}</b><small>${escapeHtml(ingredient.en)}</small></span>
           <i>${amount}</i>
         </button>
@@ -394,7 +399,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
 
     workbench.innerHTML = `
       <div class="cafe-workbench-head">
-        <div><strong>${dish.emoji} ${escapeHtml(dish.zh)}餐單</strong><span>${escapeHtml(ART.customers[customer.type].name)} · 訂單 ${customer.orderNo}</span></div>
+        <div><strong><img class="cafe-dish-art" src="${ART.dishArt(dish.id)}" alt="" />${escapeHtml(dish.zh)}餐單</strong><span>${escapeHtml(ART.customers[customer.type].name)} · 訂單 ${customer.orderNo}</span></div>
         <span class="cafe-stock-total">櫃檯 ${Object.values(inventory).reduce((sum, amount) => sum + amount, 0)} 件</span>
       </div>
       <div class="cafe-recipe-slots" aria-label="${escapeHtml(dish.zh)}食譜">${slots}</div>
@@ -480,7 +485,8 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     customer.crafted = true
     animateChef()
     renderAll()
-    announce(`${escapeHtml(recipeFor(customer).en)}做好了！請按「出餐」交給客人。`, 'good')
+    const recipe = recipeFor(customer)
+    announce(`<img class="cafe-feedback-dish-art" src="${ART.dishArt(recipe.id)}" alt="" /> ${escapeHtml(recipe.zh)}做好了！請按「出餐」交給客人。`, 'good')
   }
 
   function serveCustomer(customer) {
@@ -497,7 +503,8 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
     if (label) label.textContent = '開心出餐'
     updateHud()
     renderWorkbench()
-    announce(`<img src="${ART.sparkle}" alt="" /> ${escapeHtml(recipeFor(customer).zh)}出餐成功！ +3 金幣`, 'good')
+    const recipe = recipeFor(customer)
+    announce(`<img class="cafe-feedback-dish-art" src="${ART.dishArt(recipe.id)}" alt="" /> ${escapeHtml(recipe.zh)}出餐成功！ +3 金幣`, 'good')
     animateChef()
     if (stageServed >= stageRules(stage).serveGoal) advanceStage()
     scheduleDeparture()
@@ -565,7 +572,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
       const ingredient = chooseIngredient()
       inventory[ingredient.id]++
       onCorrect?.(word)
-      announce(`<img src="${ART.sparkle}" alt="" /> 答啱！獲得 ${ingredient.emoji} ${escapeHtml(ingredient.zh)}。`, 'good')
+      announce(`<img class="cafe-feedback-ingredient-art" src="${ART.ingredientArt(ingredient.id)}" alt="" /> 答啱！獲得 ${escapeHtml(ingredient.zh)}。`, 'good')
       renderAll()
     } else {
       if (chosenButton) chosenButton.classList.add('is-wrong')
@@ -704,9 +711,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
           </div>
         </header>
 
-        <section class="cafe-counter" aria-label="字學貓小食店櫃檯">
-          <div class="cafe-wall-window" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-          <div class="cafe-shelf" aria-hidden="true"><i>✿</i><i>🍃</i><i>✿</i></div>
+        <section class="cafe-counter" style="--cafe-bg-interior: url('${ART.bgInterior}')" aria-label="字學貓小食店櫃檯">
           <div class="cafe-queue-label">等候客人 <b data-queue-count>0/1</b></div>
           <div class="cafe-queue" data-queue role="list" aria-label="顧客隊伍"></div>
           <img class="cafe-sparkle" data-sparkle src="${ART.sparkle}" alt="" />
