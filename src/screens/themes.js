@@ -8,6 +8,9 @@ const EMOJI = {
   animals: '🐾',
   food: '🍎',
   school: '🎒',
+  clothes: '👕',
+  body: '🧍',
+  home: '🏠',
 }
 
 export async function renderThemes(root, state, nav) {
@@ -21,7 +24,7 @@ export async function renderThemes(root, state, nav) {
         <div class="stats">${band.zh}</div>
       </div>
       <h1>揀主題</h1>
-      <p class="hint">貼近香港小學 KS1／朗文·牛津類常見單元（原創詞表）</p>
+      <p class="badge-ks1">✓ 貼近香港小學 KS1／朗文·牛津類常見單元（原創詞表）</p>
       <div class="theme-grid" id="themes"></div>
     </div>
   `
@@ -40,6 +43,7 @@ export async function renderThemes(root, state, nav) {
       <span class="emoji">${EMOJI[t] || '⭐'}</span>
       <span>${meta.zh}</span>
       <span class="meta">${meta.en}</span>
+      <span class="badge-ks1 mini">KS1</span>
     `
     b.addEventListener('click', () => {
       audio.tap()

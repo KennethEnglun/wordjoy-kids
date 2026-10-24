@@ -1,12 +1,13 @@
 import { distractors, shuffle } from '../lib/vocab.js'
 import * as audio from '../lib/audio.js'
 
-export function createSpeedStar({ words, pool, onDone, roundSize = 8 }) {
+export function createSpeedStar({ words, pool, onDone, onCorrect, roundSize = 8 }) {
   const rounds = shuffle(words).slice(0, Math.min(roundSize, words.length))
   let i = 0
   let correct = 0
   let coins = 0
   const missed = []
+  const correctIds = []
   let timer = null
   let started = 0
 
@@ -18,7 +19,7 @@ export function createSpeedStar({ words, pool, onDone, roundSize = 8 }) {
   function render(root) {
     clearT()
     if (i >= rounds.length) {
-      onDone({ correct, total: rounds.length, coins, missed })
+      onDone({ correct, total: rounds.length, coins, missed, correctIds })
       return
     }
     const w = rounds[i]
@@ -70,9 +71,11 @@ export function createSpeedStar({ words, pool, onDone, roundSize = 8 }) {
     const elapsed = Date.now() - started
     if (o && o.id === w.id) {
       if (btn) btn.classList.add('correct')
-      audio.correct()
+      audio.speakOnCorrect(w.en)
       correct++
+      correctIds.push(w.id)
       let gain = 2
+      onCorrect?.(w)
       if (elapsed < 3000) gain += 2
       coins += gain
       fb.className = 'feedback ok'

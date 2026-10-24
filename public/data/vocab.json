@@ -1,67 +1,818 @@
 [
-  { "id": "mom", "en": "mom", "zhHant": "媽媽", "band": "prek", "theme": "family", "image": "art/words/mom.svg" },
-  { "id": "dad", "en": "dad", "zhHant": "爸爸", "band": "prek", "theme": "family", "image": "art/words/dad.svg" },
-  { "id": "baby", "en": "baby", "zhHant": "嬰兒", "band": "prek", "theme": "family", "image": "art/words/baby.svg" },
-  { "id": "sister", "en": "sister", "zhHant": "姐姐", "band": "p1", "theme": "family", "image": "art/words/sister.svg" },
-  { "id": "brother", "en": "brother", "zhHant": "哥哥", "band": "p1", "theme": "family", "image": "art/words/brother.svg" },
-  { "id": "grandma", "en": "grandma", "zhHant": "嫲嫲", "band": "p1", "theme": "family", "image": "art/words/grandma.svg" },
-  { "id": "grandpa", "en": "grandpa", "zhHant": "爺爺", "band": "p1", "theme": "family", "image": "art/words/grandpa.svg" },
-  { "id": "family", "en": "family", "zhHant": "家人", "band": "p2", "theme": "family", "image": "art/words/family.svg" },
-  { "id": "aunt", "en": "aunt", "zhHant": "姑姐", "band": "p3", "theme": "family", "image": "art/words/aunt.svg" },
-  { "id": "uncle", "en": "uncle", "zhHant": "叔叔", "band": "p3", "theme": "family", "image": "art/words/uncle.svg" },
-
-  { "id": "red", "en": "red", "zhHant": "紅色", "band": "prek", "theme": "colours", "image": "art/words/red.svg" },
-  { "id": "blue", "en": "blue", "zhHant": "藍色", "band": "prek", "theme": "colours", "image": "art/words/blue.svg" },
-  { "id": "yellow", "en": "yellow", "zhHant": "黃色", "band": "prek", "theme": "colours", "image": "art/words/yellow.svg" },
-  { "id": "green", "en": "green", "zhHant": "綠色", "band": "p1", "theme": "colours", "image": "art/words/green.svg" },
-  { "id": "pink", "en": "pink", "zhHant": "粉紅色", "band": "p1", "theme": "colours", "image": "art/words/pink.svg" },
-  { "id": "orange", "en": "orange", "zhHant": "橙色", "band": "p1", "theme": "colours", "image": "art/words/orange.svg" },
-  { "id": "purple", "en": "purple", "zhHant": "紫色", "band": "p2", "theme": "colours", "image": "art/words/purple.svg" },
-  { "id": "brown", "en": "brown", "zhHant": "啡色", "band": "p2", "theme": "colours", "image": "art/words/brown.svg" },
-  { "id": "black", "en": "black", "zhHant": "黑色", "band": "p3", "theme": "colours", "image": "art/words/black.svg" },
-  { "id": "white", "en": "white", "zhHant": "白色", "band": "p3", "theme": "colours", "image": "art/words/white.svg" },
-
-  { "id": "one", "en": "one", "zhHant": "一", "band": "prek", "theme": "numbers", "image": "art/words/one.svg" },
-  { "id": "two", "en": "two", "zhHant": "二", "band": "prek", "theme": "numbers", "image": "art/words/two.svg" },
-  { "id": "three", "en": "three", "zhHant": "三", "band": "prek", "theme": "numbers", "image": "art/words/three.svg" },
-  { "id": "four", "en": "four", "zhHant": "四", "band": "p1", "theme": "numbers", "image": "art/words/four.svg" },
-  { "id": "five", "en": "five", "zhHant": "五", "band": "p1", "theme": "numbers", "image": "art/words/five.svg" },
-  { "id": "six", "en": "six", "zhHant": "六", "band": "p1", "theme": "numbers", "image": "art/words/six.svg" },
-  { "id": "seven", "en": "seven", "zhHant": "七", "band": "p2", "theme": "numbers", "image": "art/words/seven.svg" },
-  { "id": "eight", "en": "eight", "zhHant": "八", "band": "p2", "theme": "numbers", "image": "art/words/eight.svg" },
-  { "id": "nine", "en": "nine", "zhHant": "九", "band": "p3", "theme": "numbers", "image": "art/words/nine.svg" },
-  { "id": "ten", "en": "ten", "zhHant": "十", "band": "p3", "theme": "numbers", "image": "art/words/ten.svg" },
-
-  { "id": "cat", "en": "cat", "zhHant": "貓", "band": "prek", "theme": "animals", "image": "art/words/cat.svg" },
-  { "id": "dog", "en": "dog", "zhHant": "狗", "band": "prek", "theme": "animals", "image": "art/words/dog.svg" },
-  { "id": "fish", "en": "fish", "zhHant": "魚", "band": "prek", "theme": "animals", "image": "art/words/fish.svg" },
-  { "id": "bird", "en": "bird", "zhHant": "雀仔", "band": "p1", "theme": "animals", "image": "art/words/bird.svg" },
-  { "id": "rabbit", "en": "rabbit", "zhHant": "兔仔", "band": "p1", "theme": "animals", "image": "art/words/rabbit.svg" },
-  { "id": "tiger", "en": "tiger", "zhHant": "老虎", "band": "p1", "theme": "animals", "image": "art/words/tiger.svg" },
-  { "id": "panda", "en": "panda", "zhHant": "熊貓", "band": "p2", "theme": "animals", "image": "art/words/panda.svg" },
-  { "id": "monkey", "en": "monkey", "zhHant": "馬騮", "band": "p2", "theme": "animals", "image": "art/words/monkey.svg" },
-  { "id": "dolphin", "en": "dolphin", "zhHant": "海豚", "band": "p3", "theme": "animals", "image": "art/words/dolphin.svg" },
-  { "id": "elephant", "en": "elephant", "zhHant": "大象", "band": "p3", "theme": "animals", "image": "art/words/elephant.svg" },
-
-  { "id": "apple", "en": "apple", "zhHant": "蘋果", "band": "prek", "theme": "food", "image": "art/words/apple.svg" },
-  { "id": "milk", "en": "milk", "zhHant": "牛奶", "band": "prek", "theme": "food", "image": "art/words/milk.svg" },
-  { "id": "egg", "en": "egg", "zhHant": "雞蛋", "band": "prek", "theme": "food", "image": "art/words/egg.svg" },
-  { "id": "rice", "en": "rice", "zhHant": "白飯", "band": "p1", "theme": "food", "image": "art/words/rice.svg" },
-  { "id": "bread", "en": "bread", "zhHant": "麵包", "band": "p1", "theme": "food", "image": "art/words/bread.svg" },
-  { "id": "banana", "en": "banana", "zhHant": "香蕉", "band": "p1", "theme": "food", "image": "art/words/banana.svg" },
-  { "id": "noodles", "en": "noodles", "zhHant": "麵條", "band": "p2", "theme": "food", "image": "art/words/noodles.svg" },
-  { "id": "carrot", "en": "carrot", "zhHant": "紅蘿蔔", "band": "p2", "theme": "food", "image": "art/words/carrot.svg" },
-  { "id": "cheese", "en": "cheese", "zhHant": "芝士", "band": "p3", "theme": "food", "image": "art/words/cheese.svg" },
-  { "id": "soup", "en": "soup", "zhHant": "湯", "band": "p3", "theme": "food", "image": "art/words/soup.svg" },
-
-  { "id": "book", "en": "book", "zhHant": "書本", "band": "prek", "theme": "school", "image": "art/words/book.svg" },
-  { "id": "pen", "en": "pen", "zhHant": "原子筆", "band": "prek", "theme": "school", "image": "art/words/pen.svg" },
-  { "id": "bag", "en": "bag", "zhHant": "書包", "band": "prek", "theme": "school", "image": "art/words/bag.svg" },
-  { "id": "ruler", "en": "ruler", "zhHant": "間尺", "band": "p1", "theme": "school", "image": "art/words/ruler.svg" },
-  { "id": "pencil", "en": "pencil", "zhHant": "鉛筆", "band": "p1", "theme": "school", "image": "art/words/pencil.svg" },
-  { "id": "desk", "en": "desk", "zhHant": "書桌", "band": "p1", "theme": "school", "image": "art/words/desk.svg" },
-  { "id": "chair", "en": "chair", "zhHant": "椅子", "band": "p2", "theme": "school", "image": "art/words/chair.svg" },
-  { "id": "crayon", "en": "crayon", "zhHant": "蠟筆", "band": "p2", "theme": "school", "image": "art/words/crayon.svg" },
-  { "id": "scissors", "en": "scissors", "zhHant": "剪刀", "band": "p3", "theme": "school", "image": "art/words/scissors.svg" },
-  { "id": "library", "en": "library", "zhHant": "圖書館", "band": "p3", "theme": "school", "image": "art/words/library.svg" }
+  {
+    "id": "mom",
+    "en": "mom",
+    "zhHant": "媽媽",
+    "band": "prek",
+    "theme": "family",
+    "image": "art/words/mom.svg"
+  },
+  {
+    "id": "dad",
+    "en": "dad",
+    "zhHant": "爸爸",
+    "band": "prek",
+    "theme": "family",
+    "image": "art/words/dad.svg"
+  },
+  {
+    "id": "baby",
+    "en": "baby",
+    "zhHant": "嬰兒",
+    "band": "prek",
+    "theme": "family",
+    "image": "art/words/baby.svg"
+  },
+  {
+    "id": "sister",
+    "en": "sister",
+    "zhHant": "姐姐",
+    "band": "p1",
+    "theme": "family",
+    "image": "art/words/sister.svg"
+  },
+  {
+    "id": "brother",
+    "en": "brother",
+    "zhHant": "哥哥",
+    "band": "p1",
+    "theme": "family",
+    "image": "art/words/brother.svg"
+  },
+  {
+    "id": "grandma",
+    "en": "grandma",
+    "zhHant": "嫲嫲",
+    "band": "p1",
+    "theme": "family",
+    "image": "art/words/grandma.svg"
+  },
+  {
+    "id": "grandpa",
+    "en": "grandpa",
+    "zhHant": "爺爺",
+    "band": "p1",
+    "theme": "family",
+    "image": "art/words/grandpa.svg"
+  },
+  {
+    "id": "family",
+    "en": "family",
+    "zhHant": "家人",
+    "band": "p2",
+    "theme": "family",
+    "image": "art/words/family.svg"
+  },
+  {
+    "id": "aunt",
+    "en": "aunt",
+    "zhHant": "姑姐",
+    "band": "p3",
+    "theme": "family",
+    "image": "art/words/aunt.svg"
+  },
+  {
+    "id": "uncle",
+    "en": "uncle",
+    "zhHant": "叔叔",
+    "band": "p3",
+    "theme": "family",
+    "image": "art/words/uncle.svg"
+  },
+  {
+    "id": "red",
+    "en": "red",
+    "zhHant": "紅色",
+    "band": "prek",
+    "theme": "colours",
+    "image": "art/words/red.svg"
+  },
+  {
+    "id": "blue",
+    "en": "blue",
+    "zhHant": "藍色",
+    "band": "prek",
+    "theme": "colours",
+    "image": "art/words/blue.svg"
+  },
+  {
+    "id": "yellow",
+    "en": "yellow",
+    "zhHant": "黃色",
+    "band": "prek",
+    "theme": "colours",
+    "image": "art/words/yellow.svg"
+  },
+  {
+    "id": "green",
+    "en": "green",
+    "zhHant": "綠色",
+    "band": "p1",
+    "theme": "colours",
+    "image": "art/words/green.svg"
+  },
+  {
+    "id": "pink",
+    "en": "pink",
+    "zhHant": "粉紅色",
+    "band": "p1",
+    "theme": "colours",
+    "image": "art/words/pink.svg"
+  },
+  {
+    "id": "orange",
+    "en": "orange",
+    "zhHant": "橙色",
+    "band": "p1",
+    "theme": "colours",
+    "image": "art/words/orange.svg"
+  },
+  {
+    "id": "purple",
+    "en": "purple",
+    "zhHant": "紫色",
+    "band": "p2",
+    "theme": "colours",
+    "image": "art/words/purple.svg"
+  },
+  {
+    "id": "brown",
+    "en": "brown",
+    "zhHant": "啡色",
+    "band": "p2",
+    "theme": "colours",
+    "image": "art/words/brown.svg"
+  },
+  {
+    "id": "black",
+    "en": "black",
+    "zhHant": "黑色",
+    "band": "p3",
+    "theme": "colours",
+    "image": "art/words/black.svg"
+  },
+  {
+    "id": "white",
+    "en": "white",
+    "zhHant": "白色",
+    "band": "p3",
+    "theme": "colours",
+    "image": "art/words/white.svg"
+  },
+  {
+    "id": "one",
+    "en": "one",
+    "zhHant": "一",
+    "band": "prek",
+    "theme": "numbers",
+    "image": "art/words/one.svg"
+  },
+  {
+    "id": "two",
+    "en": "two",
+    "zhHant": "二",
+    "band": "prek",
+    "theme": "numbers",
+    "image": "art/words/two.svg"
+  },
+  {
+    "id": "three",
+    "en": "three",
+    "zhHant": "三",
+    "band": "prek",
+    "theme": "numbers",
+    "image": "art/words/three.svg"
+  },
+  {
+    "id": "four",
+    "en": "four",
+    "zhHant": "四",
+    "band": "p1",
+    "theme": "numbers",
+    "image": "art/words/four.svg"
+  },
+  {
+    "id": "five",
+    "en": "five",
+    "zhHant": "五",
+    "band": "p1",
+    "theme": "numbers",
+    "image": "art/words/five.svg"
+  },
+  {
+    "id": "six",
+    "en": "six",
+    "zhHant": "六",
+    "band": "p1",
+    "theme": "numbers",
+    "image": "art/words/six.svg"
+  },
+  {
+    "id": "seven",
+    "en": "seven",
+    "zhHant": "七",
+    "band": "p2",
+    "theme": "numbers",
+    "image": "art/words/seven.svg"
+  },
+  {
+    "id": "eight",
+    "en": "eight",
+    "zhHant": "八",
+    "band": "p2",
+    "theme": "numbers",
+    "image": "art/words/eight.svg"
+  },
+  {
+    "id": "nine",
+    "en": "nine",
+    "zhHant": "九",
+    "band": "p3",
+    "theme": "numbers",
+    "image": "art/words/nine.svg"
+  },
+  {
+    "id": "ten",
+    "en": "ten",
+    "zhHant": "十",
+    "band": "p3",
+    "theme": "numbers",
+    "image": "art/words/ten.svg"
+  },
+  {
+    "id": "cat",
+    "en": "cat",
+    "zhHant": "貓",
+    "band": "prek",
+    "theme": "animals",
+    "image": "art/words/cat.svg"
+  },
+  {
+    "id": "dog",
+    "en": "dog",
+    "zhHant": "狗",
+    "band": "prek",
+    "theme": "animals",
+    "image": "art/words/dog.svg"
+  },
+  {
+    "id": "fish",
+    "en": "fish",
+    "zhHant": "魚",
+    "band": "prek",
+    "theme": "animals",
+    "image": "art/words/fish.svg"
+  },
+  {
+    "id": "bird",
+    "en": "bird",
+    "zhHant": "雀仔",
+    "band": "p1",
+    "theme": "animals",
+    "image": "art/words/bird.svg"
+  },
+  {
+    "id": "rabbit",
+    "en": "rabbit",
+    "zhHant": "兔仔",
+    "band": "p1",
+    "theme": "animals",
+    "image": "art/words/rabbit.svg"
+  },
+  {
+    "id": "tiger",
+    "en": "tiger",
+    "zhHant": "老虎",
+    "band": "p1",
+    "theme": "animals",
+    "image": "art/words/tiger.svg"
+  },
+  {
+    "id": "panda",
+    "en": "panda",
+    "zhHant": "熊貓",
+    "band": "p2",
+    "theme": "animals",
+    "image": "art/words/panda.svg"
+  },
+  {
+    "id": "monkey",
+    "en": "monkey",
+    "zhHant": "馬騮",
+    "band": "p2",
+    "theme": "animals",
+    "image": "art/words/monkey.svg"
+  },
+  {
+    "id": "dolphin",
+    "en": "dolphin",
+    "zhHant": "海豚",
+    "band": "p3",
+    "theme": "animals",
+    "image": "art/words/dolphin.svg"
+  },
+  {
+    "id": "elephant",
+    "en": "elephant",
+    "zhHant": "大象",
+    "band": "p3",
+    "theme": "animals",
+    "image": "art/words/elephant.svg"
+  },
+  {
+    "id": "apple",
+    "en": "apple",
+    "zhHant": "蘋果",
+    "band": "prek",
+    "theme": "food",
+    "image": "art/words/apple.svg"
+  },
+  {
+    "id": "milk",
+    "en": "milk",
+    "zhHant": "牛奶",
+    "band": "prek",
+    "theme": "food",
+    "image": "art/words/milk.svg"
+  },
+  {
+    "id": "egg",
+    "en": "egg",
+    "zhHant": "雞蛋",
+    "band": "prek",
+    "theme": "food",
+    "image": "art/words/egg.svg"
+  },
+  {
+    "id": "rice",
+    "en": "rice",
+    "zhHant": "白飯",
+    "band": "p1",
+    "theme": "food",
+    "image": "art/words/rice.svg"
+  },
+  {
+    "id": "bread",
+    "en": "bread",
+    "zhHant": "麵包",
+    "band": "p1",
+    "theme": "food",
+    "image": "art/words/bread.svg"
+  },
+  {
+    "id": "banana",
+    "en": "banana",
+    "zhHant": "香蕉",
+    "band": "p1",
+    "theme": "food",
+    "image": "art/words/banana.svg"
+  },
+  {
+    "id": "noodles",
+    "en": "noodles",
+    "zhHant": "麵條",
+    "band": "p2",
+    "theme": "food",
+    "image": "art/words/noodles.svg"
+  },
+  {
+    "id": "carrot",
+    "en": "carrot",
+    "zhHant": "紅蘿蔔",
+    "band": "p2",
+    "theme": "food",
+    "image": "art/words/carrot.svg"
+  },
+  {
+    "id": "cheese",
+    "en": "cheese",
+    "zhHant": "芝士",
+    "band": "p3",
+    "theme": "food",
+    "image": "art/words/cheese.svg"
+  },
+  {
+    "id": "soup",
+    "en": "soup",
+    "zhHant": "湯",
+    "band": "p3",
+    "theme": "food",
+    "image": "art/words/soup.svg"
+  },
+  {
+    "id": "book",
+    "en": "book",
+    "zhHant": "書本",
+    "band": "prek",
+    "theme": "school",
+    "image": "art/words/book.svg"
+  },
+  {
+    "id": "pen",
+    "en": "pen",
+    "zhHant": "原子筆",
+    "band": "prek",
+    "theme": "school",
+    "image": "art/words/pen.svg"
+  },
+  {
+    "id": "bag",
+    "en": "bag",
+    "zhHant": "書包",
+    "band": "prek",
+    "theme": "school",
+    "image": "art/words/bag.svg"
+  },
+  {
+    "id": "ruler",
+    "en": "ruler",
+    "zhHant": "間尺",
+    "band": "p1",
+    "theme": "school",
+    "image": "art/words/ruler.svg"
+  },
+  {
+    "id": "pencil",
+    "en": "pencil",
+    "zhHant": "鉛筆",
+    "band": "p1",
+    "theme": "school",
+    "image": "art/words/pencil.svg"
+  },
+  {
+    "id": "desk",
+    "en": "desk",
+    "zhHant": "書桌",
+    "band": "p1",
+    "theme": "school",
+    "image": "art/words/desk.svg"
+  },
+  {
+    "id": "chair",
+    "en": "chair",
+    "zhHant": "椅子",
+    "band": "p2",
+    "theme": "school",
+    "image": "art/words/chair.svg"
+  },
+  {
+    "id": "crayon",
+    "en": "crayon",
+    "zhHant": "蠟筆",
+    "band": "p2",
+    "theme": "school",
+    "image": "art/words/crayon.svg"
+  },
+  {
+    "id": "scissors",
+    "en": "scissors",
+    "zhHant": "剪刀",
+    "band": "p3",
+    "theme": "school",
+    "image": "art/words/scissors.svg"
+  },
+  {
+    "id": "library",
+    "en": "library",
+    "zhHant": "圖書館",
+    "band": "p3",
+    "theme": "school",
+    "image": "art/words/library.svg"
+  },
+  {
+    "id": "shirt",
+    "en": "shirt",
+    "zhHant": "恤衫",
+    "band": "prek",
+    "theme": "clothes",
+    "image": "art/words/shirt.svg"
+  },
+  {
+    "id": "shoes",
+    "en": "shoes",
+    "zhHant": "鞋子",
+    "band": "prek",
+    "theme": "clothes",
+    "image": "art/words/shoes.svg"
+  },
+  {
+    "id": "hat",
+    "en": "hat",
+    "zhHant": "帽",
+    "band": "prek",
+    "theme": "clothes",
+    "image": "art/words/hat.svg"
+  },
+  {
+    "id": "pants",
+    "en": "pants",
+    "zhHant": "褲",
+    "band": "p1",
+    "theme": "clothes",
+    "image": "art/words/pants.svg"
+  },
+  {
+    "id": "socks",
+    "en": "socks",
+    "zhHant": "襪",
+    "band": "p1",
+    "theme": "clothes",
+    "image": "art/words/socks.svg"
+  },
+  {
+    "id": "dress",
+    "en": "dress",
+    "zhHant": "連身裙",
+    "band": "p1",
+    "theme": "clothes",
+    "image": "art/words/dress.svg"
+  },
+  {
+    "id": "coat",
+    "en": "coat",
+    "zhHant": "大褸",
+    "band": "p2",
+    "theme": "clothes",
+    "image": "art/words/coat.svg"
+  },
+  {
+    "id": "skirt",
+    "en": "skirt",
+    "zhHant": "短裙",
+    "band": "p2",
+    "theme": "clothes",
+    "image": "art/words/skirt.svg"
+  },
+  {
+    "id": "jacket",
+    "en": "jacket",
+    "zhHant": "外套",
+    "band": "p3",
+    "theme": "clothes",
+    "image": "art/words/jacket.svg"
+  },
+  {
+    "id": "gloves",
+    "en": "gloves",
+    "zhHant": "手套",
+    "band": "p3",
+    "theme": "clothes",
+    "image": "art/words/gloves.svg"
+  },
+  {
+    "id": "head",
+    "en": "head",
+    "zhHant": "頭",
+    "band": "prek",
+    "theme": "body",
+    "image": "art/words/head.svg"
+  },
+  {
+    "id": "hand",
+    "en": "hand",
+    "zhHant": "手",
+    "band": "prek",
+    "theme": "body",
+    "image": "art/words/hand.svg"
+  },
+  {
+    "id": "foot",
+    "en": "foot",
+    "zhHant": "腳",
+    "band": "prek",
+    "theme": "body",
+    "image": "art/words/foot.svg"
+  },
+  {
+    "id": "eye",
+    "en": "eye",
+    "zhHant": "眼睛",
+    "band": "p1",
+    "theme": "body",
+    "image": "art/words/eye.svg"
+  },
+  {
+    "id": "ear",
+    "en": "ear",
+    "zhHant": "耳朵",
+    "band": "p1",
+    "theme": "body",
+    "image": "art/words/ear.svg"
+  },
+  {
+    "id": "nose",
+    "en": "nose",
+    "zhHant": "鼻",
+    "band": "p1",
+    "theme": "body",
+    "image": "art/words/nose.svg"
+  },
+  {
+    "id": "mouth",
+    "en": "mouth",
+    "zhHant": "嘴",
+    "band": "p2",
+    "theme": "body",
+    "image": "art/words/mouth.svg"
+  },
+  {
+    "id": "hair",
+    "en": "hair",
+    "zhHant": "頭髮",
+    "band": "p2",
+    "theme": "body",
+    "image": "art/words/hair.svg"
+  },
+  {
+    "id": "arm",
+    "en": "arm",
+    "zhHant": "手臂",
+    "band": "p3",
+    "theme": "body",
+    "image": "art/words/arm.svg"
+  },
+  {
+    "id": "leg",
+    "en": "leg",
+    "zhHant": "腿",
+    "band": "p3",
+    "theme": "body",
+    "image": "art/words/leg.svg"
+  },
+  {
+    "id": "bed",
+    "en": "bed",
+    "zhHant": "床",
+    "band": "prek",
+    "theme": "home",
+    "image": "art/words/bed.svg"
+  },
+  {
+    "id": "door",
+    "en": "door",
+    "zhHant": "門",
+    "band": "prek",
+    "theme": "home",
+    "image": "art/words/door.svg"
+  },
+  {
+    "id": "window",
+    "en": "window",
+    "zhHant": "窗",
+    "band": "prek",
+    "theme": "home",
+    "image": "art/words/window.svg"
+  },
+  {
+    "id": "table",
+    "en": "table",
+    "zhHant": "檯",
+    "band": "p1",
+    "theme": "home",
+    "image": "art/words/table.svg"
+  },
+  {
+    "id": "sofa",
+    "en": "sofa",
+    "zhHant": "梳化",
+    "band": "p1",
+    "theme": "home",
+    "image": "art/words/sofa.svg"
+  },
+  {
+    "id": "lamp",
+    "en": "lamp",
+    "zhHant": "燈",
+    "band": "p1",
+    "theme": "home",
+    "image": "art/words/lamp.svg"
+  },
+  {
+    "id": "kitchen",
+    "en": "kitchen",
+    "zhHant": "廚房",
+    "band": "p2",
+    "theme": "home",
+    "image": "art/words/kitchen.svg"
+  },
+  {
+    "id": "bathroom",
+    "en": "bathroom",
+    "zhHant": "浴室",
+    "band": "p2",
+    "theme": "home",
+    "image": "art/words/bathroom.svg"
+  },
+  {
+    "id": "fridge",
+    "en": "fridge",
+    "zhHant": "雪櫃",
+    "band": "p3",
+    "theme": "home",
+    "image": "art/words/fridge.svg"
+  },
+  {
+    "id": "garden",
+    "en": "garden",
+    "zhHant": "花園",
+    "band": "p3",
+    "theme": "home",
+    "image": "art/words/garden.svg"
+  },
+  {
+    "id": "eraser",
+    "en": "eraser",
+    "zhHant": "擦膠",
+    "band": "p2",
+    "theme": "school",
+    "image": "art/words/eraser.svg"
+  },
+  {
+    "id": "glue",
+    "en": "glue",
+    "zhHant": "膠水",
+    "band": "p3",
+    "theme": "school",
+    "image": "art/words/glue.svg"
+  },
+  {
+    "id": "water",
+    "en": "water",
+    "zhHant": "水",
+    "band": "prek",
+    "theme": "food",
+    "image": "art/words/water.svg"
+  },
+  {
+    "id": "juice",
+    "en": "juice",
+    "zhHant": "果汁",
+    "band": "p1",
+    "theme": "food",
+    "image": "art/words/juice.svg"
+  },
+  {
+    "id": "teacher",
+    "en": "teacher",
+    "zhHant": "老師",
+    "band": "p1",
+    "theme": "school",
+    "image": "art/words/teacher.svg"
+  },
+  {
+    "id": "friend",
+    "en": "friend",
+    "zhHant": "朋友",
+    "band": "p2",
+    "theme": "family",
+    "image": "art/words/friend.svg"
+  },
+  {
+    "id": "cookie",
+    "en": "cookie",
+    "zhHant": "曲奇",
+    "band": "p2",
+    "theme": "food",
+    "image": "art/words/cookie.svg"
+  },
+  {
+    "id": "cake",
+    "en": "cake",
+    "zhHant": "蛋糕",
+    "band": "p3",
+    "theme": "food",
+    "image": "art/words/cake.svg"
+  },
+  {
+    "id": "mirror",
+    "en": "mirror",
+    "zhHant": "鏡子",
+    "band": "p3",
+    "theme": "home",
+    "image": "art/words/mirror.svg"
+  },
+  {
+    "id": "pillow",
+    "en": "pillow",
+    "zhHant": "枕頭",
+    "band": "p2",
+    "theme": "home",
+    "image": "art/words/pillow.svg"
+  },
+  {
+    "id": "umbrella",
+    "en": "umbrella",
+    "zhHant": "遮",
+    "band": "p3",
+    "theme": "clothes",
+    "image": "art/words/umbrella.svg"
+  },
+  {
+    "id": "scarf",
+    "en": "scarf",
+    "zhHant": "頸巾",
+    "band": "p2",
+    "theme": "clothes",
+    "image": "art/words/scarf.svg"
+  }
 ]

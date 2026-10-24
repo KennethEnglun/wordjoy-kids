@@ -1,16 +1,17 @@
 import { distractors, shuffle } from '../lib/vocab.js'
 import * as audio from '../lib/audio.js'
 
-export function createPicMatch({ words, pool, onDone, roundSize = 8 }) {
+export function createPicMatch({ words, pool, onDone, onCorrect, roundSize = 8 }) {
   const rounds = shuffle(words).slice(0, Math.min(roundSize, words.length))
   let i = 0
   let correct = 0
   let coins = 0
   const missed = []
+  const correctIds = []
 
   function render(root) {
     if (i >= rounds.length) {
-      onDone({ correct, total: rounds.length, coins, missed })
+      onDone({ correct, total: rounds.length, coins, missed, correctIds })
       return
     }
     const w = rounds[i]
@@ -47,9 +48,11 @@ export function createPicMatch({ words, pool, onDone, roundSize = 8 }) {
     const fb = root.querySelector('#fb')
     if (o.id === w.id) {
       btn.classList.add('correct')
-      audio.correct()
+      audio.speakOnCorrect(w.en)
       correct++
+      correctIds.push(w.id)
       coins += 2
+      onCorrect?.(w)
       fb.className = 'feedback ok'
       fb.textContent = '好叻！'
     } else {

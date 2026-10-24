@@ -30,7 +30,8 @@ export function themesForBand(words, band) {
   const set = new Set(
     words.filter((w) => (BAND_ORDER[w.band] ?? 0) <= max).map((w) => w.theme),
   )
-  return [...set]
+  const order = ['family','colours','numbers','animals','food','school','clothes','body','home']
+  return order.filter((t) => set.has(t)).concat([...set].filter((t) => !order.includes(t)))
 }
 
 export function pickRound(words, n = 8) {
@@ -44,12 +45,15 @@ export function distractors(all, correct, count = 3) {
 }
 
 export const THEME_META = {
-  family: { zh: '我同家人', en: 'Family', hint: '貼近香港小學 KS1 常見單元' },
-  colours: { zh: '顏色', en: 'Colours', hint: '貼近香港小學 KS1 常見單元' },
-  numbers: { zh: '數字', en: 'Numbers', hint: '貼近香港小學 KS1 常見單元' },
-  animals: { zh: '動物', en: 'Animals', hint: '貼近香港小學 KS1 常見單元' },
-  food: { zh: '食物', en: 'Food', hint: '貼近香港小學 KS1 常見單元' },
-  school: { zh: '學校', en: 'School', hint: '貼近香港小學 KS1 常見單元' },
+  family: { zh: '我同家人', en: 'Family', hint: '貼近香港小學常見單元' },
+  colours: { zh: '顏色', en: 'Colours', hint: '貼近香港小學常見單元' },
+  numbers: { zh: '數字', en: 'Numbers', hint: '貼近香港小學常見單元' },
+  animals: { zh: '動物', en: 'Animals', hint: '貼近香港小學常見單元' },
+  food: { zh: '食物', en: 'Food', hint: '貼近香港小學常見單元' },
+  school: { zh: '學校', en: 'School', hint: '貼近香港小學常見單元' },
+  clothes: { zh: '衣服', en: 'Clothes', hint: '貼近香港小學常見單元' },
+  body: { zh: '身體', en: 'Body', hint: '貼近香港小學常見單元' },
+  home: { zh: '家', en: 'Home', hint: '貼近香港小學常見單元' },
 }
 
 export const BAND_META = {

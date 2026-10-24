@@ -1,16 +1,17 @@
 import { distractors, shuffle } from '../lib/vocab.js'
 import * as audio from '../lib/audio.js'
 
-export function createTreasureTap({ words, pool, onDone, roundSize = 8 }) {
+export function createTreasureTap({ words, pool, onDone, onCorrect, roundSize = 8 }) {
   const rounds = shuffle(words).slice(0, Math.min(roundSize, words.length))
   let i = 0
   let correct = 0
   let coins = 0
   const missed = []
+  const correctIds = []
 
   function render(root) {
     if (i >= rounds.length) {
-      onDone({ correct, total: rounds.length, coins, missed })
+      onDone({ correct, total: rounds.length, coins, missed, correctIds })
       return
     }
     const w = rounds[i]
@@ -49,9 +50,11 @@ export function createTreasureTap({ words, pool, onDone, roundSize = 8 }) {
     const chest = root.querySelector('#chest')
     if (o.id === w.id) {
       btn.classList.add('correct')
-      audio.correct()
+      audio.speakOnCorrect(w.en)
       correct++
+      correctIds.push(w.id)
       const gain = 3
+      onCorrect?.(w)
       coins += gain
       chest.classList.add('open')
       chest.innerHTML = `<img src="/art/ui/chest_open.svg" alt="open" /><div class="coin-pop">+${gain} 金幣</div>`

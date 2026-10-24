@@ -20,7 +20,7 @@ npm run build     # 產出 dist/（可給 Capacitor 包 iOS）
 
 ## MVP 內容
 
-- 60 個原創詞（family / colours / numbers / animals / food / school）
+- 100+ 原創詞（+clothes / body / home）；Joy 吉祥物；複習袋；多小朋友檔 + 家長 PIN；連續日數
 - 3 款遊戲：對對碰、閃電答題、開寶箱
 - localStorage 進度（星、金幣、複習袋、家長摘要）
 - Web Speech 英文發音（裝置支援時）
@@ -33,3 +33,6 @@ npm run build     # 產出 dist/（可給 Capacitor 包 iOS）
 ## 授權注意
 
 詞表為原創，主題對齊香港常見 KS1／朗文·牛津類單元方向，**並非**抄錄任何出版社字表。
+
+## R2
+複習袋、多子女檔、家長 PIN、streak、較穩 TTS、Joy mascot、主題擴充至 102 詞。

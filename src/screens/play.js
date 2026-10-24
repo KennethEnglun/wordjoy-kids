@@ -2,16 +2,54 @@ import { loadVocab, filterByBandTheme } from '../lib/vocab.js'
 import { createPicMatch } from '../games/picMatch.js'
 import { createSpeedStar } from '../games/speedStar.js'
 import { createTreasureTap } from '../games/treasureTap.js'
+import {
+  getActiveProfile,
+  clearReviewed,
+} from '../lib/storage.js'
+
+function isReviewState(state) {
+  return (
+    state.game === 'review' ||
+    state.theme === '__review__' ||
+    state.theme === 'review' ||
+    state.band === 'review'
+  )
+}
 
 export async function renderPlay(root, state, nav) {
   const all = await loadVocab()
-  const words = filterByBandTheme(all, state.band, state.theme)
-  const pool = filterByBandTheme(all, state.band, state.theme)
-  if (!words.length) {
-    root.innerHTML = `<div class="screen"><p>呢個主題暫時未有字。</p>
-      <button type="button" class="back" id="b">返去</button></div>`
-    root.querySelector('#b').onclick = () => nav({ screen: 'games', band: state.band, theme: state.theme })
-    return
+  const review = isReviewState(state)
+  let words
+  let pool
+
+  if (review) {
+    const bag = getActiveProfile()?.reviewBag || []
+    const byId = new Map(all.map((w) => [w.id, w]))
+    words = bag.map((id) => byId.get(id)).filter(Boolean)
+    pool = all
+    if (!words.length) {
+      root.innerHTML = `
+        <div class="screen empty-state">
+          <div class="empty-emoji">🧺</div>
+          <h1>複習袋空咗</h1>
+          <p class="hint">玩多幾局，答錯嘅字會自動放入嚟。</p>
+          <div class="actions">
+            <button type="button" class="primary" data-home>返主頁</button>
+          </div>
+        </div>`
+      root.querySelector('[data-home]').onclick = () => nav({ screen: 'home' })
+      return
+    }
+  } else {
+    words = filterByBandTheme(all, state.band, state.theme)
+    pool = filterByBandTheme(all, state.band, state.theme)
+    if (!words.length) {
+      root.innerHTML = `<div class="screen"><p>呢個主題暫時未有字。</p>
+        <button type="button" class="back" id="b">返去</button></div>`
+      root.querySelector('#b').onclick = () =>
+        nav({ screen: 'games', band: state.band, theme: state.theme })
+      return
+    }
   }
 
   root.innerHTML = `<div class="screen" id="game-root"></div>`
@@ -20,17 +58,18 @@ export async function renderPlay(root, state, nav) {
   const onDone = (result) => {
     nav({
       screen: 'results',
-      band: state.band,
-      theme: state.theme,
+      band: review ? 'review' : state.band,
+      theme: review ? 'review' : state.theme,
       game: state.game,
       result,
     })
   }
 
-  const opts = { words, pool, onDone, roundSize: 8 }
+  const onCorrect = (w) => clearReviewed([w.id])
+  const opts = { words, pool, onDone, onCorrect, roundSize: 8 }
   let game
-  if (state.game === 'speed_star') game = createSpeedStar(opts)
-  else if (state.game === 'treasure_tap') game = createTreasureTap(opts)
+  if (!review && state.game === 'speed_star') game = createSpeedStar(opts)
+  else if (!review && state.game === 'treasure_tap') game = createTreasureTap(opts)
   else game = createPicMatch(opts)
 
   game.mount(mount)
