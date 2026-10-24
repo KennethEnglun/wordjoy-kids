@@ -7,6 +7,8 @@
   "background_color": "#FFE6F2",
   "theme_color": "#FF6B9D",
   "icons": [
-    { "src": "/art/ui/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+    { "src": "/art/icon/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/art/icon/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/art/icon/app_icon.webp", "sizes": "512x512", "type": "image/webp", "purpose": "any maskable" }
   ]
 }
