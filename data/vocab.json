@@ -405,7 +405,7 @@
     "zhHant": "書本",
     "band": "prek",
     "theme": "school",
-    "image": "art/words/book.svg"
+    "image": "art/words/book.webp"
   },
   {
     "id": "pen",
@@ -413,7 +413,7 @@
     "zhHant": "原子筆",
     "band": "prek",
     "theme": "school",
-    "image": "art/words/pen.svg"
+    "image": "art/words/pen.webp"
   },
   {
     "id": "bag",
@@ -421,7 +421,7 @@
     "zhHant": "書包",
     "band": "prek",
     "theme": "school",
-    "image": "art/words/bag.svg"
+    "image": "art/words/bag.webp"
   },
   {
     "id": "ruler",
@@ -429,7 +429,7 @@
     "zhHant": "間尺",
     "band": "p1",
     "theme": "school",
-    "image": "art/words/ruler.svg"
+    "image": "art/words/ruler.webp"
   },
   {
     "id": "pencil",
@@ -437,7 +437,7 @@
     "zhHant": "鉛筆",
     "band": "p1",
     "theme": "school",
-    "image": "art/words/pencil.svg"
+    "image": "art/words/pencil.webp"
   },
   {
     "id": "desk",
@@ -445,7 +445,7 @@
     "zhHant": "書桌",
     "band": "p1",
     "theme": "school",
-    "image": "art/words/desk.svg"
+    "image": "art/words/desk.webp"
   },
   {
     "id": "chair",
@@ -453,7 +453,7 @@
     "zhHant": "椅子",
     "band": "p2",
     "theme": "school",
-    "image": "art/words/chair.svg"
+    "image": "art/words/chair.webp"
   },
   {
     "id": "crayon",
@@ -461,7 +461,7 @@
     "zhHant": "蠟筆",
     "band": "p2",
     "theme": "school",
-    "image": "art/words/crayon.svg"
+    "image": "art/words/crayon.webp"
   },
   {
     "id": "scissors",
@@ -469,7 +469,7 @@
     "zhHant": "剪刀",
     "band": "p3",
     "theme": "school",
-    "image": "art/words/scissors.svg"
+    "image": "art/words/scissors.webp"
   },
   {
     "id": "library",
@@ -477,7 +477,7 @@
     "zhHant": "圖書館",
     "band": "p3",
     "theme": "school",
-    "image": "art/words/library.svg"
+    "image": "art/words/library.webp"
   },
   {
     "id": "shirt",
@@ -725,7 +725,7 @@
     "zhHant": "擦膠",
     "band": "p2",
     "theme": "school",
-    "image": "art/words/eraser.svg"
+    "image": "art/words/eraser.webp"
   },
   {
     "id": "glue",
@@ -733,7 +733,7 @@
     "zhHant": "膠水",
     "band": "p3",
     "theme": "school",
-    "image": "art/words/glue.svg"
+    "image": "art/words/glue.webp"
   },
   {
     "id": "water",
@@ -757,7 +757,7 @@
     "zhHant": "老師",
     "band": "p1",
     "theme": "school",
-    "image": "art/words/teacher.svg"
+    "image": "art/words/teacher.webp"
   },
   {
     "id": "friend",
