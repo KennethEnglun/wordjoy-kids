@@ -325,7 +325,7 @@
     "zhHant": "蘋果",
     "band": "prek",
     "theme": "food",
-    "image": "art/words/apple.svg"
+    "image": "art/words/apple.webp"
   },
   {
     "id": "milk",
@@ -333,7 +333,7 @@
     "zhHant": "牛奶",
     "band": "prek",
     "theme": "food",
-    "image": "art/words/milk.svg"
+    "image": "art/words/milk.webp"
   },
   {
     "id": "egg",
@@ -341,7 +341,7 @@
     "zhHant": "雞蛋",
     "band": "prek",
     "theme": "food",
-    "image": "art/words/egg.svg"
+    "image": "art/words/egg.webp"
   },
   {
     "id": "rice",
@@ -349,7 +349,7 @@
     "zhHant": "白飯",
     "band": "p1",
     "theme": "food",
-    "image": "art/words/rice.svg"
+    "image": "art/words/rice.webp"
   },
   {
     "id": "bread",
@@ -357,7 +357,7 @@
     "zhHant": "麵包",
     "band": "p1",
     "theme": "food",
-    "image": "art/words/bread.svg"
+    "image": "art/words/bread.webp"
   },
   {
     "id": "banana",
@@ -365,7 +365,7 @@
     "zhHant": "香蕉",
     "band": "p1",
     "theme": "food",
-    "image": "art/words/banana.svg"
+    "image": "art/words/banana.webp"
   },
   {
     "id": "noodles",
@@ -373,7 +373,7 @@
     "zhHant": "麵條",
     "band": "p2",
     "theme": "food",
-    "image": "art/words/noodles.svg"
+    "image": "art/words/noodles.webp"
   },
   {
     "id": "carrot",
@@ -381,7 +381,7 @@
     "zhHant": "紅蘿蔔",
     "band": "p2",
     "theme": "food",
-    "image": "art/words/carrot.svg"
+    "image": "art/words/carrot.webp"
   },
   {
     "id": "cheese",
@@ -389,7 +389,7 @@
     "zhHant": "芝士",
     "band": "p3",
     "theme": "food",
-    "image": "art/words/cheese.svg"
+    "image": "art/words/cheese.webp"
   },
   {
     "id": "soup",
@@ -397,7 +397,7 @@
     "zhHant": "湯",
     "band": "p3",
     "theme": "food",
-    "image": "art/words/soup.svg"
+    "image": "art/words/soup.webp"
   },
   {
     "id": "book",
@@ -741,7 +741,7 @@
     "zhHant": "水",
     "band": "prek",
     "theme": "food",
-    "image": "art/words/water.svg"
+    "image": "art/words/water.webp"
   },
   {
     "id": "juice",
@@ -749,7 +749,7 @@
     "zhHant": "果汁",
     "band": "p1",
     "theme": "food",
-    "image": "art/words/juice.svg"
+    "image": "art/words/juice.webp"
   },
   {
     "id": "teacher",
@@ -773,7 +773,7 @@
     "zhHant": "曲奇",
     "band": "p2",
     "theme": "food",
-    "image": "art/words/cookie.svg"
+    "image": "art/words/cookie.webp"
   },
   {
     "id": "cake",
@@ -781,7 +781,7 @@
     "zhHant": "蛋糕",
     "band": "p3",
     "theme": "food",
-    "image": "art/words/cake.svg"
+    "image": "art/words/cake.webp"
   },
   {
     "id": "mirror",
