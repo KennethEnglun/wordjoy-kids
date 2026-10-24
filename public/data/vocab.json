@@ -245,7 +245,7 @@
     "zhHant": "貓",
     "band": "prek",
     "theme": "animals",
-    "image": "art/words/cat.svg"
+    "image": "art/words/cat.webp"
   },
   {
     "id": "dog",
@@ -253,7 +253,7 @@
     "zhHant": "狗",
     "band": "prek",
     "theme": "animals",
-    "image": "art/words/dog.svg"
+    "image": "art/words/dog.webp"
   },
   {
     "id": "fish",
@@ -261,7 +261,7 @@
     "zhHant": "魚",
     "band": "prek",
     "theme": "animals",
-    "image": "art/words/fish.svg"
+    "image": "art/words/fish.webp"
   },
   {
     "id": "bird",
@@ -269,7 +269,7 @@
     "zhHant": "雀仔",
     "band": "p1",
     "theme": "animals",
-    "image": "art/words/bird.svg"
+    "image": "art/words/bird.webp"
   },
   {
     "id": "rabbit",
@@ -277,7 +277,7 @@
     "zhHant": "兔仔",
     "band": "p1",
     "theme": "animals",
-    "image": "art/words/rabbit.svg"
+    "image": "art/words/rabbit.webp"
   },
   {
     "id": "tiger",
@@ -285,7 +285,7 @@
     "zhHant": "老虎",
     "band": "p1",
     "theme": "animals",
-    "image": "art/words/tiger.svg"
+    "image": "art/words/tiger.webp"
   },
   {
     "id": "panda",
@@ -293,7 +293,7 @@
     "zhHant": "熊貓",
     "band": "p2",
     "theme": "animals",
-    "image": "art/words/panda.svg"
+    "image": "art/words/panda.webp"
   },
   {
     "id": "monkey",
@@ -301,7 +301,7 @@
     "zhHant": "馬騮",
     "band": "p2",
     "theme": "animals",
-    "image": "art/words/monkey.svg"
+    "image": "art/words/monkey.webp"
   },
   {
     "id": "dolphin",
@@ -309,7 +309,7 @@
     "zhHant": "海豚",
     "band": "p3",
     "theme": "animals",
-    "image": "art/words/dolphin.svg"
+    "image": "art/words/dolphin.webp"
   },
   {
     "id": "elephant",
@@ -317,7 +317,7 @@
     "zhHant": "大象",
     "band": "p3",
     "theme": "animals",
-    "image": "art/words/elephant.svg"
+    "image": "art/words/elephant.webp"
   },
   {
     "id": "apple",
