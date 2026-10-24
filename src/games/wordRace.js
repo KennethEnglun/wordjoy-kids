@@ -1,7 +1,7 @@
 import { distractors, shuffle } from '../lib/vocab.js'
 import * as audio from '../lib/audio.js'
 
-/** Word Race — correct answers move Momo along a track. */
+/** Word Race — correct answers move 字學貓 along a track. */
 export function createWordRace({ words, pool, onDone, onCorrect, roundSize = 8 }) {
   const rounds = shuffle(words).slice(0, Math.min(roundSize, words.length))
   let i = 0

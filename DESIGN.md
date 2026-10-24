@@ -2,7 +2,9 @@
 
 Working name: **WordJoy（英樂寶）**  
 Audience: Chinese-family children in HK, Pre-K / K1–K3 → Primary 3  
-Platform: Mobile-first web app (PWA), portrait, thumb-friendly  
+Platform: Mobile-first web app (PWA), portrait, thumb-friendly
+Mascot: **字學貓** (same cat IP as 字學貓樂園; never 毛毛/Momo in UI).
+  
 Tone: Bright, playful, high-contrast, big type; Traditional Chinese UI + English learning content
 
 ## Goals

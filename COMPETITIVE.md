@@ -101,7 +101,7 @@ WordJoy 定位：**「香港家庭版詞彙 Blooket」**——手機單手玩、
 
 - **視覺**：cream 卡、sage 主色、暖棕字、天空／山丘漸變（水彩感 placeholder；ChatGPT 美術後續換）
 - **IA**：底部 5 tab — 首頁／冒險／任務／商店／角色（英文學習標籤）
-- **首頁**：捲軸 banner + 毛毛 +「開始英文之旅」+ 今日任務卡 + 學習報告／詞彙寶庫
+- **首頁**：捲軸 banner + 字學貓 +「開始英文之旅」+ 今日任務卡 + 學習報告／詞彙寶庫
 - **冒險**：遊戲作任務卡（pic_match…cafe_order），唔再用 emoji 網格主入口
 - **商店／角色換裝**：stub only（唔做 gacha／全換裝）
 - 詳見 `SISTER_APP_ALIGN.md`；參考圖 `art/reference/zijimao/`

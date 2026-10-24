@@ -1,6 +1,6 @@
 import { mountShell } from '../lib/shell.js'
 import { getActiveProfile, getTodayStars, getParentSettings } from '../lib/storage.js'
-import { momoImg, MASCOT_NAME_ZH, MASCOT_NAME_EN } from '../lib/mascot.js'
+import { momoImg, MASCOT_NAME_ZH } from '../lib/mascot.js'
 import { BAND_META } from '../lib/vocab.js'
 import * as audio from '../lib/audio.js'
 
@@ -19,7 +19,7 @@ export function renderCharacter(root, state, nav) {
     <div class="screen tab-screen character-screen">
       <header class="page-head">
         <h1>我的${MASCOT_NAME_ZH}</h1>
-        <p class="hint">${MASCOT_NAME_EN} · WordJoy 樂園夥伴</p>
+        <p class="hint">WordJoy 樂園夥伴 · 同中文 app 同一隻貓</p>
       </header>
       <div class="cream-card center char-hero">
         ${momoImg('front', MASCOT_NAME_ZH, 'momo-mascot char-momo')}

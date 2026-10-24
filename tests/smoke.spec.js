@@ -25,7 +25,7 @@ test('bottom tabs navigate', async ({ page }) => {
   await page.getByRole('button', { name: '商店', exact: true }).click()
   await expect(page.getByRole('heading', { name: /星星小店/ })).toBeVisible()
   await page.getByRole('button', { name: '角色', exact: true }).click()
-  await expect(page.getByRole('heading', { name: /我的毛毛/ })).toBeVisible()
+  await expect(page.getByRole('heading', { name: /我的字學貓/ })).toBeVisible()
   await page.getByRole('button', { name: '首頁', exact: true }).click()
   await expect(page.getByRole('heading', { name: '英樂寶' })).toBeVisible()
 })

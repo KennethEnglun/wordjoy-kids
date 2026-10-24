@@ -1,7 +1,7 @@
 import { distractors, shuffle } from '../lib/vocab.js'
 import * as audio from '../lib/audio.js'
 
-/** Café Order — Momo orders a snack; pick the matching picture. */
+/** Café Order — 字學貓 orders a snack; pick the matching picture. */
 export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 }) {
   const source = pickCafeWords(words, pool)
   const rounds = shuffle(source).slice(0, Math.min(roundSize, source.length))
@@ -29,7 +29,7 @@ export function createCafeOrder({ words, pool, onDone, onCorrect, roundSize = 8 
           </div>
         </div>
       </div>
-      <p class="hint">毛毛想食邊樣？揀啱張圖！</p>
+      <p class="hint">字學貓想食邊樣？揀啱張圖！</p>
       <div class="choices cafe-choices"></div>
       <div class="feedback" id="fb"></div>
     `

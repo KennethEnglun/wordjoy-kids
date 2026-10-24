@@ -28,7 +28,7 @@ export async function renderPlay(root, state, nav) {
   if (!gate.allowed) {
     root.innerHTML = `
       <div class="screen empty-state">
-        ${momoImg('think', '毛毛', 'momo-mascot joy-results')}
+        ${momoImg('think', '字學貓', 'momo-mascot joy-results')}
         <h1>時間到啦</h1>
         <p class="hint">${gate.reason}</p>
         <div class="actions">

@@ -64,7 +64,7 @@ export function renderHome(root, nav) {
         showNudge
           ? `<div class="nudge-banner" role="status">
               <div class="nudge-copy">
-                <strong>毛毛話：今日目標未完成，玩一局再嚟？</strong>
+                <strong>字學貓話：今日目標未完成，玩一局再嚟？</strong>
                 <span>一局大約 5 分鐘</span>
               </div>
               <button type="button" class="nudge-dismiss" data-nudge-dismiss>知道啦</button>
