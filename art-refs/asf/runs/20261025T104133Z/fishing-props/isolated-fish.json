@@ -1,0 +1,118 @@
+{
+  "source": "/workspace/wordjoy-kids/art-refs/asf/runs/20261025T104133Z/fishing-props/raw_fish_v2.png",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "threshold": 16,
+  "assets": {
+    "common": {
+      "component_area": 52058,
+      "component_center": [
+        264.0,
+        263.0
+      ],
+      "bbox": [
+        67,
+        139,
+        461,
+        387
+      ],
+      "isolated_size": [
+        530,
+        530
+      ],
+      "file": "fish_common.png"
+    },
+    "striped": {
+      "component_area": 53232,
+      "component_center": [
+        777.5,
+        268.5
+      ],
+      "bbox": [
+        577,
+        142,
+        978,
+        395
+      ],
+      "isolated_size": [
+        539,
+        539
+      ],
+      "file": "fish_striped.png"
+    },
+    "blue": {
+      "component_area": 48378,
+      "component_center": [
+        1286.0,
+        272.0
+      ],
+      "bbox": [
+        1098,
+        149,
+        1474,
+        395
+      ],
+      "isolated_size": [
+        506,
+        506
+      ],
+      "file": "fish_blue.png"
+    },
+    "spotted": {
+      "component_area": 50817,
+      "component_center": [
+        267.5,
+        746.5
+      ],
+      "bbox": [
+        75,
+        628,
+        460,
+        865
+      ],
+      "isolated_size": [
+        519,
+        519
+      ],
+      "file": "fish_spotted.png"
+    },
+    "rare_big": {
+      "component_area": 89746,
+      "component_center": [
+        793.5,
+        739.5
+      ],
+      "bbox": [
+        530,
+        577,
+        1057,
+        902
+      ],
+      "isolated_size": [
+        701,
+        701
+      ],
+      "file": "fish_rare_big.png"
+    },
+    "icon_small": {
+      "component_area": 26150,
+      "component_center": [
+        1310.5,
+        754.0
+      ],
+      "bbox": [
+        1180,
+        659,
+        1441,
+        849
+      ],
+      "isolated_size": [
+        359,
+        359
+      ],
+      "file": "fish_icon_small.png"
+    }
+  }
+}

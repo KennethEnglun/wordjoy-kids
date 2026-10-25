@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "e6614f8e50f2cdc9d6fcb607694c148eb21c86dd02715d56a08bdf6480faf6d4",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-25T10:56:51.759Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-25T10:56:51.759Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "fishing-v2 pier atlas raw art",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a172a6-c0e0-7202-a3ef-ed96391080e4",
+    "source": "CODEX_HOME/generated_images/01a172a6-c0e0-7202-a3ef-ed96391080e4/exec-811ce4a8-33fd-4859-96dd-d92d05799b53.png",
+    "sourceSha256": "45d624b5968b27ee93d4c07070f95559fa9be9ba920651197f4ee9aeacac95da",
+    "sourceMtime": "2026-10-25T10:46:05Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "45d624b5968b27ee93d4c07070f95559fa9be9ba920651197f4ee9aeacac95da",
+    "bytes": 1396282,
+    "format": "PNG",
+    "size": [
+      1774,
+      887
+    ]
+  }
+}

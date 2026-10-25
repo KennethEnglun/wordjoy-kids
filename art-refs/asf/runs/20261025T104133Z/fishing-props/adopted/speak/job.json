@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "69d7dc1e4e44ad1407af1870a6624b0dac4a90b963ea1275d6a616ce62031c56",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-25T10:56:51.875Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-25T10:56:51.875Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "fishing-v2 speak atlas raw art",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a172a6-c0e0-7202-a3ef-ed96391080e4",
+    "source": "CODEX_HOME/generated_images/01a172a6-c0e0-7202-a3ef-ed96391080e4/exec-d3cb2cf4-a8fc-4775-9eaf-1c2387f332be.png",
+    "sourceSha256": "5f68d55f1455329869236c36bb5d676843bed39a54bc009622fce6bc337f8788",
+    "sourceMtime": "2026-10-25T10:50:20Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "5f68d55f1455329869236c36bb5d676843bed39a54bc009622fce6bc337f8788",
+    "bytes": 1258659,
+    "format": "PNG",
+    "size": [
+      1536,
+      1024
+    ]
+  }
+}

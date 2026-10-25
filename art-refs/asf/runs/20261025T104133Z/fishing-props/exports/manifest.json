@@ -1,0 +1,276 @@
+{
+  "run": "20261025T104133Z/fishing-props",
+  "route": "Codex image_gen host_image (local)",
+  "outputs": {
+    "fishing_v2_bg_lake.webp": {
+      "source": "raw_lake.png",
+      "size": [
+        780,
+        1688
+      ],
+      "mode": "RGB",
+      "sha256": "e978709a82a9883f0c092db3213e598dcbd2498dc73bab33e6aacb0930ce1210",
+      "bytes": 380492
+    },
+    "fishing_v2_pier.webp": {
+      "source": "asf_pier/clean.png",
+      "size": [
+        640,
+        280
+      ],
+      "mode": "RGBA",
+      "sha256": "1f4c443a35fb999ad3a6751e6c88ffeaf4b94a23ef99b4a9f4760d6f7de78a33",
+      "bytes": 120912
+    },
+    "fishing_v2_bucket.webp": {
+      "source": "asf_props/sheet-1.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "sha256": "499c005f04901d7d617fdb94ebb4e15e174e89fbe4ca00bd8abfa04c340b4c62",
+      "bytes": 63062
+    },
+    "fishing_v2_bobber.webp": {
+      "source": "asf_props/sheet-2.png",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "sha256": "1704a872087f6e93acb5e93bbf13864bfaa9277857da33499b542e342e39987c",
+      "bytes": 6712
+    },
+    "fishing_v2_bait_bag.webp": {
+      "source": "asf_props/sheet-3.png",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "sha256": "0dd6d5c4453b784d4e443091e31cd9c32d8608f7f80a7d2bf8bf8b9c9028c992",
+      "bytes": 19508
+    },
+    "fishing_v2_rod_icon.webp": {
+      "source": "asf_props/sheet-4.png",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "sha256": "d2dc94ae2369d9804829343f4b1869aa1a2de2e787bce5d46b262873839c3935",
+      "bytes": 4996
+    },
+    "fishing_v2_fish_common.webp": {
+      "source": "asf_fish_common/clean.png",
+      "size": [
+        256,
+        160
+      ],
+      "mode": "RGBA",
+      "sha256": "c52e630890612fbb34d5c1a59a6d92284d5b43a3d61ce28be001fbe9aab8c7cb",
+      "bytes": 35062
+    },
+    "fishing_v2_fish_striped.webp": {
+      "source": "asf_fish_striped/clean.png",
+      "size": [
+        256,
+        160
+      ],
+      "mode": "RGBA",
+      "sha256": "986cd3d87dacd1ec335742ab6acd37783cdeb167dc4736e2afc1fb103f070521",
+      "bytes": 32188
+    },
+    "fishing_v2_fish_blue.webp": {
+      "source": "asf_fish_blue/clean.png",
+      "size": [
+        256,
+        160
+      ],
+      "mode": "RGBA",
+      "sha256": "45246ea91e5c627cb2430201a631efe8dbd36dea60a8197963aad3533ed5cbf0",
+      "bytes": 34092
+    },
+    "fishing_v2_fish_spotted.webp": {
+      "source": "asf_fish_spotted/clean.png",
+      "size": [
+        256,
+        160
+      ],
+      "mode": "RGBA",
+      "sha256": "01e0baf3b71049fcd599fd224ceb7e0368cd4640f007091ad085eebdf90db593",
+      "bytes": 37284
+    },
+    "fishing_v2_fish_rare_big.webp": {
+      "source": "asf_fish_rare_big/clean.png",
+      "size": [
+        320,
+        200
+      ],
+      "mode": "RGBA",
+      "sha256": "932bfa92c20b8a2b1d72b3760d4d6fc3ab6c90e8225df5b4159ad8c8e910b132",
+      "bytes": 53574
+    },
+    "fishing_v2_fish_icon_small.webp": {
+      "source": "asf_fish_icon_small/clean.png",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "sha256": "c333b3747845c967f0faa293f89d8c890ba81fe497a44103eb91a0540c863554",
+      "bytes": 9842
+    },
+    "fishing_v2_fx_ripple.webp": {
+      "source": "asf_fx/fx-1.png",
+      "size": [
+        320,
+        320
+      ],
+      "mode": "RGBA",
+      "sha256": "4c734ce48a0e5eac0f9a52c352c2d47fc8da0d1d9eccd2f2d91f7dfdc7f6aabb",
+      "bytes": 133314
+    },
+    "fishing_v2_fx_splash.webp": {
+      "source": "asf_fx/fx-2.png",
+      "size": [
+        320,
+        320
+      ],
+      "mode": "RGBA",
+      "sha256": "997c5e1b0896b59b435e36cbda301a0323d37a7d986543d762e1d1e4e109b25d",
+      "bytes": 75788
+    },
+    "fishing_v2_fx_sparkle.webp": {
+      "source": "asf_fx/fx-3.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "sha256": "7fe0de3cba9ace92b8d77e29f0cd1394a722857191c405c9e4ada16fccf6a7d6",
+      "bytes": 66560
+    },
+    "fishing_v2_fx_soft_glow.webp": {
+      "source": "asf_fx/fx-4.png",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "sha256": "8fee6223a4f1bc21c55413b63eef1e74a173d89097515cbef1a7ef434b635f1a",
+      "bytes": 264084
+    },
+    "bot_bunny_avatar.webp": {
+      "source": "asf_bots_v2/sheet-1.png",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "sha256": "042b33ca7aee82982e6b25a1470110bc23b26aa0415fa222620d65e7d2aa2f7e",
+      "bytes": 9104
+    },
+    "bot_chick_avatar.webp": {
+      "source": "asf_bots_v2/sheet-2.png",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "sha256": "44872ff438fa65eed1de36c39dee5e7e92a352511c1200f3c9c374681bf7b6ed",
+      "bytes": 10414
+    },
+    "ui_choice_btn_normal.webp": {
+      "source": "asf_buttons/sheet-1.png",
+      "size": [
+        360,
+        120
+      ],
+      "mode": "RGBA",
+      "sha256": "e914ce4646d206546f6330162f04298591a9f4e93551162ef52558b5a165262d",
+      "bytes": 49160
+    },
+    "ui_choice_btn_pressed.webp": {
+      "source": "asf_buttons/sheet-2.png",
+      "size": [
+        360,
+        120
+      ],
+      "mode": "RGBA",
+      "sha256": "b1c179ca6d8b5e61f50854a68fc47b75f03006443969f80ebe54cefb5db416fd",
+      "bytes": 49908
+    },
+    "ui_choice_btn_correct.webp": {
+      "source": "asf_buttons/sheet-3.png",
+      "size": [
+        360,
+        120
+      ],
+      "mode": "RGBA",
+      "sha256": "733528efa2ed17c277acc577e27bcbacbf010a0c2361247631929594e83c5924",
+      "bytes": 50414
+    },
+    "ui_choice_btn_wrong.webp": {
+      "source": "asf_buttons/sheet-4.png",
+      "size": [
+        360,
+        120
+      ],
+      "mode": "RGBA",
+      "sha256": "b81d289135053a70655ff9bd020e769d1379c5a923b4a7e1f08fe5945bfa5aa4",
+      "bytes": 52312
+    },
+    "ui_cream_panel.webp": {
+      "source": "asf_ui_frames/sheet-1.png",
+      "size": [
+        640,
+        480
+      ],
+      "mode": "RGBA",
+      "sha256": "a84f85341dccd35e7376f09c07e33448b8189a418fc5ca5f96cdc8a3d92e44d8",
+      "bytes": 275880
+    },
+    "ui_cta_sage.webp": {
+      "source": "asf_ui_frames/sheet-2.png",
+      "size": [
+        640,
+        140
+      ],
+      "mode": "RGBA",
+      "sha256": "130a9ed30883dc33eb96ffb75d320909586ef18dabe621ad3ec528375b180bbb",
+      "bytes": 95140
+    },
+    "ui_hud_pill_empty.webp": {
+      "source": "asf_ui_frames/sheet-3.png",
+      "size": [
+        512,
+        128
+      ],
+      "mode": "RGBA",
+      "sha256": "e6defeb87256f4550008bbd9c54cfd3593fbd3e0b61e45c38e3165aa6cfeab9a",
+      "bytes": 63938
+    },
+    "ui_coin_icon.webp": {
+      "source": "asf_ui_frames/sheet-4.png",
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "sha256": "344353f2b1a9521caa85ad62b14a5d3185592a723062c03f185b34a9066e69a7",
+      "bytes": 22576
+    },
+    "ui_speak_icon.webp": {
+      "source": "asf_speak/clean.png",
+      "size": [
+        96,
+        96
+      ],
+      "mode": "RGBA",
+      "sha256": "bd0dea754194ce1c1360b801e9dccd82100d7d90cf4f559991fc0fe00dffb123",
+      "bytes": 7062
+    }
+  }
+}
