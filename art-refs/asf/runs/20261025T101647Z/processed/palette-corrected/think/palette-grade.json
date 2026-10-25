@@ -1,0 +1,154 @@
+{
+  "schema": "wordjoy.zxm_fur_palette_grade.v1",
+  "method": "OKLab lightness range fit to approved master; hue/chroma locked to #B9B4AE",
+  "reference": {
+    "path": "art-refs/asf/runs/20261025T050136Z/master-color-corrected-approved/master_rgba.png",
+    "sha256": "a826cb21b1141117d5250be81501d5660236e76b62045d1637f6f06f5a426d04",
+    "fur_pixels": 227536
+  },
+  "palette": {
+    "path": "art-refs/asf/runs/20261025T050136Z/zxm-palette-fixed.json",
+    "sha256": "b5603b3dbacca6b5efdd7cc4b4fab468d12705079009c4cb0a01013809518c8b",
+    "fur_ramp_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "base": "#B9B4AE"
+  },
+  "frames": [
+    {
+      "input": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/think-palette/sheet-1.png",
+        "sha256": "acb57b20d1ca1e3ff1bf7175ee0a305a2df816f78c1bd01514c5a0086826e9ea"
+      },
+      "output": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/think/zxm-think-1.png",
+        "sha256": "4a410dbd00a7d5997161be0d157d6ffb28f8b448c58fb1cef32d96c6ca3e17bc"
+      },
+      "fur_pixels": 47212,
+      "median_rgb_before": [
+        199,
+        188,
+        176
+      ],
+      "median_rgb_after": [
+        185,
+        180,
+        174
+      ],
+      "mean_rgb_after": [
+        185.47,
+        180.47,
+        174.46
+      ]
+    },
+    {
+      "input": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/think-palette/sheet-2.png",
+        "sha256": "4903af565666956b1b03df54ffce39762e6cdf2932bd4e651515fb3efeb397db"
+      },
+      "output": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/think/zxm-think-2.png",
+        "sha256": "d0208fd623f4418d39904f1379dd3ceedfdb37bed74077010b976350096b63b3"
+      },
+      "fur_pixels": 45233,
+      "median_rgb_before": [
+        200,
+        189,
+        177
+      ],
+      "median_rgb_after": [
+        186,
+        181,
+        175
+      ],
+      "mean_rgb_after": [
+        185.68,
+        180.68,
+        174.67
+      ]
+    },
+    {
+      "input": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/think-palette/sheet-3.png",
+        "sha256": "d01704e4277051d1277b13d1d0b180a1d6cb4aebc75477dcd959116ebb3a9881"
+      },
+      "output": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/think/zxm-think-3.png",
+        "sha256": "64974074b015d74b825199696d1957864f59656c15cc8ec120603321250dfef4"
+      },
+      "fur_pixels": 44636,
+      "median_rgb_before": [
+        200,
+        190,
+        177
+      ],
+      "median_rgb_after": [
+        186,
+        181,
+        175
+      ],
+      "mean_rgb_after": [
+        185.96,
+        180.96,
+        174.95
+      ]
+    },
+    {
+      "input": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/think-palette/sheet-4.png",
+        "sha256": "25313861966e98c2045164d6778edbb944bf9ad93221d1586a7bdf5052076a91"
+      },
+      "output": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/think/zxm-think-4.png",
+        "sha256": "a50af368991e71672a1612e35a83ca83ee5f1beb9d96d72c17f82f567d9f49e1"
+      },
+      "fur_pixels": 46885,
+      "median_rgb_before": [
+        200,
+        189,
+        177
+      ],
+      "median_rgb_after": [
+        186,
+        181,
+        175
+      ],
+      "mean_rgb_after": [
+        186.04,
+        181.04,
+        175.03
+      ]
+    }
+  ],
+  "source_fur_pixels": 183966,
+  "luminance_fit": {
+    "source_median": 0.8040556013584137,
+    "target_median": 0.774523913860321,
+    "scale": 0.47422836039938326,
+    "source_p05_p95": [
+      0.7523337006568909,
+      0.8502541780471802
+    ],
+    "target_p05_p95": [
+      0.7560256719589233,
+      0.8024623394012451
+    ]
+  },
+  "locked_base_lab": [
+    0.77229244,
+    0.00303739,
+    0.00971323
+  ],
+  "reference_fur_luminance_percentiles": [
+    0.756026,
+    0.76818,
+    0.774524,
+    0.780855,
+    0.802462
+  ]
+}

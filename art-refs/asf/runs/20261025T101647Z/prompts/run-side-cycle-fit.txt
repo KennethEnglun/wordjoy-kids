@@ -1,0 +1,5 @@
+Edit the first reference, preserving its four distinct running poses, lead-leg placement, arms, face, body shape, colors, lighting and watercolor finish. Keep the same exact 1x4 grid, all four equal cell boundaries, 1774x887 canvas and flat #FF00FF background. Do not rearrange, redraw or duplicate poses.
+
+Only fix the fit: uniformly scale each complete cat (including its tail and paws) to 94% of its current size and center that smaller cat in its own cell. Keep the same feet baseline within the row. Leave visible magenta gutters between every cell: no tail, whisker, paw, outline or other opaque pixel may touch or cross any cell division. Retain the exact same cat in all four cells and the same approved grey fur, brown heart, cream bloomers, peach blush, watercolor line and solid brown eyes. No text, props or extra characters.
+
+Return one 1774x887 sheet with four frames.

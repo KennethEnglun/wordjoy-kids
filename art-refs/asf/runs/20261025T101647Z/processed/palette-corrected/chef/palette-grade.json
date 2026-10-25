@@ -1,0 +1,154 @@
+{
+  "schema": "wordjoy.zxm_fur_palette_grade.v1",
+  "method": "OKLab lightness range fit to approved master; hue/chroma locked to #B9B4AE",
+  "reference": {
+    "path": "art-refs/asf/runs/20261025T050136Z/master-color-corrected-approved/master_rgba.png",
+    "sha256": "a826cb21b1141117d5250be81501d5660236e76b62045d1637f6f06f5a426d04",
+    "fur_pixels": 227536
+  },
+  "palette": {
+    "path": "art-refs/asf/runs/20261025T050136Z/zxm-palette-fixed.json",
+    "sha256": "b5603b3dbacca6b5efdd7cc4b4fab468d12705079009c4cb0a01013809518c8b",
+    "fur_ramp_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "base": "#B9B4AE"
+  },
+  "frames": [
+    {
+      "input": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/chef-palette/sheet-1.png",
+        "sha256": "c14b020fd284553b60736b5942a4b48df952a994287088a208a96c2a7e546e10"
+      },
+      "output": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/chef/zxm-chef-1.png",
+        "sha256": "ffb6aa67bbc8f990aa25322fb47861f23bcbeea880ff573e13c8f56cf4c96fbf"
+      },
+      "fur_pixels": 37550,
+      "median_rgb_before": [
+        204,
+        191,
+        177
+      ],
+      "median_rgb_after": [
+        186,
+        181,
+        175
+      ],
+      "mean_rgb_after": [
+        185.46,
+        180.45,
+        174.45
+      ]
+    },
+    {
+      "input": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/chef-palette/sheet-2.png",
+        "sha256": "0027b8e75d6681a486e07e9f8d65bfc8de06676f247a216e6cc48d16b3841f9f"
+      },
+      "output": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/chef/zxm-chef-2.png",
+        "sha256": "abaa6d984871229379604cf999abe39c48d0536b268b210d8644d1843f8887f9"
+      },
+      "fur_pixels": 35430,
+      "median_rgb_before": [
+        204,
+        191,
+        177
+      ],
+      "median_rgb_after": [
+        186,
+        181,
+        175
+      ],
+      "mean_rgb_after": [
+        185.54,
+        180.53,
+        174.52
+      ]
+    },
+    {
+      "input": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/chef-palette/sheet-3.png",
+        "sha256": "b517fc705e8bbf513e1889bbecba7e613f570d279af62e6baec23e73afdd6f22"
+      },
+      "output": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/chef/zxm-chef-3.png",
+        "sha256": "f7709fe249897ed3c5a9f3f8d79059c12c9080be72c7f3239c37811de0fb8f56"
+      },
+      "fur_pixels": 36489,
+      "median_rgb_before": [
+        204,
+        191,
+        177
+      ],
+      "median_rgb_after": [
+        186,
+        181,
+        175
+      ],
+      "mean_rgb_after": [
+        185.36,
+        180.35,
+        174.35
+      ]
+    },
+    {
+      "input": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/chef-palette/sheet-4.png",
+        "sha256": "ebe693e4621c75f393741cc4896ecf1c738f08d501534870587d9f8fc0b1a704"
+      },
+      "output": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/chef/zxm-chef-4.png",
+        "sha256": "5bff6af83ebd7e82341de543ae3435c2bc3181aafd162bb404087fe834b05ab0"
+      },
+      "fur_pixels": 37245,
+      "median_rgb_before": [
+        205,
+        192,
+        178
+      ],
+      "median_rgb_after": [
+        186,
+        181,
+        175
+      ],
+      "mean_rgb_after": [
+        186.02,
+        181.0,
+        174.99
+      ]
+    }
+  ],
+  "source_fur_pixels": 146714,
+  "luminance_fit": {
+    "source_median": 0.8121161460876465,
+    "target_median": 0.774523913860321,
+    "scale": 0.5133164950753567,
+    "source_p05_p95": [
+      0.7626625776290894,
+      0.853126585483551
+    ],
+    "target_p05_p95": [
+      0.7560256719589233,
+      0.8024623394012451
+    ]
+  },
+  "locked_base_lab": [
+    0.77229244,
+    0.00303739,
+    0.00971323
+  ],
+  "reference_fur_luminance_percentiles": [
+    0.756026,
+    0.76818,
+    0.774524,
+    0.780855,
+    0.802462
+  ]
+}

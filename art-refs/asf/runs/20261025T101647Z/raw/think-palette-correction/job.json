@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "route": "codex-cli",
+  "requestedModel": "codex-image_gen",
+  "options": {
+    "tool": "image_gen"
+  },
+  "promptSha256": "9475e7bf2aae2fc3ceb4c448960aa341357689bc786047dd22a879ec04ea46c4",
+  "references": [
+    {
+      "sha256": "95a8d159ba6f4a48878fea894ce3bbf29e60f89cfe21d5203df6c0b749d6cda9",
+      "bytes": 1630744
+    },
+    {
+      "sha256": "a826cb21b1141117d5250be81501d5660236e76b62045d1637f6f06f5a426d04",
+      "bytes": 572234
+    },
+    {
+      "sha256": "9737e0df80c60d8b188c1c126d1fb10bfc5cc4de0df8bf277afb8aa2c3f76dca",
+      "bytes": 121886
+    }
+  ],
+  "fingerprint": "e7918f5e72d7ae3841371a9f0ec8dbe2fad5fbc5679156f817ddec9831674fac",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "2026-10-06",
+    "items": [],
+    "basis": "subscription quota call: no per-call USD price; counted by call caps"
+  },
+  "consent": {
+    "provider": "openai",
+    "model": "codex-image_gen",
+    "calls": 1,
+    "estimateUsd": 0.0,
+    "route": "codex-cli",
+    "quota": true,
+    "account": "the user's own Codex sign-in (ChatGPT)",
+    "note": "uses the subscription quota of that sign-in, never API credit"
+  },
+  "artSource": "host_image",
+  "execution": "execute",
+  "status": "done",
+  "receipt": {
+    "startedAt": "2026-10-25T10:55:30.929Z",
+    "submittedAt": "2026-10-25T10:55:30.942Z",
+    "completedAt": "2026-10-25T10:56:13.865Z",
+    "wallMs": 42936,
+    "providerMs": 42912,
+    "attempt": 1,
+    "purpose": "Palette correction for shared 字學貓 think sheet",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "ok"
+  },
+  "ledger": {
+    "projectDir": "../../../../../..",
+    "reservationId": "28629c4dfbc94b23bc413a12d3226db5",
+    "status": "done"
+  },
+  "cliRun": {
+    "tool": "codex",
+    "runId": "8eed2d0a542b48ca8a64fd345fe4605f",
+    "cwd": "<tmp>/forge-cli-8eed2d0a542b-2ae26691",
+    "startedAt": "2026-10-25T10:55:30.929Z",
+    "version": "0.164.0",
+    "versionText": "codex-cli 0.164.0",
+    "recipe": "codex-exec-imagegen/1",
+    "home": "CODEX_HOME",
+    "verifiedBefore": true,
+    "threadId": "01a172b3-88a4-7c70-ae45-e0bb3e66ecaf"
+  },
+  "adoption": {
+    "method": "native-run-folder",
+    "source": "CODEX_HOME/generated_images/01a172b3-88a4-7c70-ae45-e0bb3e66ecaf/exec-1038a638-3ac8-49ae-b43a-19ddf22f471a.png",
+    "sourceSha256": "f9abf44b00fe6d09b22c3070d2746a6a31dc269d4302be5266e4b5bf9ad8aaa9",
+    "sourceMtime": "2026-10-25T10:56:09Z",
+    "freshAfter": "2026-10-25T10:55:30.943Z",
+    "checks": [
+      "inside the CLI's own folder for this run",
+      "no symlink or junction",
+      "regular file of a sane size",
+      "newer than the run",
+      "magic bytes",
+      "decodes",
+      "exactly one output",
+      "exclusive copy with matching sha256"
+    ],
+    "finalAnswerNamesFile": true
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "f9abf44b00fe6d09b22c3070d2746a6a31dc269d4302be5266e4b5bf9ad8aaa9",
+    "bytes": 1584717,
+    "format": "PNG",
+    "size": [
+      1774,
+      887
+    ]
+  }
+}

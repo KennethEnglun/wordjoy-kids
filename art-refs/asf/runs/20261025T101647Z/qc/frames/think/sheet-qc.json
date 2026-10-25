@@ -30,10 +30,10 @@
       "id": "identity_residual",
       "status": "warn",
       "value": {
-        "0": 0.56,
-        "1": 1.43,
-        "2": 2.03,
-        "3": 0.57
+        "0": 0.47,
+        "1": 1.47,
+        "2": 2.11,
+        "3": 0.53
       },
       "threshold": 1.5,
       "frames": [
@@ -43,8 +43,13 @@
     },
     {
       "id": "near_duplicates",
-      "status": "pass",
-      "value": [],
+      "status": "warn",
+      "value": [
+        [
+          0,
+          3
+        ]
+      ],
       "threshold": 0.95,
       "note": "pairs with best-shift silhouette IoU at or above the threshold and similar colours"
     },
@@ -64,11 +69,11 @@
     },
     {
       "id": "torso_drift",
-      "status": "warn",
-      "value": 32.55,
+      "status": "pass",
+      "value": 0.8,
       "threshold": 2.0,
       "method": "trunk",
-      "median_x": 259.5,
+      "median_x": 257.9,
       "note": "range of the torso x in game px; scale_frames --root-lock torso-x removes it"
     },
     {
@@ -84,7 +89,7 @@
     {
       "id": "seam",
       "status": "pass",
-      "value": 1.25,
+      "value": 1.38,
       "threshold": 1.5,
       "transitions": [],
       "note": "largest frame-to-frame change over the median step; review these joins first"
@@ -93,23 +98,23 @@
   "inputs": [
     {
       "path": "../../../scaled/think/frames/zxm-think-1.png",
-      "sha256": "ababc5ac7e4a57459200e4c70b86ac86757f13c2faec137651069d5745aa75cd",
-      "bytes": 252429
+      "sha256": "a6e06227333a051a482e9520d42be06df4aeb3a72ba1644578928077a3591224",
+      "bytes": 196558
     },
     {
       "path": "../../../scaled/think/frames/zxm-think-2.png",
-      "sha256": "ba4825408fbc0e6db72d43362622b3412ce6916299c03cb6954ed40aa414ab38",
-      "bytes": 248992
+      "sha256": "371dd5c9cd5c34d458fe0956c855c1c8db57d3225dd2dbef248ff6f3509713d5",
+      "bytes": 194863
     },
     {
       "path": "../../../scaled/think/frames/zxm-think-3.png",
-      "sha256": "87d4de48355423d794668ba99e7c7dbd2a2d118f8aef48bb54b19374f707e61f",
-      "bytes": 246506
+      "sha256": "fdd840e697551e993d621f3122236b56b2955d5309fa0a6c592881276e2add47",
+      "bytes": 192322
     },
     {
       "path": "../../../scaled/think/frames/zxm-think-4.png",
-      "sha256": "68428f49b987a5e507bdd126df702414b9316eca6a9649ee03ef477c524833a6",
-      "bytes": 251028
+      "sha256": "36f06ce6a691777a17672e09bcdc5b7fbd5ddd46c0183285d6a8f37b830cc9be",
+      "bytes": 195442
     },
     {
       "path": "../../../../20261025T050136Z/master-color-corrected-approved/master_rgba.png",
@@ -120,8 +125,8 @@
   "outputs": [
     {
       "path": "frames-review.png",
-      "sha256": "f1a4b03510dd7b7a1aefc289e7046521369a775edef3bca05f7d2a4fb20706be",
-      "bytes": 102214
+      "sha256": "1893882c461bd8563d64ed88c0a2036e5ce32f104c2c4024c97045dfae47945d",
+      "bytes": 84963
     }
   ],
   "tool": {
@@ -135,7 +140,7 @@
   "input": {
     "frames": [
       {
-        "sha256": "ababc5ac7e4a57459200e4c70b86ac86757f13c2faec137651069d5745aa75cd",
+        "sha256": "a6e06227333a051a482e9520d42be06df4aeb3a72ba1644578928077a3591224",
         "size": [
           512,
           640
@@ -146,7 +151,7 @@
         "keyed": null
       },
       {
-        "sha256": "ba4825408fbc0e6db72d43362622b3412ce6916299c03cb6954ed40aa414ab38",
+        "sha256": "371dd5c9cd5c34d458fe0956c855c1c8db57d3225dd2dbef248ff6f3509713d5",
         "size": [
           512,
           640
@@ -157,7 +162,7 @@
         "keyed": null
       },
       {
-        "sha256": "87d4de48355423d794668ba99e7c7dbd2a2d118f8aef48bb54b19374f707e61f",
+        "sha256": "fdd840e697551e993d621f3122236b56b2955d5309fa0a6c592881276e2add47",
         "size": [
           512,
           640
@@ -168,7 +173,7 @@
         "keyed": null
       },
       {
-        "sha256": "68428f49b987a5e507bdd126df702414b9316eca6a9649ee03ef477c524833a6",
+        "sha256": "36f06ce6a691777a17672e09bcdc5b7fbd5ddd46c0183285d6a8f37b830cc9be",
         "size": [
           512,
           640
@@ -185,7 +190,7 @@
     "facing": "right",
     "game_pixel": 1.0,
     "frames_per_row": 4,
-    "loop": true,
+    "loop": false,
     "alpha_threshold": 127,
     "reference_frame": 0,
     "head_frac": 0.35,
@@ -204,41 +209,41 @@
       "frame": 0,
       "row": 0,
       "bbox": [
-        58,
+        57,
         103,
-        468,
+        467,
         605
       ],
       "height_px": 502,
       "width_px": 410,
-      "solid_px": 137705,
+      "solid_px": 137605,
       "ground": 605,
       "head": {
         "head_ratio": 1.011,
-        "scale": 0.6081,
-        "residual": 14.41,
-        "residual_over_median": 0.56,
+        "scale": 0.609,
+        "residual": 10.85,
+        "residual_over_median": 0.47,
         "template": false,
         "head_box": [
-          83,
+          81,
           103,
-          441,
+          440,
           279
         ]
       },
-      "colour_l1_to_median": 0.0404,
+      "colour_l1_to_median": 0.017,
       "phase": {
         "label": "flight",
         "clearance_game_px": 2.0,
-        "stride_ratio": 0.916
+        "stride_ratio": 0.919
       },
       "lead": {
         "mode": "auto-luminance",
-        "front_minus_back_L": -0.0201,
-        "separation_game_px": 103.22,
+        "front_minus_back_L": -0.0224,
+        "separation_game_px": 103.14,
         "lead": "far"
       },
-      "torso_x": 258.8,
+      "torso_x": 257.4,
       "torso_method": "trunk",
       "cell": null,
       "source": "zxm-think-1.png"
@@ -247,41 +252,41 @@
       "frame": 1,
       "row": 0,
       "bbox": [
-        53,
+        50,
         91,
-        454,
-        606
+        450,
+        605
       ],
-      "height_px": 515,
-      "width_px": 401,
-      "solid_px": 134117,
-      "ground": 606,
+      "height_px": 514,
+      "width_px": 400,
+      "solid_px": 133920,
+      "ground": 605,
       "head": {
         "head_ratio": 0.989,
-        "scale": 0.5952,
-        "residual": 36.76,
-        "residual_over_median": 1.43,
+        "scale": 0.596,
+        "residual": 33.77,
+        "residual_over_median": 1.47,
         "template": false,
         "head_box": [
-          53,
+          50,
           91,
-          439,
+          436,
           271
         ]
       },
-      "colour_l1_to_median": 0.1309,
+      "colour_l1_to_median": 0.0325,
       "phase": {
-        "label": "contact",
-        "clearance_game_px": 1.0,
-        "stride_ratio": 0.929
+        "label": "flight",
+        "clearance_game_px": 2.0,
+        "stride_ratio": 0.932
       },
       "lead": {
         "mode": "auto-luminance",
-        "front_minus_back_L": -0.0251,
-        "separation_game_px": 104.49,
+        "front_minus_back_L": -0.0171,
+        "separation_game_px": 104.85,
         "lead": "far"
       },
-      "torso_x": 260.1,
+      "torso_x": 257.7,
       "torso_method": "trunk",
       "cell": null,
       "source": "zxm-think-2.png"
@@ -290,41 +295,41 @@
       "frame": 2,
       "row": 0,
       "bbox": [
-        57,
+        44,
         81,
-        461,
-        606
+        448,
+        605
       ],
-      "height_px": 525,
+      "height_px": 524,
       "width_px": 404,
-      "solid_px": 132221,
-      "ground": 606,
+      "solid_px": 131989,
+      "ground": 605,
       "head": {
         "head_ratio": 0.968,
-        "scale": 0.5823,
-        "residual": 52.27,
-        "residual_over_median": 2.03,
+        "scale": 0.583,
+        "residual": 48.26,
+        "residual_over_median": 2.11,
         "template": false,
         "head_box": [
-          62,
+          48,
           81,
-          461,
-          265
+          448,
+          264
         ]
       },
-      "colour_l1_to_median": 0.0455,
+      "colour_l1_to_median": 0.0163,
       "phase": {
-        "label": "contact",
-        "clearance_game_px": 1.0,
+        "label": "flight",
+        "clearance_game_px": 2.0,
         "stride_ratio": 1.0
       },
       "lead": {
         "mode": "auto-luminance",
-        "front_minus_back_L": -0.0737,
-        "separation_game_px": 114.06,
+        "front_minus_back_L": -0.1463,
+        "separation_game_px": 113.81,
         "lead": "far"
       },
-      "torso_x": 271.5,
+      "torso_x": 258.2,
       "torso_method": "trunk",
       "cell": null,
       "source": "zxm-think-3.png"
@@ -333,49 +338,49 @@
       "frame": 3,
       "row": 0,
       "bbox": [
-        39,
+        59,
         103,
-        444,
+        464,
         607
       ],
       "height_px": 504,
       "width_px": 405,
-      "solid_px": 136625,
+      "solid_px": 136408,
       "ground": 607,
       "head": {
         "head_ratio": 1.011,
-        "scale": 0.6081,
-        "residual": 14.77,
-        "residual_over_median": 0.57,
+        "scale": 0.609,
+        "residual": 12.05,
+        "residual_over_median": 0.53,
         "template": false,
         "head_box": [
-          64,
+          83,
           103,
-          417,
+          437,
           279
         ]
       },
-      "colour_l1_to_median": 0.0676,
+      "colour_l1_to_median": 0.0588,
       "phase": {
         "label": "contact",
         "clearance_game_px": 0.0,
-        "stride_ratio": 0.919
+        "stride_ratio": 0.922
       },
       "lead": {
         "mode": "auto-luminance",
-        "front_minus_back_L": -0.0302,
-        "separation_game_px": 103.78,
+        "front_minus_back_L": -0.027,
+        "separation_game_px": 103.44,
         "lead": "far"
       },
-      "torso_x": 239.0,
+      "torso_x": 258.0,
       "torso_method": "trunk",
       "cell": null,
       "source": "zxm-think-4.png"
     }
   ],
   "identity": {
-    "median_scale": 0.6017,
-    "median_residual": 25.77,
+    "median_scale": 0.6025,
+    "median_residual": 22.91,
     "reduction": 9,
     "template": "master",
     "scales": [
@@ -396,75 +401,75 @@
     "pairs": [
       {
         "pair": [
+          0,
+          3
+        ],
+        "iou_best_shift": 0.9641,
+        "best_shift_src_px": [
+          0,
+          0
+        ],
+        "colour_l1": 0.0675
+      },
+      {
+        "pair": [
           1,
           3
         ],
-        "iou_best_shift": 0.8922,
+        "iou_best_shift": 0.8888,
         "best_shift_src_px": [
-          9,
+          -9,
           0
         ],
-        "colour_l1": 0.1977
+        "colour_l1": 0.0872
       },
       {
         "pair": [
           0,
           1
         ],
-        "iou_best_shift": 0.886,
+        "iou_best_shift": 0.8778,
         "best_shift_src_px": [
           9,
           0
         ],
-        "colour_l1": 0.1652
-      },
-      {
-        "pair": [
-          0,
-          3
-        ],
-        "iou_best_shift": 0.8827,
-        "best_shift_src_px": [
-          9,
-          0
-        ],
-        "colour_l1": 0.0441
+        "colour_l1": 0.0416
       },
       {
         "pair": [
           1,
           2
         ],
-        "iou_best_shift": 0.8227,
+        "iou_best_shift": 0.8246,
         "best_shift_src_px": [
-          0,
+          9,
           -9
         ],
-        "colour_l1": 0.1125
+        "colour_l1": 0.04
       },
       {
         "pair": [
           2,
           3
         ],
-        "iou_best_shift": 0.7702,
+        "iou_best_shift": 0.7505,
         "best_shift_src_px": [
-          9,
-          9
+          -9,
+          0
         ],
-        "colour_l1": 0.1077
+        "colour_l1": 0.0593
       },
       {
         "pair": [
           0,
           2
         ],
-        "iou_best_shift": 0.7631,
+        "iou_best_shift": 0.7462,
         "best_shift_src_px": [
           9,
           -9
         ],
-        "colour_l1": 0.0851
+        "colour_l1": 0.0299
       }
     ],
     "max_shift_src_px": 9
@@ -489,7 +494,7 @@
     "unclear": 0
   },
   "torso": {
-    "drift_game_px": 32.55
+    "drift_game_px": 0.8
   },
   "row_baselines": {
     "0": 607
@@ -498,36 +503,21 @@
     {
       "from": 2,
       "to": 3,
-      "mae": 29.17,
-      "over_median": 1.25
-    },
-    {
-      "from": 3,
-      "to": 0,
-      "mae": 23.6,
-      "over_median": 1.01
+      "mae": 32.7,
+      "over_median": 1.38
     },
     {
       "from": 1,
       "to": 2,
-      "mae": 23.14,
-      "over_median": 0.99
+      "mae": 23.78,
+      "over_median": 1.0
     },
     {
       "from": 0,
       "to": 1,
-      "mae": 20.15,
-      "over_median": 0.86
+      "mae": 20.3,
+      "over_median": 0.85
     }
   ],
-  "seam": {
-    "frames": 4,
-    "seam": 23.599668662875306,
-    "adjacent_median": 23.137398152070887,
-    "adjacent_p95": 28.567385778988108,
-    "adjacent_max": 29.170717737534467,
-    "seam_over_median": 1.0199793644802297,
-    "seam_over_p95": 0.826105295229126,
-    "method": "premultiplied RGBA mean absolute difference (0-255); seam = last -> first"
-  }
+  "seam": null
 }

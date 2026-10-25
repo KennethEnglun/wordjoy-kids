@@ -35,13 +35,13 @@
   "margin": null,
   "anchor_mode": "stance",
   "source_anchor": [
-    374.5,
-    711.0
+    384.5,
+    712.0
   ],
   "reference_frame": 0,
-  "root_lock": "none",
+  "root_lock": "torso-x",
   "lock": [],
-  "row_baseline": false,
+  "row_baseline": true,
   "shift_quantum": 1,
   "alpha_threshold": 16,
   "frames_per_row": 4,
@@ -56,15 +56,15 @@
   "frames": [
     {
       "source": {
-        "path": "../../processed/chef/zxm-chef-1.png",
-        "sha256": "3f874778201a27e8cf2fa366fc790dae45977921599f0f7a5311a1f3aa999fcd",
-        "bytes": 159803
+        "path": "../../processed/palette-corrected/chef/zxm-chef-1.png",
+        "sha256": "ffb6aa67bbc8f990aa25322fb47861f23bcbeea880ff573e13c8f56cf4c96fbf",
+        "bytes": 126149
       },
       "cell": null,
       "output": {
         "path": "frames/zxm-chef-1.png",
-        "sha256": "bedd461c412a5b1e462c43a9fdc02d41cb49d609e439f2a872cb38baa1cf463c",
-        "bytes": 256863
+        "sha256": "46fc3b4b719fa226f341b3e925268adbf9a4f278867d0da483c55d3bbfd5e00e",
+        "bytes": 212180
       },
       "shift": [
         0,
@@ -72,7 +72,7 @@
       ],
       "output_bbox": [
         60,
-        91,
+        90,
         454,
         609
       ],
@@ -80,134 +80,134 @@
       "turn_slide_output_px": 0.0,
       "measure": {
         "bbox": [
-          233,
+          243,
           335,
-          517,
-          711
+          528,
+          712
         ],
-        "ground": 711,
-        "body_height": 376,
-        "stance_x": 374.5,
-        "torso_x": 374.99,
-        "centroid_x": 378.45,
-        "hip_x": 372.5
+        "ground": 712,
+        "body_height": 377,
+        "stance_x": 384.5,
+        "torso_x": 385.05,
+        "centroid_x": 388.88,
+        "hip_x": 382.5
       }
     },
     {
       "source": {
-        "path": "../../processed/chef/zxm-chef-2.png",
-        "sha256": "65089590922429f2865315310be2f5a4b404f0dfb29707e69e19c3fbe03fc75b",
-        "bytes": 160162
+        "path": "../../processed/palette-corrected/chef/zxm-chef-2.png",
+        "sha256": "abaa6d984871229379604cf999abe39c48d0536b268b210d8644d1843f8887f9",
+        "bytes": 128553
       },
       "cell": null,
       "output": {
         "path": "frames/zxm-chef-2.png",
-        "sha256": "f8e0b5466d409242bc294cb9d84655f2745d09c6844f14c56e6b2546ede69b97",
-        "bytes": 258436
+        "sha256": "3cb62b98d30f0d12fb8bbcc5cd7c5f3afe6a1b9ba101fa093d882e35c0d660b5",
+        "bytes": 216453
       },
       "shift": [
-        0,
+        15,
         0
       ],
       "output_bbox": [
-        40,
-        91,
-        445,
+        55,
+        90,
+        460,
         609
       ],
-      "turn_slide_px": 16.317,
-      "turn_slide_output_px": 16.0,
+      "turn_slide_px": 13.683,
+      "turn_slide_output_px": 14.0,
       "measure": {
         "bbox": [
-          219,
+          229,
           335,
-          511,
-          711
+          521,
+          712
         ],
-        "ground": 711,
+        "ground": 712,
         "body_height": 376,
-        "stance_x": 368.5,
-        "torso_x": 363.69,
-        "centroid_x": 371.81,
-        "hip_x": 350.0
+        "stance_x": 378.5,
+        "torso_x": 374.07,
+        "centroid_x": 382.07,
+        "hip_x": 360.5
       }
     },
     {
       "source": {
-        "path": "../../processed/chef/zxm-chef-3.png",
-        "sha256": "d8c6a45d4278a6d041a65e33d28dde181f128883ebddf4a6c999d3fcf5675899",
-        "bytes": 166042
+        "path": "../../processed/palette-corrected/chef/zxm-chef-3.png",
+        "sha256": "f7709fe249897ed3c5a9f3f8d79059c12c9080be72c7f3239c37811de0fb8f56",
+        "bytes": 133279
       },
       "cell": null,
       "output": {
         "path": "frames/zxm-chef-3.png",
-        "sha256": "ce7db5d815b4179cac70b6e1be579a237d2eeb36f6ffcf17b9350c8edcc76907",
-        "bytes": 267899
+        "sha256": "8ef7004e6a883564a36a316a6c59ab5f4c6fe0967da2c0b25ce3056e9d30730d",
+        "bytes": 224089
       },
       "shift": [
-        0,
+        20,
         0
       ],
       "output_bbox": [
-        26,
+        48,
         90,
-        455,
+        476,
         609
       ],
-      "turn_slide_px": 21.756,
-      "turn_slide_output_px": 21.0,
+      "turn_slide_px": 19.603,
+      "turn_slide_output_px": 19.0,
       "measure": {
         "bbox": [
-          208,
-          334,
-          518,
-          711
+          219,
+          335,
+          529,
+          712
         ],
-        "ground": 711,
-        "body_height": 376,
-        "stance_x": 366.5,
-        "torso_x": 361.66,
-        "centroid_x": 368.31,
-        "hip_x": 346.5
+        "ground": 712,
+        "body_height": 377,
+        "stance_x": 377.0,
+        "torso_x": 370.46,
+        "centroid_x": 378.69,
+        "hip_x": 357.5
       }
     },
     {
       "source": {
-        "path": "../../processed/chef/zxm-chef-4.png",
-        "sha256": "382bc71f3b6f9726a9a496b4dcc464b365d3dbf9307b94913e4c4c7c4dcf1320",
-        "bytes": 159725
+        "path": "../../processed/palette-corrected/chef/zxm-chef-4.png",
+        "sha256": "5bff6af83ebd7e82341de543ae3435c2bc3181aafd162bb404087fe834b05ab0",
+        "bytes": 126663
       },
       "cell": null,
       "output": {
         "path": "frames/zxm-chef-4.png",
-        "sha256": "8fd92456ed5f3cd208b92f6e9dd72c1a0c1990e78e4c063f6f99848f37a9be1a",
-        "bytes": 257035
+        "sha256": "9daab6ea13af6d8e1fcfa91b24c3294611b9a195b3795e687714115ce7d74b0a",
+        "bytes": 213055
       },
       "shift": [
-        0,
+        29,
         0
       ],
       "output_bbox": [
-        36,
+        65,
         90,
-        427,
-        610
+        457,
+        609
       ],
-      "turn_slide_px": 51.671,
-      "turn_slide_output_px": 52.0,
+      "turn_slide_px": 7.688,
+      "turn_slide_output_px": 7.0,
       "measure": {
         "bbox": [
-          215,
-          334,
-          498,
-          711
+          225,
+          335,
+          508,
+          712
         ],
-        "ground": 711,
+        "ground": 712,
         "body_height": 377,
-        "stance_x": 355.5,
-        "torso_x": 352.69,
-        "centroid_x": 357.93,
-        "hip_x": 351.5
+        "stance_x": 366.0,
+        "torso_x": 363.52,
+        "centroid_x": 368.25,
+        "hip_x": 361.5
       }
     }
   ],
@@ -231,45 +231,45 @@
       ]
     ],
     "before": [
-      26.27,
-      14.767,
-      42.819,
-      45.61
+      24.643,
+      13.723,
+      39.76,
+      42.592
     ],
     "after": [
-      26.27,
-      14.767,
-      42.819,
-      45.61
+      24.186,
+      17.956,
+      29.863,
+      6.427
     ],
     "metric": "forge_core.transition_mae (premultiplied RGBA) on one shared crop"
   },
   "seam": {
     "before": {
       "frames": 4,
-      "seam": 45.60961559996063,
-      "adjacent_median": 26.26965444999948,
-      "adjacent_p95": 41.16450843142528,
-      "adjacent_max": 42.81949220713926,
-      "seam_over_median": 1.736209194786783,
-      "seam_over_p95": 1.1079839730368775,
+      "seam": 42.59232089813285,
+      "adjacent_median": 24.642827222411125,
+      "adjacent_p95": 38.24859194574988,
+      "adjacent_max": 39.76034358167641,
+      "seam_over_median": 1.7283861349885117,
+      "seam_over_p95": 1.1135657218060189,
       "method": "premultiplied RGBA mean absolute difference (0-255); seam = last -> first"
     },
     "after": {
       "frames": 4,
-      "seam": 45.60961559996063,
-      "adjacent_median": 26.26965444999948,
-      "adjacent_p95": 41.16450843142528,
-      "adjacent_max": 42.81949220713926,
-      "seam_over_median": 1.736209194786783,
-      "seam_over_p95": 1.1079839730368775,
+      "seam": 6.427385084573328,
+      "adjacent_median": 24.186101687182582,
+      "adjacent_p95": 29.29493272284829,
+      "adjacent_max": 29.862580615700036,
+      "seam_over_median": 0.26574704628731133,
+      "seam_over_p95": 0.21940262315606388,
       "method": "premultiplied RGBA mean absolute difference (0-255); seam = last -> first"
     }
   },
   "input": {
     "frames": [
       {
-        "sha256": "3f874778201a27e8cf2fa366fc790dae45977921599f0f7a5311a1f3aa999fcd",
+        "sha256": "ffb6aa67bbc8f990aa25322fb47861f23bcbeea880ff573e13c8f56cf4c96fbf",
         "size": [
           768,
           768
@@ -280,7 +280,7 @@
         "keyed": null
       },
       {
-        "sha256": "65089590922429f2865315310be2f5a4b404f0dfb29707e69e19c3fbe03fc75b",
+        "sha256": "abaa6d984871229379604cf999abe39c48d0536b268b210d8644d1843f8887f9",
         "size": [
           768,
           768
@@ -291,7 +291,7 @@
         "keyed": null
       },
       {
-        "sha256": "d8c6a45d4278a6d041a65e33d28dde181f128883ebddf4a6c999d3fcf5675899",
+        "sha256": "f7709fe249897ed3c5a9f3f8d79059c12c9080be72c7f3239c37811de0fb8f56",
         "size": [
           768,
           768
@@ -302,7 +302,7 @@
         "keyed": null
       },
       {
-        "sha256": "382bc71f3b6f9726a9a496b4dcc464b365d3dbf9307b94913e4c4c7c4dcf1320",
+        "sha256": "5bff6af83ebd7e82341de543ae3435c2bc3181aafd162bb404087fe834b05ab0",
         "size": [
           768,
           768
@@ -344,12 +344,17 @@
         "id": "registration",
         "status": "pass",
         "value": {
-          "horizontal": null,
-          "vertical": null,
+          "horizontal": "torso-x",
+          "vertical": "row-baseline",
           "row_grounds": {
-            "0": 711
+            "0": 712
           },
-          "feature_values": null
+          "feature_values": [
+            385.05,
+            374.07,
+            370.46,
+            363.52
+          ]
         },
         "threshold": null,
         "note": "per-frame whole-pixel shifts against the reference frame"
@@ -358,8 +363,8 @@
         "id": "turn_slide",
         "status": "pass",
         "value": {
-          "design": 51.671,
-          "output": 52.0
+          "design": 19.603,
+          "output": 19.0
         },
         "threshold": null,
         "note": "2 x |stance x - anchor x| in output px, before (design) and after pixel sampling (output); 0 means a mirrored turn keeps the feet in place"
@@ -367,31 +372,31 @@
     ],
     "inputs": [
       {
-        "path": "../../processed/chef/zxm-chef-1.png",
-        "sha256": "3f874778201a27e8cf2fa366fc790dae45977921599f0f7a5311a1f3aa999fcd",
-        "bytes": 159803
+        "path": "../../processed/palette-corrected/chef/zxm-chef-1.png",
+        "sha256": "ffb6aa67bbc8f990aa25322fb47861f23bcbeea880ff573e13c8f56cf4c96fbf",
+        "bytes": 126149
       },
       {
-        "path": "../../processed/chef/zxm-chef-2.png",
-        "sha256": "65089590922429f2865315310be2f5a4b404f0dfb29707e69e19c3fbe03fc75b",
-        "bytes": 160162
+        "path": "../../processed/palette-corrected/chef/zxm-chef-2.png",
+        "sha256": "abaa6d984871229379604cf999abe39c48d0536b268b210d8644d1843f8887f9",
+        "bytes": 128553
       },
       {
-        "path": "../../processed/chef/zxm-chef-3.png",
-        "sha256": "d8c6a45d4278a6d041a65e33d28dde181f128883ebddf4a6c999d3fcf5675899",
-        "bytes": 166042
+        "path": "../../processed/palette-corrected/chef/zxm-chef-3.png",
+        "sha256": "f7709fe249897ed3c5a9f3f8d79059c12c9080be72c7f3239c37811de0fb8f56",
+        "bytes": 133279
       },
       {
-        "path": "../../processed/chef/zxm-chef-4.png",
-        "sha256": "382bc71f3b6f9726a9a496b4dcc464b365d3dbf9307b94913e4c4c7c4dcf1320",
-        "bytes": 159725
+        "path": "../../processed/palette-corrected/chef/zxm-chef-4.png",
+        "sha256": "5bff6af83ebd7e82341de543ae3435c2bc3181aafd162bb404087fe834b05ab0",
+        "bytes": 126663
       }
     ],
     "outputs": [
       {
         "path": "scale-review.png",
-        "sha256": "4d741350eb924227ca1072bd6b33b4ad6ac26f8f47b6f0db3438186c2a01a6c2",
-        "bytes": 859813
+        "sha256": "58b373af34bace84770692b0110c5c0059e3d214055d31fb588936470ac0695b",
+        "bytes": 722512
       }
     ],
     "tool": {

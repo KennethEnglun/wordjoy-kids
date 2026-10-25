@@ -19,8 +19,11 @@
     },
     "run": {
       "route": "Agent Sprite Forge route_media image (local Codex CLI image_gen)",
-      "selected_sheet": "art-refs/asf/runs/20261025T101647Z/raw/run-motion-correction/generated.png",
-      "derived_from": "raw/run-fit-correction/generated.png"
+      "selected_sheet": "art-refs/asf/runs/20261025T101647Z/raw/run-mirror-alternation/generated.png",
+      "pose_sheet": "art-refs/asf/runs/20261025T101647Z/raw/run-side-cycle-final/generated.png",
+      "fit_sheet": "art-refs/asf/runs/20261025T101647Z/raw/run-side-cycle-fit/generated.png",
+      "process": "art-refs/asf/runs/20261025T101647Z/processed/run-mirror/pipeline-meta.json",
+      "fur_palette_grade": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/run-final-mirror/palette-grade.json"
     },
     "cheer": {
       "source": "public/art/games/fishing-v2/sheets/zxm_cheer_sheet.webp",
@@ -28,11 +31,15 @@
     },
     "chef": {
       "route": "Agent Sprite Forge route_media image (local Codex CLI image_gen)",
-      "sheet": "art-refs/asf/runs/20261025T101647Z/raw/chef/generated.png"
+      "base_sheet": "art-refs/asf/runs/20261025T101647Z/raw/chef/generated.png",
+      "selected_sheet": "art-refs/asf/runs/20261025T101647Z/raw/chef-palette-correction/generated.png",
+      "fur_palette_grade": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/chef/palette-grade.json"
     },
     "think": {
       "route": "Agent Sprite Forge route_media image (local Codex CLI image_gen)",
-      "sheet": "art-refs/asf/runs/20261025T101647Z/raw/think/generated.png"
+      "base_sheet": "art-refs/asf/runs/20261025T101647Z/raw/think/generated.png",
+      "selected_sheet": "art-refs/asf/runs/20261025T101647Z/raw/think-palette-correction/generated.png",
+      "fur_palette_grade": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/think/palette-grade.json"
     },
     "cast": {
       "source": "public/art/games/fishing-v2/sheets/zxm_cast_sheet.webp",
@@ -81,9 +88,32 @@
     "watercolor_line": "brown"
   },
   "qc": {
-    "spill_reports": "qc/{idle,cheer,cast,fish}-source-spill, qc/{run-motion,chef,think}-spill",
-    "frame_reports": "qc/frames/{idle,run-final,cheer,chef-head55,think,cast,fish}/sheet-qc.json",
+    "spill_reports": [
+      "qc/idle-source-spill/sheet-qc.json",
+      "qc/cheer-source-spill/sheet-qc.json",
+      "qc/cast-source-spill/sheet-qc.json",
+      "qc/fish-source-spill/sheet-qc.json",
+      "qc/run-mirror-spill/sheet-qc.json",
+      "qc/chef-palette-spill/sheet-qc.json",
+      "qc/think-palette-spill/sheet-qc.json"
+    ],
+    "frame_reports": [
+      "qc/frames/idle/sheet-qc.json",
+      "qc/frames/run-final/sheet-qc.json",
+      "qc/frames/cheer/sheet-qc.json",
+      "qc/frames/chef-head55/sheet-qc.json",
+      "qc/frames/think/sheet-qc.json",
+      "qc/frames/cast/sheet-qc.json",
+      "qc/frames/fish/sheet-qc.json"
+    ],
     "all_head_ratio_checks": "pass, every frame within [0.95, 1.05]",
-    "row_baseline_checks": "pass for all seven action sheets; shared scale anchors to stance at y=606"
-  }
+    "all_row_baseline_checks": "pass, 0 px spread for all seven action sheets"
+  },
+  "fur_palette_grade": {
+    "script": "art-refs/asf/runs/20261025T101647Z/apply_fur_palette.py",
+    "reference": "art-refs/asf/runs/20261025T050136Z/master-color-corrected-approved/master_rgba.png",
+    "palette": "art-refs/asf/runs/20261025T050136Z/zxm-palette-fixed.json",
+    "method": "locked #B9B4AE hue/chroma with master-matched OKLab fur lightness range"
+  },
+  "identity_master_rgba_used": "art-refs/asf/runs/20261025T050136Z/master-color-corrected-approved/master_rgba.png"
 }

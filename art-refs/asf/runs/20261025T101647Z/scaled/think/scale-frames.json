@@ -35,13 +35,13 @@
   "margin": null,
   "anchor_mode": "stance",
   "source_anchor": [
-    391.5,
+    398.5,
     710.0
   ],
   "reference_frame": 0,
-  "root_lock": "none",
+  "root_lock": "torso-x",
   "lock": [],
-  "row_baseline": false,
+  "row_baseline": true,
   "shift_quantum": 1,
   "alpha_threshold": 16,
   "frames_per_row": 4,
@@ -56,158 +56,158 @@
   "frames": [
     {
       "source": {
-        "path": "../../processed/think/zxm-think-1.png",
-        "sha256": "6472d38e89ad7ef90c1b93b6e82ba4c85eb9969330204601f5b7ab17e2f4a8db",
-        "bytes": 157567
+        "path": "../../processed/palette-corrected/think/zxm-think-1.png",
+        "sha256": "4a410dbd00a7d5997161be0d157d6ffb28f8b448c58fb1cef32d96c6ca3e17bc",
+        "bytes": 115303
       },
       "cell": null,
       "output": {
         "path": "frames/zxm-think-1.png",
-        "sha256": "ababc5ac7e4a57459200e4c70b86ac86757f13c2faec137651069d5745aa75cd",
-        "bytes": 252429
+        "sha256": "a6e06227333a051a482e9520d42be06df4aeb3a72ba1644578928077a3591224",
+        "bytes": 196558
       },
       "shift": [
         0,
         0
       ],
       "output_bbox": [
-        54,
+        52,
         98,
-        472,
-        610
+        471,
+        609
       ],
       "turn_slide_px": 0.0,
       "turn_slide_output_px": 1.0,
       "measure": {
         "bbox": [
-          245,
+          251,
           339,
-          548,
+          554,
           710
         ],
         "ground": 710,
         "body_height": 371,
-        "stance_x": 391.5,
-        "torso_x": 393.36,
-        "centroid_x": 403.52,
-        "hip_x": 394.0
+        "stance_x": 398.5,
+        "torso_x": 399.85,
+        "centroid_x": 409.61,
+        "hip_x": 400.0
       }
     },
     {
       "source": {
-        "path": "../../processed/think/zxm-think-2.png",
-        "sha256": "fcb418fd3b67fdb513b0c0d3f374c8007b463e0b616d8f49f5e32c29dbb6e94f",
-        "bytes": 155361
+        "path": "../../processed/palette-corrected/think/zxm-think-2.png",
+        "sha256": "d0208fd623f4418d39904f1379dd3ceedfdb37bed74077010b976350096b63b3",
+        "bytes": 114765
       },
       "cell": null,
       "output": {
         "path": "frames/zxm-think-2.png",
-        "sha256": "ba4825408fbc0e6db72d43362622b3412ce6916299c03cb6954ed40aa414ab38",
-        "bytes": 248992
+        "sha256": "371dd5c9cd5c34d458fe0956c855c1c8db57d3225dd2dbef248ff6f3509713d5",
+        "bytes": 194863
       },
       "shift": [
-        0,
+        -2,
         0
       ],
       "output_bbox": [
-        49,
+        46,
         86,
-        457,
-        610
+        454,
+        609
       ],
-      "turn_slide_px": 25.836,
-      "turn_slide_output_px": 26.0,
+      "turn_slide_px": 33.915,
+      "turn_slide_output_px": 33.0,
       "measure": {
         "bbox": [
-          242,
+          248,
           331,
-          537,
-          710
-        ],
-        "ground": 710,
-        "body_height": 379,
-        "stance_x": 382.0,
-        "torso_x": 395.12,
-        "centroid_x": 398.05,
-        "hip_x": 385.0
-      }
-    },
-    {
-      "source": {
-        "path": "../../processed/think/zxm-think-3.png",
-        "sha256": "632b959c06374d493f60fb857fdf627ad0ec1ed0fdcd295b0dc2c0050f5b6475",
-        "bytes": 154154
-      },
-      "cell": null,
-      "output": {
-        "path": "frames/zxm-think-3.png",
-        "sha256": "87d4de48355423d794668ba99e7c7dbd2a2d118f8aef48bb54b19374f707e61f",
-        "bytes": 246506
-      },
-      "shift": [
-        0,
-        0
-      ],
-      "output_bbox": [
-        54,
-        77,
-        465,
-        610
-      ],
-      "turn_slide_px": 57.11,
-      "turn_slide_output_px": 57.0,
-      "measure": {
-        "bbox": [
-          245,
-          323,
           543,
           710
         ],
         "ground": 710,
-        "body_height": 387,
-        "stance_x": 370.5,
-        "torso_x": 402.66,
-        "centroid_x": 396.27,
-        "hip_x": 382.5
+        "body_height": 379,
+        "stance_x": 387.5,
+        "torso_x": 401.15,
+        "centroid_x": 403.97,
+        "hip_x": 391.0
       }
     },
     {
       "source": {
-        "path": "../../processed/think/zxm-think-4.png",
-        "sha256": "966119002ad0a3e8409761e4d124b75bd478376730cb0a177559efb38672525c",
-        "bytes": 156118
+        "path": "../../processed/palette-corrected/think/zxm-think-3.png",
+        "sha256": "64974074b015d74b825199696d1957864f59656c15cc8ec120603321250dfef4",
+        "bytes": 113370
+      },
+      "cell": null,
+      "output": {
+        "path": "frames/zxm-think-3.png",
+        "sha256": "fdd840e697551e993d621f3122236b56b2955d5309fa0a6c592881276e2add47",
+        "bytes": 192322
+      },
+      "shift": [
+        -12,
+        0
+      ],
+      "output_bbox": [
+        40,
+        77,
+        452,
+        609
+      ],
+      "turn_slide_px": 83.83,
+      "turn_slide_output_px": 83.0,
+      "measure": {
+        "bbox": [
+          251,
+          323,
+          549,
+          710
+        ],
+        "ground": 710,
+        "body_height": 387,
+        "stance_x": 376.5,
+        "torso_x": 408.76,
+        "centroid_x": 402.33,
+        "hip_x": 388.75
+      }
+    },
+    {
+      "source": {
+        "path": "../../processed/palette-corrected/think/zxm-think-4.png",
+        "sha256": "a50af368991e71672a1612e35a83ca83ee5f1beb9d96d72c17f82f567d9f49e1",
+        "bytes": 114561
       },
       "cell": null,
       "output": {
         "path": "frames/zxm-think-4.png",
-        "sha256": "68428f49b987a5e507bdd126df702414b9316eca6a9649ee03ef477c524833a6",
-        "bytes": 251028
+        "sha256": "36f06ce6a691777a17672e09bcdc5b7fbd5ddd46c0183285d6a8f37b830cc9be",
+        "bytes": 195442
       },
       "shift": [
-        0,
+        21,
         0
       ],
       "output_bbox": [
-        35,
+        55,
         98,
-        449,
+        468,
         611
       ],
-      "turn_slide_px": 35.354,
-      "turn_slide_output_px": 36.0,
+      "turn_slide_px": 3.926,
+      "turn_slide_output_px": 3.0,
       "measure": {
         "bbox": [
-          231,
+          238,
           339,
-          531,
+          536,
           711
         ],
         "ground": 711,
         "body_height": 372,
-        "stance_x": 378.5,
-        "torso_x": 378.62,
-        "centroid_x": 387.45,
-        "hip_x": 378.5
+        "stance_x": 384.5,
+        "torso_x": 384.58,
+        "centroid_x": 393.36,
+        "hip_x": 384.5
       }
     }
   ],
@@ -231,45 +231,45 @@
       ]
     ],
     "before": [
-      28.298,
-      32.489,
-      40.961,
-      33.139
+      27.369,
+      31.667,
+      40.226,
+      32.479
     ],
     "after": [
-      28.298,
-      32.489,
-      40.961,
-      33.139
+      28.507,
+      33.398,
+      45.919,
+      6.427
     ],
     "metric": "forge_core.transition_mae (premultiplied RGBA) on one shared crop"
   },
   "seam": {
     "before": {
       "frames": 4,
-      "seam": 33.138522902368805,
-      "adjacent_median": 32.48940523346356,
-      "adjacent_p95": 40.11416352582222,
-      "adjacent_max": 40.961358891639854,
-      "seam_over_median": 1.0199793644802295,
-      "seam_over_p95": 0.826105295229126,
+      "seam": 32.479422923190135,
+      "adjacent_median": 31.667324802974612,
+      "adjacent_p95": 39.37010852634234,
+      "adjacent_max": 40.22597338449431,
+      "seam_over_median": 1.025644670816628,
+      "seam_over_p95": 0.82497671809714,
       "method": "premultiplied RGBA mean absolute difference (0-255); seam = last -> first"
     },
     "after": {
       "frames": 4,
-      "seam": 33.138522902368805,
-      "adjacent_median": 32.48940523346356,
-      "adjacent_p95": 40.11416352582222,
-      "adjacent_max": 40.961358891639854,
-      "seam_over_median": 1.0199793644802295,
-      "seam_over_p95": 0.826105295229126,
+      "seam": 6.426701429378305,
+      "adjacent_median": 33.397730735691965,
+      "adjacent_p95": 44.66677178496593,
+      "adjacent_max": 45.91888745710748,
+      "seam_over_median": 0.1924292844995641,
+      "seam_over_p95": 0.1438810366757112,
       "method": "premultiplied RGBA mean absolute difference (0-255); seam = last -> first"
     }
   },
   "input": {
     "frames": [
       {
-        "sha256": "6472d38e89ad7ef90c1b93b6e82ba4c85eb9969330204601f5b7ab17e2f4a8db",
+        "sha256": "4a410dbd00a7d5997161be0d157d6ffb28f8b448c58fb1cef32d96c6ca3e17bc",
         "size": [
           768,
           768
@@ -280,7 +280,7 @@
         "keyed": null
       },
       {
-        "sha256": "fcb418fd3b67fdb513b0c0d3f374c8007b463e0b616d8f49f5e32c29dbb6e94f",
+        "sha256": "d0208fd623f4418d39904f1379dd3ceedfdb37bed74077010b976350096b63b3",
         "size": [
           768,
           768
@@ -291,7 +291,7 @@
         "keyed": null
       },
       {
-        "sha256": "632b959c06374d493f60fb857fdf627ad0ec1ed0fdcd295b0dc2c0050f5b6475",
+        "sha256": "64974074b015d74b825199696d1957864f59656c15cc8ec120603321250dfef4",
         "size": [
           768,
           768
@@ -302,7 +302,7 @@
         "keyed": null
       },
       {
-        "sha256": "966119002ad0a3e8409761e4d124b75bd478376730cb0a177559efb38672525c",
+        "sha256": "a50af368991e71672a1612e35a83ca83ee5f1beb9d96d72c17f82f567d9f49e1",
         "size": [
           768,
           768
@@ -344,12 +344,17 @@
         "id": "registration",
         "status": "pass",
         "value": {
-          "horizontal": null,
-          "vertical": null,
+          "horizontal": "torso-x",
+          "vertical": "row-baseline",
           "row_grounds": {
             "0": 711
           },
-          "feature_values": null
+          "feature_values": [
+            399.85,
+            401.15,
+            408.76,
+            384.58
+          ]
         },
         "threshold": null,
         "note": "per-frame whole-pixel shifts against the reference frame"
@@ -358,8 +363,8 @@
         "id": "turn_slide",
         "status": "pass",
         "value": {
-          "design": 57.11,
-          "output": 57.0
+          "design": 83.83,
+          "output": 83.0
         },
         "threshold": null,
         "note": "2 x |stance x - anchor x| in output px, before (design) and after pixel sampling (output); 0 means a mirrored turn keeps the feet in place"
@@ -367,31 +372,31 @@
     ],
     "inputs": [
       {
-        "path": "../../processed/think/zxm-think-1.png",
-        "sha256": "6472d38e89ad7ef90c1b93b6e82ba4c85eb9969330204601f5b7ab17e2f4a8db",
-        "bytes": 157567
+        "path": "../../processed/palette-corrected/think/zxm-think-1.png",
+        "sha256": "4a410dbd00a7d5997161be0d157d6ffb28f8b448c58fb1cef32d96c6ca3e17bc",
+        "bytes": 115303
       },
       {
-        "path": "../../processed/think/zxm-think-2.png",
-        "sha256": "fcb418fd3b67fdb513b0c0d3f374c8007b463e0b616d8f49f5e32c29dbb6e94f",
-        "bytes": 155361
+        "path": "../../processed/palette-corrected/think/zxm-think-2.png",
+        "sha256": "d0208fd623f4418d39904f1379dd3ceedfdb37bed74077010b976350096b63b3",
+        "bytes": 114765
       },
       {
-        "path": "../../processed/think/zxm-think-3.png",
-        "sha256": "632b959c06374d493f60fb857fdf627ad0ec1ed0fdcd295b0dc2c0050f5b6475",
-        "bytes": 154154
+        "path": "../../processed/palette-corrected/think/zxm-think-3.png",
+        "sha256": "64974074b015d74b825199696d1957864f59656c15cc8ec120603321250dfef4",
+        "bytes": 113370
       },
       {
-        "path": "../../processed/think/zxm-think-4.png",
-        "sha256": "966119002ad0a3e8409761e4d124b75bd478376730cb0a177559efb38672525c",
-        "bytes": 156118
+        "path": "../../processed/palette-corrected/think/zxm-think-4.png",
+        "sha256": "a50af368991e71672a1612e35a83ca83ee5f1beb9d96d72c17f82f567d9f49e1",
+        "bytes": 114561
       }
     ],
     "outputs": [
       {
         "path": "scale-review.png",
-        "sha256": "2431139e4b9e6740a546c071ca061d315e90f1502f1925252e8eee37c496208c",
-        "bytes": 825421
+        "sha256": "a31ae1176879fb73974b68dda01122766e56804df0c3ae999647a52ca7ae968a",
+        "bytes": 648306
       }
     ],
     "tool": {
