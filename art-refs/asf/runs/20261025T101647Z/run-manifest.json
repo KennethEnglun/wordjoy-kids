@@ -1,0 +1,89 @@
+{
+  "schema": "wordjoy.zxm_shared_animation_regeneration.v1",
+  "run": "20261025T101647Z",
+  "character": "字學貓",
+  "identity_master": "art-refs/asf/runs/20261025T050136Z/master-color-corrected-approved/master.png",
+  "bible": "art/reference/zijimao/字學貓_角色設定圖_v1.png",
+  "style_sheets": {
+    "idle": "public/art/games/fishing-v2/sheets/zxm_idle_sheet.webp",
+    "cast": "public/art/games/fishing-v2/sheets/zxm_cast_sheet.webp",
+    "fish": "public/art/games/fishing-v2/sheets/zxm_fish_sheet.webp",
+    "cheer": "public/art/games/fishing-v2/sheets/zxm_cheer_sheet.webp"
+  },
+  "style_reference_board": "art-refs/asf/runs/20261025T101647Z/fishing-style-board.png",
+  "palette": "art-refs/asf/runs/20261025T050136Z/zxm-palette-fixed.json",
+  "art_source": {
+    "idle": {
+      "source": "public/art/games/fishing-v2/sheets/zxm_idle_sheet.webp",
+      "method": "split, process, shared-scale"
+    },
+    "run": {
+      "route": "Agent Sprite Forge route_media image (local Codex CLI image_gen)",
+      "selected_sheet": "art-refs/asf/runs/20261025T101647Z/raw/run-motion-correction/generated.png",
+      "derived_from": "raw/run-fit-correction/generated.png"
+    },
+    "cheer": {
+      "source": "public/art/games/fishing-v2/sheets/zxm_cheer_sheet.webp",
+      "method": "split, process, shared-scale"
+    },
+    "chef": {
+      "route": "Agent Sprite Forge route_media image (local Codex CLI image_gen)",
+      "sheet": "art-refs/asf/runs/20261025T101647Z/raw/chef/generated.png"
+    },
+    "think": {
+      "route": "Agent Sprite Forge route_media image (local Codex CLI image_gen)",
+      "sheet": "art-refs/asf/runs/20261025T101647Z/raw/think/generated.png"
+    },
+    "cast": {
+      "source": "public/art/games/fishing-v2/sheets/zxm_cast_sheet.webp",
+      "method": "split, process, shared-scale"
+    },
+    "fish": {
+      "source": "public/art/games/fishing-v2/sheets/zxm_fish_sheet.webp",
+      "method": "split, process, shared-scale"
+    }
+  },
+  "exports": {
+    "frame_count_per_action": 4,
+    "canvas_px": [
+      512,
+      640
+    ],
+    "format": "RGBA WebP",
+    "shared_scale_reference": "new idle scale-frames profile",
+    "memory_static": {
+      "source": "think frame 1",
+      "target": "public/art/games/memory/memory_mascot_think.webp"
+    },
+    "shared_profile": {
+      "reference": "scaled/idle/scale-frames.json",
+      "scale": 1.3597733711048159,
+      "canvas_px": [
+        512,
+        640
+      ],
+      "anchor_px": [
+        256,
+        606
+      ],
+      "anchor": "stance",
+      "root_lock": "torso-x",
+      "row_baseline": true
+    }
+  },
+  "identity_contract": {
+    "fur": "#B9B4AE",
+    "forehead_heart": "#5A3A26",
+    "bloomers": "#F3E6CC",
+    "blush": "#F4A6A0",
+    "eyes": "solid brown circles; no white and no highlight",
+    "shape": "large round head, short limbs, chubby belly",
+    "watercolor_line": "brown"
+  },
+  "qc": {
+    "spill_reports": "qc/{idle,cheer,cast,fish}-source-spill, qc/{run-motion,chef,think}-spill",
+    "frame_reports": "qc/frames/{idle,run-final,cheer,chef-head55,think,cast,fish}/sheet-qc.json",
+    "all_head_ratio_checks": "pass, every frame within [0.95, 1.05]",
+    "row_baseline_checks": "pass for all seven action sheets; shared scale anchors to stance at y=606"
+  }
+}

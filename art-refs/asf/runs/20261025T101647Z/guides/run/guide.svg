@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1774" height="887" viewBox="0 0 1774 887">
+<rect width="1774" height="887" fill="#ffffff"/>
+<path d="M0,0h444v887h-444z M18,18v851h408v-851z" fill="#c8c8c8" fill-rule="evenodd"/>
+<rect x="66.6" y="133.0" width="310.8" height="620.9" fill="none" stroke="#00aaff" stroke-width="3"/>
+<line x1="66.6" y1="754.0" x2="377.4" y2="754.0" stroke="#000000" stroke-width="2"/>
+<line x1="237.5" y1="742.0" x2="237.5" y2="766.0" stroke="#000000" stroke-width="2"/>
+<polyline points="237.5,639.4 207.2,696.5 144.3,682.0 166.9,682.0" fill="none" stroke="#2050a0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="245.3,555.5 265.9,599.3 304.5,582.9" fill="none" stroke="#2050a0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="237.5,639.4 245.3,539.3" fill="none" stroke="#6e6e6e" stroke-width="19" stroke-linecap="round"/>
+<circle cx="255.0" cy="503.8" r="32.3" fill="none" stroke="#6e6e6e" stroke-width="5"/>
+<polyline points="237.5,639.4 269.8,695.4 297.1,754.0 319.8,754.0" fill="none" stroke="#ff7a00" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="245.3,555.5 223.3,598.6 249.7,614.1" fill="none" stroke="#ff7a00" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M444,0h443v887h-443z M462,18v851h407v-851z" fill="#c8c8c8" fill-rule="evenodd"/>
+<rect x="510.4" y="133.0" width="310.1" height="620.9" fill="none" stroke="#00aaff" stroke-width="3"/>
+<line x1="510.4" y1="754.0" x2="820.5" y2="754.0" stroke="#000000" stroke-width="2"/>
+<line x1="681.0" y1="742.0" x2="681.0" y2="766.0" stroke="#000000" stroke-width="2"/>
+<polyline points="681.0,633.0 705.2,692.9 643.4,711.8 666.0,711.8" fill="none" stroke="#2050a0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="688.8,549.0 672.3,594.6 702.1,606.5" fill="none" stroke="#2050a0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="681.0,633.0 688.8,532.9" fill="none" stroke="#6e6e6e" stroke-width="19" stroke-linecap="round"/>
+<circle cx="698.4" cy="497.3" r="32.3" fill="none" stroke="#6e6e6e" stroke-width="5"/>
+<polyline points="681.0,633.0 664.3,695.4 637.0,754.0 659.6,754.0" fill="none" stroke="#ff7a00" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="688.8,549.0 700.1,596.1 738.6,587.6" fill="none" stroke="#ff7a00" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M887,0h444v887h-444z M905,18v851h408v-851z" fill="#c8c8c8" fill-rule="evenodd"/>
+<rect x="953.6" y="133.0" width="310.8" height="620.9" fill="none" stroke="#00aaff" stroke-width="3"/>
+<line x1="953.6" y1="754.0" x2="1264.4" y2="754.0" stroke="#000000" stroke-width="2"/>
+<line x1="1124.5" y1="742.0" x2="1124.5" y2="766.0" stroke="#000000" stroke-width="2"/>
+<polyline points="1124.5,639.4 1156.8,695.4 1184.1,754.0 1206.8,754.0" fill="none" stroke="#2050a0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1132.3,555.5 1110.3,598.6 1136.7,614.1" fill="none" stroke="#2050a0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1124.5,639.4 1132.3,539.3" fill="none" stroke="#6e6e6e" stroke-width="19" stroke-linecap="round"/>
+<circle cx="1142.0" cy="503.8" r="32.3" fill="none" stroke="#6e6e6e" stroke-width="5"/>
+<polyline points="1124.5,639.4 1094.2,696.5 1031.3,682.0 1053.9,682.0" fill="none" stroke="#ff7a00" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1132.3,555.5 1152.9,599.3 1191.5,582.9" fill="none" stroke="#ff7a00" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1331,0h443v887h-443z M1349,18v851h407v-851z" fill="#c8c8c8" fill-rule="evenodd"/>
+<rect x="1397.5" y="133.0" width="310.1" height="620.9" fill="none" stroke="#00aaff" stroke-width="3"/>
+<line x1="1397.5" y1="754.0" x2="1707.5" y2="754.0" stroke="#000000" stroke-width="2"/>
+<line x1="1568.0" y1="742.0" x2="1568.0" y2="766.0" stroke="#000000" stroke-width="2"/>
+<polyline points="1568.0,633.0 1551.3,695.4 1524.0,754.0 1546.6,754.0" fill="none" stroke="#2050a0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1575.8,549.0 1587.1,596.1 1625.6,587.6" fill="none" stroke="#2050a0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1568.0,633.0 1575.8,532.9" fill="none" stroke="#6e6e6e" stroke-width="19" stroke-linecap="round"/>
+<circle cx="1585.4" cy="497.3" r="32.3" fill="none" stroke="#6e6e6e" stroke-width="5"/>
+<polyline points="1568.0,633.0 1592.2,692.9 1530.4,711.8 1553.0,711.8" fill="none" stroke="#ff7a00" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1575.8,549.0 1559.3,594.6 1589.1,606.5" fill="none" stroke="#ff7a00" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

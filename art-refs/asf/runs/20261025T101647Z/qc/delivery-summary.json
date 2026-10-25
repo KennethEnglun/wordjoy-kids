@@ -1,0 +1,78 @@
+{
+  "schema": "wordjoy.zxm_shared_animation_delivery_qc.v1",
+  "run": "20261025T101647Z",
+  "exports": {
+    "actions": [
+      "idle",
+      "run",
+      "cheer",
+      "chef",
+      "think",
+      "cast",
+      "fish"
+    ],
+    "frames_per_action": 4,
+    "canvas_px": [
+      512,
+      640
+    ],
+    "format": "lossless RGBA WebP",
+    "memory_static_updated": true
+  },
+  "head_ratio": {
+    "status": "pass",
+    "range": [
+      0.95,
+      1.05
+    ],
+    "run": [
+      0.99,
+      1.01
+    ],
+    "chef_full_head_band": 0.55
+  },
+  "row_baseline": {
+    "status": "pass",
+    "spread_px": 0,
+    "actions": 7
+  },
+  "spill": {
+    "cross_cell_components": 0,
+    "cross_cell_visible": 0,
+    "sheet_edge": 0,
+    "empty_cells": 0,
+    "advisories": [
+      "safe_frame: subject within 15% cell edge in all selected 4-cell sheets",
+      "approved fishing source sheets: faint alpha haze cleaned during processing",
+      "cheer approved source: 23 boundary-band pixels; no crossing components"
+    ]
+  },
+  "frame_advisories": {
+    "run": [
+      "leg_alternation needs visual review; phase coverage finds contact and flight in both half-cycles",
+      "near_duplicates frames 1/3, IoU 0.9578",
+      "torso drift 5.03 px before root lock"
+    ],
+    "cheer": [
+      "near_duplicates pairs 1/4, 2/3, 2/4",
+      "torso drift 19.01 px before root lock"
+    ],
+    "chef": [
+      "torso drift 29.07 px before root lock"
+    ],
+    "think": [
+      "identity residual frame 3: 2.03 (threshold 1.5)",
+      "torso drift 32.55 px before root lock"
+    ],
+    "fish": [
+      "near_duplicates pairs 1/2, 2/3",
+      "torso drift 11.69 px before root lock"
+    ],
+    "idle": [],
+    "cast": []
+  },
+  "webp_lossless_roundtrip": {
+    "status": "pass",
+    "count": 29
+  }
+}

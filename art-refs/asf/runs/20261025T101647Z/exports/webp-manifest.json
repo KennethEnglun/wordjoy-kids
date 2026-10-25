@@ -1,0 +1,446 @@
+{
+  "schema": "wordjoy.zxm_animation_webp_exports.v1",
+  "format": "lossless RGBA WebP",
+  "canvas_px": [
+    512,
+    640
+  ],
+  "count": 29,
+  "files": [
+    {
+      "action": "idle",
+      "frame": 1,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/idle/frames/zxm-idle-1.png",
+      "target": "public/art/games/anim/zxm_idle_01.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "8a898c345837417668fc1345cdca027dc1ab99e95cb9f2d0a35e5b5d2b45ca60",
+      "target_sha256": "57a5ca17c8cff4418fb9dbf724f973ca2d22753ed0c0315a6d84279398b8bcb1",
+      "bytes": 136728,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "idle",
+      "frame": 2,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/idle/frames/zxm-idle-2.png",
+      "target": "public/art/games/anim/zxm_idle_02.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "9d2ab0488239b83e6f19bac7f71477a4a5d3a90b6895768f3f0e7b165ebab1f2",
+      "target_sha256": "1114dbacc0d80e82e7ca26c69582ff982fb12cdbb5f78eed6a507dbfe0d23f73",
+      "bytes": 140678,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "idle",
+      "frame": 3,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/idle/frames/zxm-idle-3.png",
+      "target": "public/art/games/anim/zxm_idle_03.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "085ea5f8837ac7be681fdfb64ef8b4f4d13b1a80d8297f74fac30a792db3e701",
+      "target_sha256": "bb5a3bed309784fc13faea4bd34add4d4eb73e4e2cc7236040ae2816cf592333",
+      "bytes": 141076,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "idle",
+      "frame": 4,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/idle/frames/zxm-idle-4.png",
+      "target": "public/art/games/anim/zxm_idle_04.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "a397b2760b8dd81c4e9256f83c0c6c783da6d3f750cc4886cf2f39e1ca6091f3",
+      "target_sha256": "9ac78d382295f6842b97fae6d79789956b216ce0e2d26ed19ed2681087e8072e",
+      "bytes": 134842,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "run",
+      "frame": 1,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/run-final/frames/zxm-run-final-1.png",
+      "target": "public/art/games/anim/zxm_run_01.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "1bdaef058d2cef96b0b496925530ea79a5656261db1eae63cbd8330258d06a70",
+      "target_sha256": "357b5f29781dd5040cb5115ff31c993bf524d7a2cb4a48740a89546686bbc9c9",
+      "bytes": 183138,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "run",
+      "frame": 2,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/run-final/frames/zxm-run-final-2.png",
+      "target": "public/art/games/anim/zxm_run_02.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "6314b3d6cbd89ef6480c25e8780cbe634be9bf53a813c970dc1e3b13436bc647",
+      "target_sha256": "7665286e848c07f8be4a4e815cf42995cfaeb0c3a1b6a2b66e527e71a3eca4af",
+      "bytes": 174224,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "run",
+      "frame": 3,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/run-final/frames/zxm-run-final-3.png",
+      "target": "public/art/games/anim/zxm_run_03.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "731b165abc1b141a1f2a4f745f942a771b8d8745fa6dee9da7d521db38fa4805",
+      "target_sha256": "bf26fbe46f84c863cbc7d7fbdd7ecf13f13c8f36ca186457a3219e9bae312c26",
+      "bytes": 182938,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "run",
+      "frame": 4,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/run-final/frames/zxm-run-final-4.png",
+      "target": "public/art/games/anim/zxm_run_04.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "eb57b216374faccadb34552c3c681597d15704ad3995068b7e222ebbbdb54738",
+      "target_sha256": "e3b0c56e12c3c0450f4a24cd048e0879ebc734a727b053ff557c804c0aa4701e",
+      "bytes": 172080,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "cheer",
+      "frame": 1,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/cheer/frames/zxm-cheer-1.png",
+      "target": "public/art/games/anim/zxm_cheer_01.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "e24ff50d1d6b11396f5a0d3b161b523505338d5905a686edcc65dddcefcab676",
+      "target_sha256": "1249fcb64232aa6a887eed019518cfb8525d6db10d4f6aea7c0217e2dc2fe356",
+      "bytes": 135472,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "cheer",
+      "frame": 2,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/cheer/frames/zxm-cheer-2.png",
+      "target": "public/art/games/anim/zxm_cheer_02.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "9f2a1ecb35b889c2e25fccc3e341e26dcb0813a29b4402f455096d467755eda8",
+      "target_sha256": "47c4ef63317853187a493a20ebbae86caa31dc206e49284cf1139fb3f8a1aae2",
+      "bytes": 134630,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "cheer",
+      "frame": 3,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/cheer/frames/zxm-cheer-3.png",
+      "target": "public/art/games/anim/zxm_cheer_03.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "c325b2d9ce6e373ee084cb580b863a1597e472cafe478b0e8ef6a5f783bd598d",
+      "target_sha256": "c62a17ab0d692abc357f13cf7e5bcf1f0a89450d07ce6f22ac57c21a8fa5dd14",
+      "bytes": 133784,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "cheer",
+      "frame": 4,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/cheer/frames/zxm-cheer-4.png",
+      "target": "public/art/games/anim/zxm_cheer_04.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "1aed2eac90fd8e8985b72cc9d0cad6059509388762e5c69c0079936799bcd39d",
+      "target_sha256": "68521cc6f5e8a5790834af59cc6755d397583db6c9ef83dfbbf05eebde9d6fd6",
+      "bytes": 134476,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "chef",
+      "frame": 1,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/chef/frames/zxm-chef-1.png",
+      "target": "public/art/games/anim/zxm_chef_01.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "bedd461c412a5b1e462c43a9fdc02d41cb49d609e439f2a872cb38baa1cf463c",
+      "target_sha256": "f6b464f9da642ad2239f55cb006ac56460cc56b305e287234859d27cc589834e",
+      "bytes": 173358,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "chef",
+      "frame": 2,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/chef/frames/zxm-chef-2.png",
+      "target": "public/art/games/anim/zxm_chef_02.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "f8e0b5466d409242bc294cb9d84655f2745d09c6844f14c56e6b2546ede69b97",
+      "target_sha256": "4bb7afa4f49be50289f97f4c595e158d4d0acba7be465949f29ec3d1ff20ffe3",
+      "bytes": 173728,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "chef",
+      "frame": 3,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/chef/frames/zxm-chef-3.png",
+      "target": "public/art/games/anim/zxm_chef_03.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "ce7db5d815b4179cac70b6e1be579a237d2eeb36f6ffcf17b9350c8edcc76907",
+      "target_sha256": "5a2d29b01feeb35314354090ac92c39316c9a9568eaffbbf83c4c1c636fe5aad",
+      "bytes": 181992,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "chef",
+      "frame": 4,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/chef/frames/zxm-chef-4.png",
+      "target": "public/art/games/anim/zxm_chef_04.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "8fd92456ed5f3cd208b92f6e9dd72c1a0c1990e78e4c063f6f99848f37a9be1a",
+      "target_sha256": "ebb070bb83ecf12d75dfc231d0fecffb4b43e1fc6de5cb48d142e15aabbddc78",
+      "bytes": 173394,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "think",
+      "frame": 1,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/think/frames/zxm-think-1.png",
+      "target": "public/art/games/anim/zxm_think_01.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "ababc5ac7e4a57459200e4c70b86ac86757f13c2faec137651069d5745aa75cd",
+      "target_sha256": "cb96490d6837fda80149f078a5d9d5a85d0f6567a2921b4d475bde575911b8ec",
+      "bytes": 167480,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "think",
+      "frame": 2,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/think/frames/zxm-think-2.png",
+      "target": "public/art/games/anim/zxm_think_02.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "ba4825408fbc0e6db72d43362622b3412ce6916299c03cb6954ed40aa414ab38",
+      "target_sha256": "855aa6188223db0d9ed3ace8c9c3f0d71d7a02ad7cee3fddb279e8d9a5db56b1",
+      "bytes": 164428,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "think",
+      "frame": 3,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/think/frames/zxm-think-3.png",
+      "target": "public/art/games/anim/zxm_think_03.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "87d4de48355423d794668ba99e7c7dbd2a2d118f8aef48bb54b19374f707e61f",
+      "target_sha256": "1cd17c8a2fdda42089646e396ef966145f8b5f053f4799450e635d344a0a06cd",
+      "bytes": 162412,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "think",
+      "frame": 4,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/think/frames/zxm-think-4.png",
+      "target": "public/art/games/anim/zxm_think_04.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "68428f49b987a5e507bdd126df702414b9316eca6a9649ee03ef477c524833a6",
+      "target_sha256": "0373e93e5bf58582e06dd10774ddd66e2c363a070c64ad309bbba55eb9aa7010",
+      "bytes": 166224,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "cast",
+      "frame": 1,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/cast/frames/zxm-cast-1.png",
+      "target": "public/art/games/anim/zxm_cast_01.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "9a01d78f3ddee904b684ec9eb9089c837013938aa70bd8414e9c1cd67c7d52ae",
+      "target_sha256": "45354205b5062ab5ee4e45d7ddceb0d71ab8b9d1b12942acb885304a04b1e4b8",
+      "bytes": 150420,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "cast",
+      "frame": 2,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/cast/frames/zxm-cast-2.png",
+      "target": "public/art/games/anim/zxm_cast_02.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "fbbd1eb390ffd82802a0ed8a138e8d72364a5fb8514bf4cd7860a1a778d30f16",
+      "target_sha256": "89c326979cf72dfd22bd34e9a6db0e90621ab92e8e742471f3975039f44676ab",
+      "bytes": 146648,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "cast",
+      "frame": 3,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/cast/frames/zxm-cast-3.png",
+      "target": "public/art/games/anim/zxm_cast_03.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "20f79a201afd976f58d9622fade53f4a8f16e6f79f55a2dea14fc190f5b32bc7",
+      "target_sha256": "ccaeb8c70d22086adbb049e331e66c7e46ad4d9ab62f279dbc8a2934fc5b021d",
+      "bytes": 152144,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "cast",
+      "frame": 4,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/cast/frames/zxm-cast-4.png",
+      "target": "public/art/games/anim/zxm_cast_04.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "0649558adb9c05773f204f19a3200e52b9c40c3deb2d9cd4b8a64d6ab2453c8e",
+      "target_sha256": "210390d3c5013b7d67ec88a6c985c2e192dadc34f096b8da75e79d23e9a41901",
+      "bytes": 149534,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "fish",
+      "frame": 1,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/fish/frames/zxm-fish-1.png",
+      "target": "public/art/games/anim/zxm_fish_01.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "9e5b9281b7ff315c60103799c523c37ef92b1b03afdce302a8f2cee4520baec3",
+      "target_sha256": "1c8c08d8edf519bebdbef4f0c99b246a7c779bf2078a57d64637cf56cee9d835",
+      "bytes": 132328,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "fish",
+      "frame": 2,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/fish/frames/zxm-fish-2.png",
+      "target": "public/art/games/anim/zxm_fish_02.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "bb72e0ce7ed9d4227a9d0428b31803170adcb61a8362d6636c08357e030595ee",
+      "target_sha256": "37325a5acaa824532d4e9896094f8a367934b9476db03b990f7d168e86e22690",
+      "bytes": 137112,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "fish",
+      "frame": 3,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/fish/frames/zxm-fish-3.png",
+      "target": "public/art/games/anim/zxm_fish_03.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "581c5ccf959e66a96420910d66d337fc27e8777e69b132ddcf09be96e66c6dc3",
+      "target_sha256": "ee8e7b458f60cc45cb72a12f15877cbd3e21357883c9dd451b80bfa21ef358b9",
+      "bytes": 135784,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "fish",
+      "frame": 4,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/fish/frames/zxm-fish-4.png",
+      "target": "public/art/games/anim/zxm_fish_04.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "55534eb2cd39411f4cd79b8ba57c9eb2998a8847f6d12b2f7b83d95805de5a04",
+      "target_sha256": "84bf203529114815ed3f25a014f126c8b9a281ae1a3170e0cf4f17115f54af13",
+      "bytes": 137394,
+      "lossless_roundtrip": true
+    },
+    {
+      "action": "memory_static",
+      "frame": 1,
+      "source": "art-refs/asf/runs/20261025T101647Z/scaled/think/frames/zxm-think-1.png",
+      "target": "public/art/games/memory/memory_mascot_think.webp",
+      "size": [
+        512,
+        640
+      ],
+      "mode": "RGBA",
+      "source_sha256": "ababc5ac7e4a57459200e4c70b86ac86757f13c2faec137651069d5745aa75cd",
+      "target_sha256": "cb96490d6837fda80149f078a5d9d5a85d0f6567a2921b4d475bde575911b8ec",
+      "bytes": 167480,
+      "lossless_roundtrip": true
+    }
+  ]
+}

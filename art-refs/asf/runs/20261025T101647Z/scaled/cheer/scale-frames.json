@@ -1,0 +1,380 @@
+{
+  "schema": "generate2dsprite.scale_frames.v1",
+  "scale": 1.3597733711048159,
+  "scale_from": "profile",
+  "target_body_px": null,
+  "resampler": "lanczos",
+  "canvas": [
+    512,
+    640
+  ],
+  "anchor_px": [
+    256,
+    606
+  ],
+  "padding": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "base_canvas": [
+    512,
+    640
+  ],
+  "base_anchor_px": [
+    256,
+    606
+  ],
+  "needed_padding": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "margin": null,
+  "anchor_mode": "stance",
+  "source_anchor": [
+    239.0,
+    444.0
+  ],
+  "reference_frame": 0,
+  "root_lock": "none",
+  "lock": [],
+  "row_baseline": false,
+  "shift_quantum": 1,
+  "alpha_threshold": 16,
+  "frames_per_row": 4,
+  "torso": {
+    "colors": [],
+    "band": [
+      0.4,
+      0.6
+    ],
+    "method": "trunk"
+  },
+  "frames": [
+    {
+      "source": {
+        "path": "../../processed/cheer/zxm-cheer-1.png",
+        "sha256": "b6f294d2060b74ebd52fd89e229fe8a5091994ea97dccab12db3f2fa7848f463",
+        "bytes": 116267
+      },
+      "cell": null,
+      "output": {
+        "path": "frames/zxm-cheer-1.png",
+        "sha256": "e24ff50d1d6b11396f5a0d3b161b523505338d5905a686edcc65dddcefcab676",
+        "bytes": 197311
+      },
+      "shift": [
+        0,
+        0
+      ],
+      "output_bbox": [
+        64,
+        112,
+        478,
+        610
+      ],
+      "turn_slide_px": 0.0,
+      "turn_slide_output_px": 1.0,
+      "measure": {
+        "bbox": [
+          102,
+          84,
+          399,
+          444
+        ],
+        "ground": 444,
+        "body_height": 360,
+        "stance_x": 239.0,
+        "torso_x": 243.61,
+        "centroid_x": 251.46,
+        "hip_x": 241.5
+      }
+    },
+    {
+      "source": {
+        "path": "../../processed/cheer/zxm-cheer-2.png",
+        "sha256": "63f590778672730ec6b64524598120bf718c56c147a455f0c4202c49fcdce2d2",
+        "bytes": 117068
+      },
+      "cell": null,
+      "output": {
+        "path": "frames/zxm-cheer-2.png",
+        "sha256": "9f2a1ecb35b889c2e25fccc3e341e26dcb0813a29b4402f455096d467755eda8",
+        "bytes": 197656
+      },
+      "shift": [
+        0,
+        0
+      ],
+      "output_bbox": [
+        69,
+        112,
+        478,
+        610
+      ],
+      "turn_slide_px": 0.0,
+      "turn_slide_output_px": 0.0,
+      "measure": {
+        "bbox": [
+          105,
+          84,
+          399,
+          444
+        ],
+        "ground": 444,
+        "body_height": 359,
+        "stance_x": 239.0,
+        "torso_x": 235.53,
+        "centroid_x": 252.12,
+        "hip_x": 238.0
+      }
+    },
+    {
+      "source": {
+        "path": "../../processed/cheer/zxm-cheer-3.png",
+        "sha256": "9c2d87074d662554ed3aa35572b0e0caa22a72ebd841d6a2545a47d55d6ea8aa",
+        "bytes": 115938
+      },
+      "cell": null,
+      "output": {
+        "path": "frames/zxm-cheer-3.png",
+        "sha256": "c325b2d9ce6e373ee084cb580b863a1597e472cafe478b0e8ef6a5f783bd598d",
+        "bytes": 196463
+      },
+      "shift": [
+        0,
+        0
+      ],
+      "output_bbox": [
+        69,
+        111,
+        481,
+        611
+      ],
+      "turn_slide_px": 1.36,
+      "turn_slide_output_px": 0.0,
+      "measure": {
+        "bbox": [
+          105,
+          83,
+          401,
+          444
+        ],
+        "ground": 444,
+        "body_height": 360,
+        "stance_x": 239.5,
+        "torso_x": 237.48,
+        "centroid_x": 252.13,
+        "hip_x": 237.5
+      }
+    },
+    {
+      "source": {
+        "path": "../../processed/cheer/zxm-cheer-4.png",
+        "sha256": "c118cdcc8f91704ef3ccb4822c1413624c79233746c0ac30629b81d6cececfeb",
+        "bytes": 116319
+      },
+      "cell": null,
+      "output": {
+        "path": "frames/zxm-cheer-4.png",
+        "sha256": "1aed2eac90fd8e8985b72cc9d0cad6059509388762e5c69c0079936799bcd39d",
+        "bytes": 197238
+      },
+      "shift": [
+        0,
+        0
+      ],
+      "output_bbox": [
+        62,
+        110,
+        476,
+        610
+      ],
+      "turn_slide_px": 1.36,
+      "turn_slide_output_px": 1.0,
+      "measure": {
+        "bbox": [
+          100,
+          83,
+          398,
+          444
+        ],
+        "ground": 444,
+        "body_height": 361,
+        "stance_x": 239.5,
+        "torso_x": 229.95,
+        "centroid_x": 248.44,
+        "hip_x": 235.5
+      }
+    }
+  ],
+  "transitions": {
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "before": [
+      12.111,
+      10.901,
+      13.213
+    ],
+    "after": [
+      12.111,
+      10.901,
+      13.213
+    ],
+    "metric": "forge_core.transition_mae (premultiplied RGBA) on one shared crop"
+  },
+  "seam": null,
+  "input": {
+    "frames": [
+      {
+        "sha256": "b6f294d2060b74ebd52fd89e229fe8a5091994ea97dccab12db3f2fa7848f463",
+        "size": [
+          480,
+          480
+        ],
+        "source_mode": "RGBA",
+        "bit_depth": 8,
+        "conversion": "none",
+        "keyed": null
+      },
+      {
+        "sha256": "63f590778672730ec6b64524598120bf718c56c147a455f0c4202c49fcdce2d2",
+        "size": [
+          480,
+          480
+        ],
+        "source_mode": "RGBA",
+        "bit_depth": 8,
+        "conversion": "none",
+        "keyed": null
+      },
+      {
+        "sha256": "9c2d87074d662554ed3aa35572b0e0caa22a72ebd841d6a2545a47d55d6ea8aa",
+        "size": [
+          480,
+          480
+        ],
+        "source_mode": "RGBA",
+        "bit_depth": 8,
+        "conversion": "none",
+        "keyed": null
+      },
+      {
+        "sha256": "c118cdcc8f91704ef3ccb4822c1413624c79233746c0ac30629b81d6cececfeb",
+        "size": [
+          480,
+          480
+        ],
+        "source_mode": "RGBA",
+        "bit_depth": 8,
+        "conversion": "none",
+        "keyed": null
+      }
+    ]
+  },
+  "profile": {
+    "path": "../idle/scale-frames.json",
+    "sha256": "71c7101f1faca81b855c7ee741da4de58ea65a10479987cd57c11474b540c1dd",
+    "bytes": 9271
+  },
+  "qa": {
+    "status": "pass",
+    "method": "one pinned resample per frame (forge_core.resample_rgba) on a work canvas holding every frame, then one crop; the crop is checked to keep every visible pixel",
+    "notProven": [
+      "That the locked feature (torso, stance, hip) is the right root for this action.",
+      "Pose quality and smoothness: review scale-review.png and play the clip."
+    ],
+    "checks": [
+      {
+        "id": "no_clipping",
+        "status": "pass",
+        "value": 0,
+        "threshold": 0,
+        "note": "every visible source pixel is on the canvas"
+      },
+      {
+        "id": "integer_nearest",
+        "status": "skipped",
+        "value": null,
+        "threshold": "N or 1/N"
+      },
+      {
+        "id": "registration",
+        "status": "pass",
+        "value": {
+          "horizontal": null,
+          "vertical": null,
+          "row_grounds": {
+            "0": 444
+          },
+          "feature_values": null
+        },
+        "threshold": null,
+        "note": "per-frame whole-pixel shifts against the reference frame"
+      },
+      {
+        "id": "turn_slide",
+        "status": "pass",
+        "value": {
+          "design": 1.36,
+          "output": 1.0
+        },
+        "threshold": null,
+        "note": "2 x |stance x - anchor x| in output px, before (design) and after pixel sampling (output); 0 means a mirrored turn keeps the feet in place"
+      }
+    ],
+    "inputs": [
+      {
+        "path": "../../processed/cheer/zxm-cheer-1.png",
+        "sha256": "b6f294d2060b74ebd52fd89e229fe8a5091994ea97dccab12db3f2fa7848f463",
+        "bytes": 116267
+      },
+      {
+        "path": "../../processed/cheer/zxm-cheer-2.png",
+        "sha256": "63f590778672730ec6b64524598120bf718c56c147a455f0c4202c49fcdce2d2",
+        "bytes": 117068
+      },
+      {
+        "path": "../../processed/cheer/zxm-cheer-3.png",
+        "sha256": "9c2d87074d662554ed3aa35572b0e0caa22a72ebd841d6a2545a47d55d6ea8aa",
+        "bytes": 115938
+      },
+      {
+        "path": "../../processed/cheer/zxm-cheer-4.png",
+        "sha256": "c118cdcc8f91704ef3ccb4822c1413624c79233746c0ac30629b81d6cececfeb",
+        "bytes": 116319
+      }
+    ],
+    "outputs": [
+      {
+        "path": "scale-review.png",
+        "sha256": "e6b0a47ccffee369becab6f5894172bcb639c0872b0bd81fe95776476f877442",
+        "bytes": 636545
+      }
+    ],
+    "tool": {
+      "name": "scale_frames.py",
+      "version": "0.4.0"
+    }
+  },
+  "tool": {
+    "name": "scale_frames.py",
+    "version": "0.4.0"
+  },
+  "clips": "clips.json"
+}
