@@ -212,10 +212,6 @@ export default class FishScene extends Phaser.Scene {
       .setDepth(13)
       .setAlpha(0)
       .setVisible(false)
-    this.peek = this.add.image(324, 418, 'cat-peek')
-      .setDisplaySize(83, 104)
-      .setDepth(31)
-      .setVisible(false)
     this.fishLayer = this.add.container(0, 0).setDepth(32)
   }
 
@@ -245,7 +241,7 @@ export default class FishScene extends Phaser.Scene {
     if (!this.transition('Ready')) return
     this.questionPanel?.destroy()
     this.toast?.clear()
-    this.peek.setVisible(false)
+    this.castLineOrigin = null
     this.bobber.setVisible(false)
     this.ripple.setVisible(false).setAlpha(0)
     this.splash.setVisible(false).setAlpha(0)
@@ -321,18 +317,55 @@ export default class FishScene extends Phaser.Scene {
     this.readyUi?.destroy(true)
     this.readyUi = null
     this.toast.show('魚餌落水中…', { duration: 1050 })
+    this.bobber.setVisible(false).setAlpha(1)
+    this.cat.once(
+      Phaser.Animations.Events.ANIMATION_COMPLETE_KEY + 'cat-cast',
+      this.castBobber,
+      this,
+    )
     this.cat.play('cat-cast')
-    this.bobber.setPosition(210, 418).setVisible(true).setAlpha(0)
+  }
+
+  getCastRodTip() {
+    // Frame 4's rod tip is near (15, 192) in its 256x320 sheet cell.
+    const frameX = 15
+    const frameY = 192
+    const frameWidth = 256
+    const frameHeight = 320
+    return {
+      x: this.cat.x + (frameX - frameWidth * this.cat.originX) * this.cat.scaleX,
+      y: this.cat.y + (frameY - frameHeight * this.cat.originY) * this.cat.scaleY,
+    }
+  }
+
+  castBobber() {
+    if (this.state !== 'Casting' || this.scene.isActive() === false) return
+
+    const start = this.getCastRodTip()
+    const control = { x: 150, y: 386 }
+    const landing = { x: 164, y: 714 }
+    this.castLineOrigin = start
+    this.bobber.setPosition(start.x, start.y).setVisible(true).setAlpha(0)
+    this.ripple.setPosition(landing.x, landing.y)
+    this.splash.setPosition(landing.x, landing.y - 4)
+
+    const flight = { progress: 0 }
     this.tweens.add({
-      targets: this.bobber,
-      x: 287,
-      y: 477,
-      alpha: 1,
+      targets: flight,
+      progress: 1,
       duration: 760,
-      ease: 'Quad.Out',
-      onStart: () => this.drawFishingLine(),
-      onUpdate: () => this.drawFishingLine(),
+      ease: 'Sine.InOut',
+      onUpdate: () => {
+        const t = flight.progress
+        const inverse = 1 - t
+        this.bobber.setPosition(
+          inverse * inverse * start.x + 2 * inverse * t * control.x + t * t * landing.x,
+          inverse * inverse * start.y + 2 * inverse * t * control.y + t * t * landing.y,
+        ).setAlpha(Math.min(1, t * 2.5))
+        this.drawFishingLine()
+      },
       onComplete: () => {
+        this.bobber.setPosition(landing.x, landing.y).setAlpha(1)
         this.drawFishingLine()
         this.time.delayedCall(120, () => this.waitForBite())
       },
@@ -340,11 +373,12 @@ export default class FishScene extends Phaser.Scene {
   }
 
   drawFishingLine() {
+    if (!this.castLineOrigin || !['Casting', 'WaitingBite', 'Question'].includes(this.state)) return
     this.fishingLine.clear()
     this.fishingLine.setVisible(true)
     this.fishingLine.lineStyle(2, colorNumber('#6E5948'), 0.84)
     this.fishingLine.beginPath()
-    this.fishingLine.moveTo(238, 489)
+    this.fishingLine.moveTo(this.castLineOrigin.x, this.castLineOrigin.y)
     this.fishingLine.lineTo(this.bobber.x, this.bobber.y + 3)
     this.fishingLine.strokePath()
   }
@@ -353,7 +387,6 @@ export default class FishScene extends Phaser.Scene {
     if (this.state !== 'Casting' || this.scene.isActive() === false) return
     if (!this.transition('WaitingBite')) return
     audio.tap()
-    this.cat.play('cat-idle')
     this.toast.show('有魚咬鉤啦！', { duration: 800 })
     this.ripple.setVisible(true).setAlpha(0.82).setScale(0.45)
     this.tweens.add({
@@ -372,6 +405,7 @@ export default class FishScene extends Phaser.Scene {
       yoyo: true,
       repeat: 2,
       ease: 'Sine.InOut',
+      onUpdate: () => this.drawFishingLine(),
     })
     this.time.delayedCall(620, () => this.askQuestion())
   }
@@ -386,7 +420,6 @@ export default class FishScene extends Phaser.Scene {
     const word = this.rounds[this.roundIndex]
     const options = shuffle([word, ...distractors(this.pool, word, 3)])
     this.currentQuestion = { word, options }
-    this.peek.setVisible(true)
     this.questionPanel.show(word, options, this.promptKeys[this.roundIndex])
   }
 
@@ -396,6 +429,7 @@ export default class FishScene extends Phaser.Scene {
     const isCorrect = String(option.id) === String(word.id)
     const nextState = isCorrect ? 'ResolveCorrect' : 'ResolveWrong'
     if (!this.transition(nextState)) return
+    this.fishingLine.setVisible(false)
 
     if (isCorrect) this.resolveCorrect(word)
     else this.resolveWrong(option, word)
@@ -564,7 +598,6 @@ export default class FishScene extends Phaser.Scene {
     this.questionPanel?.destroy()
     this.readyUi?.destroy(true)
     this.readyUi = null
-    this.peek.setVisible(false)
     this.toast?.clear()
     this.bobber.setVisible(false)
     this.ripple.setVisible(false)

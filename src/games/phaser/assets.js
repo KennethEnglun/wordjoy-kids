@@ -35,18 +35,15 @@ export const ASSETS = Object.freeze({
     cast: `${ROOT}sheets/zxm_cast_sheet.webp`,
     fish: `${ROOT}sheets/zxm_fish_sheet.webp`,
     cheer: `${ROOT}sheets/zxm_cheer_sheet.webp`,
-    peek: `${ROOT}zxm_peek_card.webp`,
   },
 })
 
 export const IMAGE_ASSETS = Object.entries(ASSETS)
   .filter(([, value]) => typeof value === 'string')
   .map(([key, url]) => ({ key, url }))
-  .concat([{ key: 'cat-peek', url: ASSETS.cat.peek }])
 
 export const FISH_ASSETS = Object.entries(ASSETS.fish)
   .map(([key, url]) => ({ key: `fish-${key}`, url }))
 
 export const SPRITESHEETS = Object.entries(ASSETS.cat)
-  .filter(([key]) => key !== 'peek')
   .map(([key, url]) => ({ key: `cat-${key}`, url }))
