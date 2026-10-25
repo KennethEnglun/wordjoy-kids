@@ -1,0 +1,26 @@
+{
+  "schema": "generate2dsprite.animation_clips.v2",
+  "frames": [
+    "frames/zxm-fish-1.png",
+    "frames/zxm-fish-2.png",
+    "frames/zxm-fish-3.png",
+    "frames/zxm-fish-4.png"
+  ],
+  "anchor_px": [
+    256,
+    606
+  ],
+  "clips": {
+    "fish": {
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "ticks": 5,
+      "tick_hz": 60,
+      "loop_policy": "oneshot"
+    }
+  }
+}

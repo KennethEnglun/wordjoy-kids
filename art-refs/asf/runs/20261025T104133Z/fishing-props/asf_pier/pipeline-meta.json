@@ -1,0 +1,266 @@
+{
+  "schema": "generate2dsprite.pipeline_meta.v2",
+  "target": "asset",
+  "mode": "single",
+  "prompt": "",
+  "role": "",
+  "input": "raw_pier.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 200,
+  "background_mode": "native_alpha",
+  "resampler": "lanczos",
+  "key_quality": "auto",
+  "key": "magenta",
+  "despill_radius": 0,
+  "alpha_geometry_threshold": 16,
+  "connectivity": 8,
+  "anchor_mode": "center",
+  "alpha_hygiene": "both",
+  "alpha_floor": 4,
+  "pixel_scale": null,
+  "logical_pixel": 1,
+  "rows": 1,
+  "cols": 1,
+  "cell_size": 640,
+  "fit_scale": 0.9,
+  "trim_border": 0,
+  "edge_clean_depth": 0,
+  "align": "center",
+  "shared_scale": false,
+  "scale_strategy": "fit",
+  "component_mode": "all",
+  "component_padding": 0,
+  "min_component_area": 1,
+  "edge_touch_margin": 0,
+  "provenance": {
+    "input_sha256": "45d624b5968b27ee93d4c07070f95559fa9be9ba920651197f4ee9aeacac95da",
+    "source_mode": "RGBA",
+    "bit_depth": 8,
+    "conversion": "none",
+    "raw_copy": "raw.png",
+    "bytes": 1396282,
+    "format": "PNG",
+    "size": [
+      1774,
+      887
+    ]
+  },
+  "single_size": 640,
+  "geometry": {
+    "alpha_geometry_threshold": 16,
+    "connectivity": 8,
+    "anchor_mode": "center",
+    "scale_strategy": "fit",
+    "pixel_scale": null,
+    "logical_pixel": 1,
+    "grid_rounding": "exact",
+    "pad_offset": [
+      0,
+      0
+    ],
+    "anchor_px": null,
+    "anchor_band_fraction": 0.12,
+    "scale": null,
+    "scale_ratio": null,
+    "registration_anchor": null,
+    "injected_shift_px": null,
+    "legacy_fractional_nearest": false
+  },
+  "hygiene": {
+    "mode": "both",
+    "floor": 4,
+    "solid_min": 32,
+    "attach_radius": 2,
+    "connectivity": 8,
+    "floor_px": 10953,
+    "detached_px": 6,
+    "detached_components": 3,
+    "max_removed_alpha": 5
+  },
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        1774,
+        887
+      ],
+      "trim_offset": [
+        0,
+        0
+      ],
+      "source_rect": [
+        43,
+        257,
+        1730,
+        722
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        43,
+        257,
+        1730,
+        722
+      ],
+      "subject_bbox": [
+        43,
+        257,
+        1730,
+        722
+      ],
+      "source_frame_size": [
+        1774,
+        887
+      ],
+      "is_empty": false,
+      "subject_area": 590454,
+      "body_core_area": 311069,
+      "body_area_fraction": 0.1976876313123674,
+      "anchor_source": [
+        886.5,
+        489.5
+      ],
+      "anchor_cell": [
+        886.5,
+        489.5
+      ],
+      "source_edge_touch": false,
+      "output_edge_touch": false,
+      "edge_touch": false,
+      "paste_clamped": false,
+      "scale_strategy": "fit",
+      "output_size": [
+        576,
+        158
+      ],
+      "paste_position": [
+        32,
+        241
+      ],
+      "source_to_output_scale": 0.34143449911084767,
+      "output_anchor": [
+        320.0,
+        320.0
+      ],
+      "aligned_bbox": [
+        31,
+        241,
+        608,
+        400
+      ],
+      "output_subject_height_px": 159.0,
+      "body_scale": 0.2484375
+    }
+  ],
+  "edge_touch_frames": [],
+  "source_edge_touch_frames": [],
+  "output_edge_touch_frames": [],
+  "empty_frames": [],
+  "paste_clamped_frames": [],
+  "qc_summary": {
+    "frame_count": 1,
+    "valid_frame_count": 1,
+    "empty_count": 0,
+    "edge_touch_count": 0,
+    "paste_clamped_count": 0,
+    "body_scale_mean": 0.2484375,
+    "body_scale_cv": 0.0,
+    "legacy_body_scale_mean": 0.44462077247061615,
+    "legacy_body_scale_cv": 0.0,
+    "output_subject_height_mean": 159.0,
+    "output_subject_height_median": 159.0,
+    "scale_reference_height_px": 159.0,
+    "scale_reference_frames": [
+      [
+        0,
+        0
+      ]
+    ],
+    "anchor_x_std": 0.0,
+    "anchor_y_std": 0.0,
+    "anchor_y_mean": 0.5518602029312288,
+    "pixel_grid_off_edges": null
+  },
+  "qc_config": {
+    "strict_qc": true,
+    "reject_edge_touch": false,
+    "allow_source_edge_touch": false,
+    "max_body_scale_cv": null,
+    "max_anchor_y_std": null,
+    "max_profile_scale_drift": null
+  },
+  "qa": {
+    "status": "pass",
+    "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+    "notProven": [
+      "pose quality, anatomy, identity and facing",
+      "loop seam, phase order and timing at game size",
+      "colour fidelity of keyed edges beyond the matte_qa residue counts",
+      "that the subject is complete where it does not touch a cell edge"
+    ],
+    "checks": [
+      {
+        "id": "empty_frames",
+        "status": "pass",
+        "value": [],
+        "threshold": []
+      },
+      {
+        "id": "paste_clamped_frames",
+        "status": "pass",
+        "value": [],
+        "threshold": []
+      },
+      {
+        "id": "output_edge_touch_frames",
+        "status": "pass",
+        "value": [],
+        "threshold": []
+      },
+      {
+        "id": "source_edge_touch_frames",
+        "status": "pass",
+        "value": [],
+        "threshold": []
+      },
+      {
+        "id": "body_scale_cv",
+        "status": "skipped",
+        "value": 0.0,
+        "threshold": null
+      },
+      {
+        "id": "anchor_y_std",
+        "status": "skipped",
+        "value": 0.0,
+        "threshold": null
+      }
+    ],
+    "inputs": [
+      {
+        "path": "raw.png",
+        "sha256": "45d624b5968b27ee93d4c07070f95559fa9be9ba920651197f4ee9aeacac95da",
+        "bytes": 1396282
+      }
+    ],
+    "outputs": [
+      {
+        "path": "clean.png",
+        "sha256": "560ede2e268a6750931102c08b3f9a5a2aa3be4990ba1c7a8cfae1649af07e78",
+        "bytes": 172469
+      }
+    ],
+    "tool": {
+      "name": "generate2dsprite.py process",
+      "version": "0.4.0"
+    }
+  }
+}

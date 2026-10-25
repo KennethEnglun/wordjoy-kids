@@ -1,0 +1,380 @@
+{
+  "schema": "generate2dsprite.scale_frames.v1",
+  "scale": 1.3597733711048159,
+  "scale_from": "profile",
+  "target_body_px": null,
+  "resampler": "lanczos",
+  "canvas": [
+    512,
+    640
+  ],
+  "anchor_px": [
+    256,
+    606
+  ],
+  "padding": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "base_canvas": [
+    512,
+    640
+  ],
+  "base_anchor_px": [
+    256,
+    606
+  ],
+  "needed_padding": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "margin": null,
+  "anchor_mode": "stance",
+  "source_anchor": [
+    240.5,
+    444.0
+  ],
+  "reference_frame": 0,
+  "root_lock": "none",
+  "lock": [],
+  "row_baseline": false,
+  "shift_quantum": 1,
+  "alpha_threshold": 16,
+  "frames_per_row": 4,
+  "torso": {
+    "colors": [],
+    "band": [
+      0.4,
+      0.6
+    ],
+    "method": "trunk"
+  },
+  "frames": [
+    {
+      "source": {
+        "path": "../../processed/fish/zxm-fish-1.png",
+        "sha256": "5168e734f0c940b55772f8927732e28e1b25760d257792f79c6b3d31fd40d118",
+        "bytes": 113340
+      },
+      "cell": null,
+      "output": {
+        "path": "frames/zxm-fish-1.png",
+        "sha256": "9e5b9281b7ff315c60103799c523c37ef92b1b03afdce302a8f2cee4520baec3",
+        "bytes": 192041
+      },
+      "shift": [
+        0,
+        0
+      ],
+      "output_bbox": [
+        62,
+        115,
+        473,
+        610
+      ],
+      "turn_slide_px": 0.0,
+      "turn_slide_output_px": 1.0,
+      "measure": {
+        "bbox": [
+          101,
+          85,
+          397,
+          444
+        ],
+        "ground": 444,
+        "body_height": 359,
+        "stance_x": 240.5,
+        "torso_x": 241.43,
+        "centroid_x": 251.51,
+        "hip_x": 240.5
+      }
+    },
+    {
+      "source": {
+        "path": "../../processed/fish/zxm-fish-2.png",
+        "sha256": "25012e032a9f727153b325e4aecac9ed392f0c506fdb6c53d3bc868f8e45e79c",
+        "bytes": 117534
+      },
+      "cell": null,
+      "output": {
+        "path": "frames/zxm-fish-2.png",
+        "sha256": "bb72e0ce7ed9d4227a9d0428b31803170adcb61a8362d6636c08357e030595ee",
+        "bytes": 199581
+      },
+      "shift": [
+        0,
+        0
+      ],
+      "output_bbox": [
+        62,
+        115,
+        473,
+        610
+      ],
+      "turn_slide_px": 0.0,
+      "turn_slide_output_px": 1.0,
+      "measure": {
+        "bbox": [
+          101,
+          85,
+          397,
+          444
+        ],
+        "ground": 444,
+        "body_height": 359,
+        "stance_x": 240.5,
+        "torso_x": 241.84,
+        "centroid_x": 252.09,
+        "hip_x": 242.0
+      }
+    },
+    {
+      "source": {
+        "path": "../../processed/fish/zxm-fish-3.png",
+        "sha256": "c1b653019df5ae1c4b4573421814defdd457d879f03b209f092eb593bf707a2c",
+        "bytes": 115878
+      },
+      "cell": null,
+      "output": {
+        "path": "frames/zxm-fish-3.png",
+        "sha256": "581c5ccf959e66a96420910d66d337fc27e8777e69b132ddcf09be96e66c6dc3",
+        "bytes": 195777
+      },
+      "shift": [
+        0,
+        0
+      ],
+      "output_bbox": [
+        58,
+        115,
+        472,
+        610
+      ],
+      "turn_slide_px": 0.0,
+      "turn_slide_output_px": 0.0,
+      "measure": {
+        "bbox": [
+          97,
+          85,
+          396,
+          444
+        ],
+        "ground": 444,
+        "body_height": 358,
+        "stance_x": 240.5,
+        "torso_x": 234.27,
+        "centroid_x": 248.45,
+        "hip_x": 237.0
+      }
+    },
+    {
+      "source": {
+        "path": "../../processed/fish/zxm-fish-4.png",
+        "sha256": "03f8fec25d330ce4894779af792f271516fe1e6a5d971cbe2272e5510ac412b2",
+        "bytes": 117775
+      },
+      "cell": null,
+      "output": {
+        "path": "frames/zxm-fish-4.png",
+        "sha256": "55534eb2cd39411f4cd79b8ba57c9eb2998a8847f6d12b2f7b83d95805de5a04",
+        "bytes": 199518
+      },
+      "shift": [
+        0,
+        0
+      ],
+      "output_bbox": [
+        57,
+        111,
+        473,
+        610
+      ],
+      "turn_slide_px": 4.079,
+      "turn_slide_output_px": 4.0,
+      "measure": {
+        "bbox": [
+          98,
+          83,
+          397,
+          444
+        ],
+        "ground": 444,
+        "body_height": 361,
+        "stance_x": 239.0,
+        "torso_x": 234.63,
+        "centroid_x": 251.42,
+        "hip_x": 238.0
+      }
+    }
+  ],
+  "transitions": {
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "before": [
+      5.788,
+      12.477,
+      18.278
+    ],
+    "after": [
+      5.788,
+      12.477,
+      18.278
+    ],
+    "metric": "forge_core.transition_mae (premultiplied RGBA) on one shared crop"
+  },
+  "seam": null,
+  "input": {
+    "frames": [
+      {
+        "sha256": "5168e734f0c940b55772f8927732e28e1b25760d257792f79c6b3d31fd40d118",
+        "size": [
+          480,
+          480
+        ],
+        "source_mode": "RGBA",
+        "bit_depth": 8,
+        "conversion": "none",
+        "keyed": null
+      },
+      {
+        "sha256": "25012e032a9f727153b325e4aecac9ed392f0c506fdb6c53d3bc868f8e45e79c",
+        "size": [
+          480,
+          480
+        ],
+        "source_mode": "RGBA",
+        "bit_depth": 8,
+        "conversion": "none",
+        "keyed": null
+      },
+      {
+        "sha256": "c1b653019df5ae1c4b4573421814defdd457d879f03b209f092eb593bf707a2c",
+        "size": [
+          480,
+          480
+        ],
+        "source_mode": "RGBA",
+        "bit_depth": 8,
+        "conversion": "none",
+        "keyed": null
+      },
+      {
+        "sha256": "03f8fec25d330ce4894779af792f271516fe1e6a5d971cbe2272e5510ac412b2",
+        "size": [
+          480,
+          480
+        ],
+        "source_mode": "RGBA",
+        "bit_depth": 8,
+        "conversion": "none",
+        "keyed": null
+      }
+    ]
+  },
+  "profile": {
+    "path": "../idle/scale-frames.json",
+    "sha256": "71c7101f1faca81b855c7ee741da4de58ea65a10479987cd57c11474b540c1dd",
+    "bytes": 9271
+  },
+  "qa": {
+    "status": "pass",
+    "method": "one pinned resample per frame (forge_core.resample_rgba) on a work canvas holding every frame, then one crop; the crop is checked to keep every visible pixel",
+    "notProven": [
+      "That the locked feature (torso, stance, hip) is the right root for this action.",
+      "Pose quality and smoothness: review scale-review.png and play the clip."
+    ],
+    "checks": [
+      {
+        "id": "no_clipping",
+        "status": "pass",
+        "value": 0,
+        "threshold": 0,
+        "note": "every visible source pixel is on the canvas"
+      },
+      {
+        "id": "integer_nearest",
+        "status": "skipped",
+        "value": null,
+        "threshold": "N or 1/N"
+      },
+      {
+        "id": "registration",
+        "status": "pass",
+        "value": {
+          "horizontal": null,
+          "vertical": null,
+          "row_grounds": {
+            "0": 444
+          },
+          "feature_values": null
+        },
+        "threshold": null,
+        "note": "per-frame whole-pixel shifts against the reference frame"
+      },
+      {
+        "id": "turn_slide",
+        "status": "pass",
+        "value": {
+          "design": 4.079,
+          "output": 4.0
+        },
+        "threshold": null,
+        "note": "2 x |stance x - anchor x| in output px, before (design) and after pixel sampling (output); 0 means a mirrored turn keeps the feet in place"
+      }
+    ],
+    "inputs": [
+      {
+        "path": "../../processed/fish/zxm-fish-1.png",
+        "sha256": "5168e734f0c940b55772f8927732e28e1b25760d257792f79c6b3d31fd40d118",
+        "bytes": 113340
+      },
+      {
+        "path": "../../processed/fish/zxm-fish-2.png",
+        "sha256": "25012e032a9f727153b325e4aecac9ed392f0c506fdb6c53d3bc868f8e45e79c",
+        "bytes": 117534
+      },
+      {
+        "path": "../../processed/fish/zxm-fish-3.png",
+        "sha256": "c1b653019df5ae1c4b4573421814defdd457d879f03b209f092eb593bf707a2c",
+        "bytes": 115878
+      },
+      {
+        "path": "../../processed/fish/zxm-fish-4.png",
+        "sha256": "03f8fec25d330ce4894779af792f271516fe1e6a5d971cbe2272e5510ac412b2",
+        "bytes": 117775
+      }
+    ],
+    "outputs": [
+      {
+        "path": "scale-review.png",
+        "sha256": "7a2bb2db5c06cc25d3c0444d9493e038160860346423c51cdff1e900b86b6204",
+        "bytes": 631894
+      }
+    ],
+    "tool": {
+      "name": "scale_frames.py",
+      "version": "0.4.0"
+    }
+  },
+  "tool": {
+    "name": "scale_frames.py",
+    "version": "0.4.0"
+  },
+  "clips": "clips.json"
+}

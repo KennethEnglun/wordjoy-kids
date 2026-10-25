@@ -1,0 +1,189 @@
+{
+  "schema": "wordjoy.zxm_shared_animation_delivery_qc.v1",
+  "run": "20261025T101647Z",
+  "exports": {
+    "actions": [
+      "idle",
+      "run",
+      "cheer",
+      "chef",
+      "think",
+      "cast",
+      "fish"
+    ],
+    "frames_per_action": 4,
+    "canvas_px": [
+      512,
+      640
+    ],
+    "format": "lossless RGBA WebP",
+    "memory_static_updated": true
+  },
+  "head_ratio": {
+    "status": "pass",
+    "range": [
+      0.95,
+      1.05
+    ],
+    "per_action": {
+      "idle": [
+        1.021,
+        1.0,
+        0.959,
+        1.0
+      ],
+      "run": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "cheer": [
+        0.99,
+        0.99,
+        1.01,
+        1.01
+      ],
+      "chef": [
+        1.0,
+        1.02,
+        1.0,
+        1.0
+      ],
+      "think": [
+        1.011,
+        0.989,
+        0.968,
+        1.011
+      ],
+      "cast": [
+        1.0,
+        1.0,
+        0.957,
+        1.0
+      ],
+      "fish": [
+        1.0,
+        1.0,
+        0.98,
+        1.0
+      ]
+    },
+    "chef_head_frac": 0.55
+  },
+  "row_baseline": {
+    "status": "pass",
+    "spread_px": 0,
+    "threshold_px": 0.5,
+    "all_actions": true,
+    "shared_anchor_y": 606
+  },
+  "spill": {
+    "cross_cell_components": 0,
+    "cross_cell_visible": 0,
+    "sheet_edge": 0,
+    "empty_cells": 0,
+    "advisory": "safe_frame and approved-source alpha haze/boundary-band warnings are listed in delivery.md"
+  },
+  "frame_advisories": {
+    "run": [],
+    "cheer": [
+      {
+        "id": "near_duplicates",
+        "value": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "threshold": 0.95
+      },
+      {
+        "id": "torso_drift",
+        "value": 19.01,
+        "threshold": 2.0
+      }
+    ],
+    "chef": [
+      {
+        "id": "near_duplicates",
+        "value": [
+          [
+            0,
+            3
+          ]
+        ],
+        "threshold": 0.95
+      }
+    ],
+    "think": [
+      {
+        "id": "identity_residual",
+        "value": {
+          "0": 0.47,
+          "1": 1.47,
+          "2": 2.11,
+          "3": 0.53
+        },
+        "threshold": 1.5,
+        "frames": [
+          2
+        ]
+      },
+      {
+        "id": "near_duplicates",
+        "value": [
+          [
+            0,
+            3
+          ]
+        ],
+        "threshold": 0.95
+      }
+    ],
+    "fish": [
+      {
+        "id": "near_duplicates",
+        "value": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "threshold": 0.95
+      },
+      {
+        "id": "torso_drift",
+        "value": 11.69,
+        "threshold": 2.0
+      }
+    ],
+    "idle": [],
+    "cast": []
+  },
+  "webp_lossless_roundtrip": {
+    "status": "pass",
+    "count": 29
+  },
+  "frame_qc_status": {
+    "idle": "pass",
+    "run": "pass",
+    "cheer": "warn",
+    "chef": "warn",
+    "think": "warn",
+    "cast": "pass",
+    "fish": "warn"
+  }
+}

@@ -15,6 +15,7 @@
     "vite": "^6.0.7"
   },
   "dependencies": {
+    "phaser": "^3.90.0",
     "serve": "^14.2.6"
   },
   "engines": {

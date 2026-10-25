@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "13d067b5fd869b6518f1afed4161fcec263c9cec0be5741411f24f91dbf5f197",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-25T10:56:51.782Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-25T10:56:51.782Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "fishing-v2 buttons atlas raw art",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a172a6-c0e0-7202-a3ef-ed96391080e4",
+    "source": "CODEX_HOME/generated_images/01a172a6-c0e0-7202-a3ef-ed96391080e4/exec-874bd937-3e30-40e1-90e2-6bf7d318d150.png",
+    "sourceSha256": "9c482177c574bbdd6bf3bdb9ecea4147e91e5fc32bb1114b6ce639cfd0dfe27e",
+    "sourceMtime": "2026-10-25T10:48:59Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "9c482177c574bbdd6bf3bdb9ecea4147e91e5fc32bb1114b6ce639cfd0dfe27e",
+    "bytes": 1246363,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

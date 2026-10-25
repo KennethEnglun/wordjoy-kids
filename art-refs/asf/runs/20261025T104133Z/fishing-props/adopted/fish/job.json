@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "54a083de417d0660734c531674978e8ebc994e450c9278e3c293d65ddcf32592",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-25T10:56:51.846Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-25T10:56:51.846Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "fishing-v2 fish atlas raw art",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a172a6-c0e0-7202-a3ef-ed96391080e4",
+    "source": "CODEX_HOME/generated_images/01a172a6-c0e0-7202-a3ef-ed96391080e4/exec-c8a288d0-b1ec-4c14-96e7-09b65159a720.png",
+    "sourceSha256": "1ec44e08240713daeb635d5ba6c18c79ebdf50872700b520b9c408e5091ef7ce",
+    "sourceMtime": "2026-10-25T10:52:23Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "1ec44e08240713daeb635d5ba6c18c79ebdf50872700b520b9c408e5091ef7ce",
+    "bytes": 1941126,
+    "format": "PNG",
+    "size": [
+      1536,
+      1024
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+Create one new four-frame animation sheet for the EXISTING approved character 字學貓 using all three references: reference 1 is the approved identity master and must determine the exact cat; reference 2 is the approved fishing style board; reference 3 is the four-cell run guide and must determine the four poses and NEAR/FAR leg alternation. This is not a new character or a new master.
+
+Canvas 1774x887, one row of four equal cells, 1x4 left-to-right, flat #FF00FF background, one cat per cell, full body, generous safe margins. Character: warm-grey fur #B9B4AE with neutral grey watercolor shading, brown forehead heart #5A3A26, cream bloomers #F3E6CC, peach blush #F4A6A0, brown watercolor outline, solid round brown eyes with absolutely no whites/highlights, large round head, short limbs and chubby belly. Always retain the heart and bloomers.
+
+Show a real run to the RIGHT in consistent three-quarter side view so both legs are readable as separate near and far legs. Four distinct sequential poses, no duplicated frames:
+1. CONTACT A: near leg reaches forward to the right, far leg extends back to the left, with the near foot planted.
+2. FLIGHT A: body lifts, both feet clearly off the ground, near knee forward and far leg back.
+3. CONTACT B: exact opposite lead: far leg reaches forward to the right and plants; near leg extends back to the left. It must visibly differ from frame 1.
+4. FLIGHT B: both feet off the ground, far knee forward and near leg back, visibly different from frame 2.
+
+Keep the feet contact line constant, head and torso scale constant, and arms counter-swing naturally. Avoid a front-facing standing bounce. Make the leg silhouettes visibly alternate in the final sheet. No text, labels, props, motion trails, or extra characters. Preserve the approved fishing-sheet finish and exact identity. Return the four-frame sprite sheet only.

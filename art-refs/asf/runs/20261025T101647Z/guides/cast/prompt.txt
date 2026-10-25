@@ -1,0 +1,13 @@
+Request aspect 2:1. Do not state pixel sizes: the host image tool keeps the aspect and
+returns about 1774x887 for it (area about 1,572,864 px).
+Attach guide.png as a layout and pose reference only. Do not draw any of its lines, boxes, colours,
+grey bands or stick figures.
+- 4 poses in 1 rows x 4 columns, read left to right, top row first.
+- The grey band around every cell is empty gutter: no pixel of the character may enter it.
+- Keep the whole character (ears, tail, both feet, held items) inside the blue safe box of its cell.
+- The black line is the ground and the tick is the fixed root: one body scale and one root in every cell.
+- The character faces RIGHT in every cell.
+Background: real transparency, or one flat chroma colour absent from the character.
+No text, labels, numbers, grid lines, shadows, dust or checkerboard.
+
+After generation: run sheet_qc.py spill on the raw sheet, then sheet_qc.py frames.

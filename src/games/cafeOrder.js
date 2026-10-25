@@ -7,7 +7,7 @@ const ART = {
   patienceHeart: '/art/games/cafe/cafe_patience_heart.webp',
   ingredientArt: (id) => `/art/games/cafe/cafe_ing_${id}.webp`,
   dishArt: (id) => `/art/games/cafe/cafe_dish_${id}.webp`,
-  chefIdle: '/art/games/cafe/cafe_mascot_chef.webp',
+  chefIdle: '/art/games/anim/zxm_chef_01.webp',
   chefCook: [1, 2, 3, 4].map((frame) => `/art/games/anim/zxm_chef_0${frame}.webp`),
   customers: {
     rabbit: {

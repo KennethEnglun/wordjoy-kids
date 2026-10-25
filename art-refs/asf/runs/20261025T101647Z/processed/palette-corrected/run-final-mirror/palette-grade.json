@@ -1,0 +1,154 @@
+{
+  "schema": "wordjoy.zxm_fur_palette_grade.v1",
+  "method": "OKLab lightness range fit to approved master; hue/chroma locked to #B9B4AE",
+  "reference": {
+    "path": "art-refs/asf/runs/20261025T050136Z/master-color-corrected-approved/master_rgba.png",
+    "sha256": "a826cb21b1141117d5250be81501d5660236e76b62045d1637f6f06f5a426d04",
+    "fur_pixels": 227536
+  },
+  "palette": {
+    "path": "art-refs/asf/runs/20261025T050136Z/zxm-palette-fixed.json",
+    "sha256": "b5603b3dbacca6b5efdd7cc4b4fab468d12705079009c4cb0a01013809518c8b",
+    "fur_ramp_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "base": "#B9B4AE"
+  },
+  "frames": [
+    {
+      "input": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/run-mirror/sheet-1.png",
+        "sha256": "fb88786b7bc6ff10ab66fc208121ca27bf70ceebf0c2de7e907730b8c5e47bf4"
+      },
+      "output": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/run-final-mirror/zxm-run-final-1.png",
+        "sha256": "e4bab92172a9bba425999cecee8cef49f48f21f01bab257fee3e7bf8248db4a6"
+      },
+      "fur_pixels": 23246,
+      "median_rgb_before": [
+        212,
+        201,
+        187
+      ],
+      "median_rgb_after": [
+        185,
+        180,
+        174
+      ],
+      "mean_rgb_after": [
+        184.48,
+        179.49,
+        173.49
+      ]
+    },
+    {
+      "input": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/run-mirror/sheet-2.png",
+        "sha256": "1f10c9b4b5ffcb8bd3507574629427d65fea6e7ccfcab66d9d31d35f8a1905e6"
+      },
+      "output": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/run-final-mirror/zxm-run-final-2.png",
+        "sha256": "7632f7fe6852e8ea6625ade4fed7a6f314e19cc7e1e274f782d8df560032e9a0"
+      },
+      "fur_pixels": 21717,
+      "median_rgb_before": [
+        213,
+        202,
+        187
+      ],
+      "median_rgb_after": [
+        186,
+        181,
+        175
+      ],
+      "mean_rgb_after": [
+        185.34,
+        180.34,
+        174.34
+      ]
+    },
+    {
+      "input": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/run-mirror/sheet-3.png",
+        "sha256": "4f7dba6da2e4745f4b4ebdfb81e9054e0e1b99f61739dc711464153dd65c4261"
+      },
+      "output": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/run-final-mirror/zxm-run-final-3.png",
+        "sha256": "fba12f477b22f52d49dce49e6237fd0967c488235337b4b62f4e6d6b5168dc93"
+      },
+      "fur_pixels": 22301,
+      "median_rgb_before": [
+        213,
+        202,
+        187
+      ],
+      "median_rgb_after": [
+        186,
+        181,
+        175
+      ],
+      "mean_rgb_after": [
+        185.41,
+        180.4,
+        174.39
+      ]
+    },
+    {
+      "input": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/run-mirror/sheet-4.png",
+        "sha256": "c6086667889b23a8e43b2ee54c798d5291153155f888330cc2136b3d7faa60ad"
+      },
+      "output": {
+        "path": "art-refs/asf/runs/20261025T101647Z/processed/palette-corrected/run-final-mirror/zxm-run-final-4.png",
+        "sha256": "a8b2df19a2e6f2eb669b63b6f160bc2c7bccdc50f701bb7641b5878502b24d69"
+      },
+      "fur_pixels": 21740,
+      "median_rgb_before": [
+        213,
+        202,
+        187
+      ],
+      "median_rgb_after": [
+        186,
+        181,
+        175
+      ],
+      "mean_rgb_after": [
+        185.1,
+        180.1,
+        174.09
+      ]
+    }
+  ],
+  "source_fur_pixels": 89004,
+  "luminance_fit": {
+    "source_median": 0.8435789942741394,
+    "target_median": 0.774523913860321,
+    "scale": 0.8088585122615215,
+    "source_p05_p95": [
+      0.8078691363334656,
+      0.8652792602777479
+    ],
+    "target_p05_p95": [
+      0.7560256719589233,
+      0.8024623394012451
+    ]
+  },
+  "locked_base_lab": [
+    0.77229244,
+    0.00303739,
+    0.00971323
+  ],
+  "reference_fur_luminance_percentiles": [
+    0.756026,
+    0.76818,
+    0.774524,
+    0.780855,
+    0.802462
+  ]
+}
