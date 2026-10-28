@@ -26,7 +26,7 @@ export function renderCharacter(root, state, nav) {
         <h2>${p?.name || '小朋友'} 嘅 ${MASCOT_NAME_ZH}</h2>
         <p class="level-pill">Lv. ${lv} 英文旅者</p>
         <p class="stats-inline">⭐ ${stars} · 🪙 ${p?.coins || 0} · 🔥 ${streak} 日</p>
-        <p class="hint">程度：${BAND_META[p?.band]?.zh || '小一'} · 今日目標 ${today}/${dailyGoalStars}</p>
+        <p class="hint">程度：${BAND_META[p?.band]?.zh || '初小'} · 今日目標 ${today}/${dailyGoalStars}</p>
       </div>
       <button type="button" class="link-card" data-profiles>
         <div><strong>切換小朋友</strong><span>一機多個檔案</span></div>

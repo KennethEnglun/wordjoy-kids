@@ -10,9 +10,9 @@ test('home shell and start journey to pic match', async ({ page }) => {
   await page.getByRole('button', { name: /對對碰之路|Pic Match/i }).click()
   await expect(page.getByText(/揀主題/)).toBeVisible()
   await page.getByRole('button', { name: /我同家人|Family/i }).first().click()
-  const choice = page.locator('button.choice').first()
-  await expect(choice).toBeVisible({ timeout: 10000 })
-  await choice.click()
+  const card = page.getByRole('button', { name: '記憶卡，未翻開' }).first()
+  await expect(card).toBeVisible({ timeout: 10000 })
+  await card.click()
   await expect(page.locator('#app')).toContainText(/題|星|金幣|好叻|再睇|WordJoy|英樂寶|⭐/)
 })
 
@@ -57,11 +57,11 @@ test('review bag from tasks', async ({ page }) => {
             id: 'kid1',
             name: '測試仔',
             avatar: '🐱',
-            band: 'prek',
+            band: 'junior',
             coins: 5,
             stars: 2,
             best: {},
-            reviewBag: ['mom', 'dad', 'cat'],
+            reviewBag: ['mom', 'junior-me_family-dad', 'junior-animals_pets-cat'],
             sessions: [],
             streak: { count: 2, lastDate: new Date().toISOString().slice(0, 10) },
             todayKey: new Date().toISOString().slice(0, 10),
@@ -73,20 +73,22 @@ test('review bag from tasks', async ({ page }) => {
   })
   await page.goto('/#/tasks')
   await page.getByRole('button', { name: /複習袋/ }).click()
-  await expect(page.locator('button.choice').first()).toBeVisible({ timeout: 10000 })
+  await expect(page.getByRole('button', { name: '記憶卡，未翻開' }).first()).toBeVisible({
+    timeout: 10000,
+  })
 })
 
 test('word race from adventure', async ({ page }) => {
-  await page.goto('/#/adventure/prek')
+  await page.goto('/#/adventure/junior')
   await page.getByRole('button', { name: /詞語賽道|Word Race/i }).click()
   await page.getByRole('button', { name: /動物|Animals/i }).first().click()
-  await expect(page.locator('button.choice').first()).toBeVisible({ timeout: 10000 })
+  await expect(page.locator('button.race-choice').first()).toBeVisible({ timeout: 10000 })
 })
 
 test('cafe order still works', async ({ page }) => {
-  await page.goto('/#/play/prek/food/cafe_order')
-  await expect(page.locator('.cafe-order, .order-line').first()).toBeVisible({ timeout: 10000 })
-  await expect(page.locator('button.choice').first()).toBeVisible()
+  await page.goto('/#/play/junior/food_drink/cafe_order')
+  await expect(page.locator('.cafe-game, .cafe-question').first()).toBeVisible({ timeout: 10000 })
+  await expect(page.locator('button.cafe-choice').first()).toBeVisible()
 })
 
 test('parent school themes', async ({ page }) => {

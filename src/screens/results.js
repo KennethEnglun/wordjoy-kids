@@ -11,7 +11,7 @@ import {
   getParentSettings,
   getTodayStars,
 } from '../lib/storage.js'
-import { THEME_META, BAND_META } from '../lib/vocab.js'
+import { THEME_META, BAND_META, resolveBand, resolveTheme } from '../lib/vocab.js'
 import { momoImg, MASCOT_NAME_ZH } from '../lib/mascot.js'
 import * as audio from '../lib/audio.js'
 
@@ -52,8 +52,8 @@ export function renderResults(root, state, nav) {
   const today = getTodayStars()
   const starStr = '⭐'.repeat(stars) + '☆'.repeat(3 - stars)
   const isReview = theme === 'review' || theme === '__review__' || band === 'review'
-  const tmeta = isReview ? { zh: '複習袋' } : THEME_META[theme] || { zh: theme }
-  const bmeta = isReview ? { zh: '複習' } : BAND_META[band] || { zh: band }
+  const tmeta = isReview ? { zh: '複習袋' } : THEME_META[resolveTheme(theme)] || { zh: theme }
+  const bmeta = isReview ? { zh: '複習' } : BAND_META[resolveBand(band)] || { zh: band }
   const pose = stars >= 2 ? 'celebrate' : stars === 1 ? 'proud' : 'sad'
 
   root.innerHTML = `

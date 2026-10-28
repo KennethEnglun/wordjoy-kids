@@ -105,12 +105,12 @@ function pickCafeWords(words, pool, roundSize = 8) {
   const selected = Array.isArray(words) && words.length ? words : []
   const fullPool = Array.isArray(pool) && pool.length ? pool : selected
   const base = uniqueWords(selected.length ? selected : fullPool)
-  const food = base.filter((word) => word.theme === 'food')
+  const food = base.filter((word) => word.theme === 'food_drink')
   if (!food.length) return base
   if (food.length >= roundSize) return food
 
   // A food lesson can still use its other words to fill a short cafe round.
-  return uniqueWords([...food, ...base.filter((word) => word.theme !== 'food'), ...fullPool])
+  return uniqueWords([...food, ...base.filter((word) => word.theme !== 'food_drink'), ...fullPool])
 }
 
 /** Vocab answers earn ingredients; players assemble each customer's dish before serving it. */

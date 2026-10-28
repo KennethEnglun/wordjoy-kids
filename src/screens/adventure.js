@@ -1,6 +1,6 @@
 import { mountShell } from '../lib/shell.js'
 import { getActiveProfile } from '../lib/storage.js'
-import { BAND_META } from '../lib/vocab.js'
+import { BAND_IDS, BAND_META, resolveBand } from '../lib/vocab.js'
 import * as audio from '../lib/audio.js'
 
 const ROUTES = [
@@ -14,7 +14,7 @@ const ROUTES = [
 
 export function renderAdventure(root, state, nav) {
   const p = getActiveProfile()
-  const band = state.band || p?.band || 'p1'
+  const band = resolveBand(state.band || p?.band)
   const body = `
     <div class="screen tab-screen adventure-screen">
       <header class="page-head">
@@ -34,7 +34,7 @@ export function renderAdventure(root, state, nav) {
   `
   const shellBody = mountShell(root, { screen: 'adventure', nav, bodyHtml: body })
   const chips = shellBody.querySelector('#bands')
-  ;['prek', 'p1', 'p2', 'p3'].forEach((code) => {
+  BAND_IDS.forEach((code) => {
     const b = document.createElement('button')
     b.type = 'button'
     b.className = `chip${code === band ? ' on' : ''}`

@@ -48,7 +48,11 @@ export async function renderPlay(root, state, nav) {
   if (review) {
     const bag = getActiveProfile()?.reviewBag || []
     const byId = new Map(all.map((w) => [w.id, w]))
-    words = bag.map((id) => byId.get(id)).filter(Boolean)
+    const byEn = new Map()
+    for (const word of all) {
+      if (!byEn.has(word.en)) byEn.set(word.en, word)
+    }
+    words = bag.map((id) => byId.get(id) || byEn.get(id)).filter(Boolean)
     pool = all
     if (!words.length) {
       root.innerHTML = `
