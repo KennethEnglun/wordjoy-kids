@@ -61,7 +61,7 @@ test('review bag from tasks', async ({ page }) => {
             coins: 5,
             stars: 2,
             best: {},
-            reviewBag: ['junior-me_family-mom', 'junior-me_family-dad', 'junior-animals_pets-cat'],
+            reviewBag: ['mom', 'junior-me_family-dad', 'junior-animals_pets-cat'],
             sessions: [],
             streak: { count: 2, lastDate: new Date().toISOString().slice(0, 10) },
             todayKey: new Date().toISOString().slice(0, 10),

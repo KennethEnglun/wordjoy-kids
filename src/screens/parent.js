@@ -10,7 +10,7 @@ import {
   getWeeklyThemes,
   setWeeklyThemes,
 } from '../lib/storage.js'
-import { THEME_META, BAND_META } from '../lib/vocab.js'
+import { THEME_META, BAND_META, resolveBand, resolveTheme } from '../lib/vocab.js'
 import { momoImg, MASCOT_NAME_ZH } from '../lib/mascot.js'
 import * as audio from '../lib/audio.js'
 
@@ -114,10 +114,10 @@ export function renderParent(root, state, nav) {
     const settings = getParentSettings()
     const weekly = getWeeklyDigest()
     const today = getTodayStars()
-    const tmeta = last ? THEME_META[last.theme] || { zh: last.theme } : null
-    const bmeta = last ? BAND_META[last.band] || { zh: last.band } : null
+    const tmeta = last ? THEME_META[resolveTheme(last.theme)] || { zh: last.theme } : null
+    const bmeta = last ? BAND_META[resolveBand(last.band)] || { zh: last.band } : null
     const themeNames = weekly.themes
-      .map((t) => THEME_META[t]?.zh || t)
+      .map((t) => THEME_META[resolveTheme(t)]?.zh || t)
       .filter(Boolean)
       .join('、') || '—'
 

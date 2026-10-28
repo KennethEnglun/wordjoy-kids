@@ -55,13 +55,11 @@ export async function renderThemes(root, state, nav) {
     `
     b.addEventListener('click', () => {
       audio.tap()
-      {
       if (state.pendingGame) {
         nav({ screen: 'play', band: bandId, theme: t, game: state.pendingGame })
       } else {
         nav({ screen: 'games', band: bandId, theme: t })
       }
-    }
     })
     grid.appendChild(b)
   })
