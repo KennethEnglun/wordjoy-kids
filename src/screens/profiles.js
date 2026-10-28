@@ -110,7 +110,7 @@ export function renderProfiles(root, state, nav) {
         audio.tap()
         const input = root.querySelector('#profile-name')
         const name = (input.value || '').trim() || nextName
-        const currentBand = getActiveProfile()?.band || 'p1'
+        const currentBand = getActiveProfile()?.band || 'junior'
         const created = createProfile(name, pickedAvatar, currentBand)
         if (!created) {
           notice = `最多只可以開 ${MAX_PROFILES} 個檔案。`

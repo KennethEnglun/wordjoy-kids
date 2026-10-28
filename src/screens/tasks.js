@@ -49,7 +49,7 @@ export function renderTasks(root, state, nav) {
   const shellBody = mountShell(root, { screen: 'tasks', nav, bodyHtml: body })
   shellBody.querySelector('[data-play]').onclick = () => {
     audio.tap()
-    nav({ screen: 'adventure', band: p?.band || 'p1' })
+    nav({ screen: 'adventure', band: p?.band || 'junior' })
   }
   const rev = shellBody.querySelector('[data-review]')
   if (rev && bag) {

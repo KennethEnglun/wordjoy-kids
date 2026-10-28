@@ -1,7 +1,8 @@
+import { resolveBand, resolveTheme } from './vocab.js'
+
 const KEY = 'wordjoy-progress'
 export const MAX_PROFILES = 3
 export const AVATARS = ['🐻', '🐱', '🐰', '🦊', '🐼', '🦁', '🐸', '🐵', '🦄', '🐯']
-const BANDS = ['prek', 'p1', 'p2', 'p3']
 
 function dateStr(d = new Date()) {
   const y = d.getFullYear()
@@ -15,12 +16,12 @@ function yesterdayStr() {
   return dateStr(new Date(n.getFullYear(), n.getMonth(), n.getDate() - 1))
 }
 
-function blankProfile(id, name = '小朋友1', avatar = '🐻', band = 'p1') {
+function blankProfile(id, name = '小朋友1', avatar = '🐻', band = 'junior') {
   return {
     id,
     name,
     avatar,
-    band: BANDS.includes(band) ? band : 'p1',
+    band: resolveBand(band),
     coins: 0,
     stars: 0,
     best: {},
@@ -44,7 +45,7 @@ function normalizeProfile(raw, fallbackId) {
     id,
     name: typeof p.name === 'string' && p.name.trim() ? p.name.trim().slice(0, 16) : '小朋友',
     avatar: typeof p.avatar === 'string' && p.avatar ? p.avatar : '🐻',
-    band: BANDS.includes(p.band) ? p.band : 'p1',
+    band: resolveBand(p.band),
     coins: Math.max(0, Number(p.coins) || 0),
     stars: Math.max(0, Number(p.stars) || 0),
     best: p.best && typeof p.best === 'object' ? { ...p.best } : {},
@@ -62,7 +63,7 @@ function normalizeProfile(raw, fallbackId) {
 
 function migrate(raw) {
   const old = raw && typeof raw === 'object' ? raw : {}
-  const prof = blankProfile('kid1', '小朋友1', '🐻', 'p1')
+  const prof = blankProfile('kid1', '小朋友1', '🐻', 'junior')
   prof.coins = Math.max(0, Number(old.coins) || 0)
   prof.stars = Math.max(0, Number(old.stars) || 0)
   prof.best = old.best && typeof old.best === 'object' ? { ...old.best } : {}
@@ -79,7 +80,7 @@ function migrate(raw) {
 }
 
 function normalizeWeeklyThemes(list) {
-  return uniqueIds(list).slice(0, 2)
+  return uniqueIds((Array.isArray(list) ? list : []).map((t) => resolveTheme(t))).slice(0, 2)
 }
 
 function normalize(raw) {
@@ -166,7 +167,7 @@ export function setActiveProfile(id) {
   return state.profiles[id]
 }
 
-export function createProfile(name, avatar = '🐻', band = 'p1') {
+export function createProfile(name, avatar = '🐻', band = 'junior') {
   const state = getState()
   if (Object.keys(state.profiles).length >= MAX_PROFILES) return null
   let n = 1
@@ -190,7 +191,7 @@ export function updateProfile(patch, id = null) {
   const p = state.profiles[target]
   if (typeof patch.name === 'string' && patch.name.trim()) p.name = patch.name.trim().slice(0, 16)
   if (typeof patch.avatar === 'string' && patch.avatar) p.avatar = patch.avatar
-  if (BANDS.includes(patch.band)) p.band = patch.band
+  if (patch.band) p.band = resolveBand(patch.band)
   if (patch.coins != null) p.coins = Math.max(0, Number(patch.coins) || 0)
   if (patch.stars != null) p.stars = Math.max(0, Number(patch.stars) || 0)
   if (patch.best && typeof patch.best === 'object') p.best = { ...p.best, ...patch.best }

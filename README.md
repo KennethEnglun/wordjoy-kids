@@ -1,6 +1,6 @@
 # 英樂寶 WordJoy
 
-香港中文家庭小朋友學英文詞彙嘅手機優先網頁遊戲（Pre-K → 小三）。圖畫先行、繁中家長層、貼近香港小學 KS1 主題（原創詞表，不抄出版社）。
+香港中文家庭小朋友學英文詞彙嘅手機優先網頁遊戲（初小／中小／高小）。圖畫先行、繁中家長層、貼近香港小學 KS1 主題（原創詞表，不抄出版社）。
 
 Mobile-first English vocab mini-games for Chinese-family kids in Hong Kong. Picture-first, Traditional Chinese parent layer, KS1-aligned original word lists.
 
@@ -20,7 +20,7 @@ npm run build     # 產出 dist/（可給 Capacitor 包 iOS）
 
 ## MVP 內容
 
-- 100+ 原創詞（+clothes / body / home）；Joy 吉祥物；複習袋；多小朋友檔 + 家長 PIN；連續日數
+- 1152 原創詞（16 主題 × 初小／中小／高小）；Joy 吉祥物；複習袋；多小朋友檔 + 家長 PIN；連續日數
 - 3 款遊戲：對對碰、閃電答題、開寶箱
 - localStorage 進度（星、金幣、複習袋、家長摘要）
 - Web Speech 英文發音（裝置支援時）

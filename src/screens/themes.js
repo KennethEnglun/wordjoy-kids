@@ -1,22 +1,30 @@
-import { loadVocab, themesForBand, THEME_META, BAND_META } from '../lib/vocab.js'
+import { loadVocab, themesForBand, THEME_META, BAND_META, resolveBand } from '../lib/vocab.js'
 import * as audio from '../lib/audio.js'
 
 const EMOJI = {
-  family: '👨‍👩‍👧',
-  colours: '🎨',
-  numbers: '🔢',
-  animals: '🐾',
-  food: '🍎',
+  me_family: '👨‍👩‍👧',
+  colours_shapes_numbers: '🎨',
+  animals_pets: '🐾',
+  food_drink: '🍎',
   school: '🎒',
   clothes: '👕',
-  body: '🧍',
+  body_senses: '🧍',
+  toys_games: '🧸',
   home: '🏠',
+  weather_seasons: '☔',
+  transport: '🚌',
+  places_community: '🏘️',
+  sports_hobbies: '⚽',
+  friends_feelings: '😊',
+  festivals: '🧧',
+  nature_environment: '🌳',
 }
 
 export async function renderThemes(root, state, nav) {
   const words = await loadVocab()
-  const themes = themesForBand(words, state.band)
-  const band = BAND_META[state.band]
+  const bandId = resolveBand(state.band)
+  const themes = themesForBand(words, bandId)
+  const band = BAND_META[bandId]
   root.innerHTML = `
     <div class="screen">
       <div class="topbar">
@@ -30,7 +38,7 @@ export async function renderThemes(root, state, nav) {
   `
   root.querySelector('[data-back]').onclick = () => {
     audio.tap()
-    nav({ screen: 'adventure', band: state.band })
+    nav({ screen: 'adventure', band: bandId })
   }
   const grid = root.querySelector('#themes')
   themes.forEach((t) => {
@@ -49,9 +57,9 @@ export async function renderThemes(root, state, nav) {
       audio.tap()
       {
       if (state.pendingGame) {
-        nav({ screen: 'play', band: state.band, theme: t, game: state.pendingGame })
+        nav({ screen: 'play', band: bandId, theme: t, game: state.pendingGame })
       } else {
-        nav({ screen: 'games', band: state.band, theme: t })
+        nav({ screen: 'games', band: bandId, theme: t })
       }
     }
     })

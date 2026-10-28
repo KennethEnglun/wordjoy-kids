@@ -121,14 +121,14 @@ export function renderHome(root, nav) {
   shellBody.querySelector('[data-profiles]').onclick = go(() => nav({ screen: 'profiles' }))
   shellBody.querySelector('[data-start]').onclick = go(() => {
     if (!gate.allowed) return
-    nav({ screen: 'adventure', band: p?.band || 'p1' })
+    nav({ screen: 'adventure', band: p?.band || 'junior' })
   })
   shellBody.querySelectorAll('[data-tasks]').forEach((el) => {
     el.onclick = go(() => nav({ screen: 'tasks' }))
   })
   shellBody.querySelector('[data-report]').onclick = go(() => nav({ screen: 'parent' }))
   shellBody.querySelector('[data-vault]').onclick = go(() =>
-    nav({ screen: 'themes', band: p?.band || 'p1' }),
+    nav({ screen: 'themes', band: p?.band || 'junior' }),
   )
   const dismiss = shellBody.querySelector('[data-nudge-dismiss]')
   if (dismiss) {

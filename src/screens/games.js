@@ -1,4 +1,4 @@
-import { THEME_META, BAND_META } from '../lib/vocab.js'
+import { THEME_META, BAND_META, resolveBand, resolveTheme } from '../lib/vocab.js'
 import { getActiveProfile } from '../lib/storage.js'
 import * as audio from '../lib/audio.js'
 
@@ -12,8 +12,10 @@ const GAMES = [
 ]
 
 export function renderGames(root, state, nav) {
-  const theme = THEME_META[state.theme] || { zh: state.theme }
-  const band = BAND_META[state.band]
+  const bandId = resolveBand(state.band)
+  const themeId = resolveTheme(state.theme)
+  const theme = THEME_META[themeId] || { zh: themeId }
+  const band = BAND_META[bandId]
   const bag = getActiveProfile()?.reviewBag?.length || 0
   root.innerHTML = `
     <div class="screen">
@@ -33,7 +35,7 @@ export function renderGames(root, state, nav) {
   `
   root.querySelector('[data-back]').onclick = () => {
     audio.tap()
-    nav({ screen: 'themes', band: state.band })
+    nav({ screen: 'themes', band: bandId })
   }
   const rev = root.querySelector('[data-review]')
   if (rev) {
@@ -55,7 +57,7 @@ export function renderGames(root, state, nav) {
     `
     b.addEventListener('click', () => {
       audio.tap()
-      nav({ screen: 'play', band: state.band, theme: state.theme, game: g.id })
+      nav({ screen: 'play', band: bandId, theme: themeId, game: g.id })
     })
     grid.appendChild(b)
   })
