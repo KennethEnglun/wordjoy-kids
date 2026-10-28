@@ -1,0 +1,3890 @@
+[
+  {
+    "id": "junior-time_calendar-monday",
+    "en": "Monday",
+    "zhHant": "星期一",
+    "example": "Monday is a school day.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-tuesday",
+    "en": "Tuesday",
+    "zhHant": "星期二",
+    "example": "Art is on Tuesday.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-wednesday",
+    "en": "Wednesday",
+    "zhHant": "星期三",
+    "example": "We swim on Wednesday.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-thursday",
+    "en": "Thursday",
+    "zhHant": "星期四",
+    "example": "PE is on Thursday.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-friday",
+    "en": "Friday",
+    "zhHant": "星期五",
+    "example": "I like Friday.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-saturday",
+    "en": "Saturday",
+    "zhHant": "星期六",
+    "example": "We play on Saturday.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-sunday",
+    "en": "Sunday",
+    "zhHant": "星期日",
+    "example": "Sunday is a rest day.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-morning",
+    "en": "morning",
+    "zhHant": "早上",
+    "example": "I read in the morning.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-afternoon",
+    "en": "afternoon",
+    "zhHant": "下午",
+    "example": "We walk in the afternoon.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-night",
+    "en": "night",
+    "zhHant": "夜晚",
+    "example": "The moon comes out at night.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-clock",
+    "en": "clock",
+    "zhHant": "時鐘",
+    "example": "Look at the clock.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-calendar",
+    "en": "calendar",
+    "zhHant": "日曆",
+    "example": "See the date on the calendar.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-january",
+    "en": "January",
+    "zhHant": "一月",
+    "example": "January is the first month.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-start",
+    "en": "start",
+    "zhHant": "開始",
+    "example": "School starts at eight.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-finish",
+    "en": "finish",
+    "zhHant": "結束",
+    "example": "We finish at three.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-ring",
+    "en": "ring",
+    "zhHant": "響起",
+    "example": "The bell rings at noon.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-check",
+    "en": "check",
+    "zhHant": "查看",
+    "example": "Check the calendar.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-show",
+    "en": "show",
+    "zhHant": "顯示",
+    "example": "The clock shows nine.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-first",
+    "en": "first",
+    "zhHant": "第一",
+    "example": "Monday is the first weekday.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-last",
+    "en": "last",
+    "zhHant": "最後",
+    "example": "Sunday is the last day.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-next",
+    "en": "next",
+    "zhHant": "下一個",
+    "example": "Tuesday is next.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-daily",
+    "en": "daily",
+    "zhHant": "每日",
+    "example": "We have a daily class.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-free",
+    "en": "free",
+    "zhHant": "空閒",
+    "example": "I am free on Sunday.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-time_calendar-today",
+    "en": "today",
+    "zhHant": "今天",
+    "example": "We have music today.",
+    "pos": "adverb",
+    "band": "junior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-february",
+    "en": "February",
+    "zhHant": "二月",
+    "example": "February is a short month.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-march",
+    "en": "March",
+    "zhHant": "三月",
+    "example": "We have a picnic in March.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-april",
+    "en": "April",
+    "zhHant": "四月",
+    "example": "We plant trees in April.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-may",
+    "en": "May",
+    "zhHant": "五月",
+    "example": "The weather is warm in May.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-june",
+    "en": "June",
+    "zhHant": "六月",
+    "example": "The term ends in June.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-july",
+    "en": "July",
+    "zhHant": "七月",
+    "example": "July is a holiday month.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-august",
+    "en": "August",
+    "zhHant": "八月",
+    "example": "It is hot in August.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-september",
+    "en": "September",
+    "zhHant": "九月",
+    "example": "School starts in September.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-date",
+    "en": "date",
+    "zhHant": "日期",
+    "example": "What is the date today?",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-week",
+    "en": "week",
+    "zhHant": "一星期",
+    "example": "A week has seven days.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-year",
+    "en": "year",
+    "zhHant": "年",
+    "example": "A year has twelve months.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-minute",
+    "en": "minute",
+    "zhHant": "分鐘",
+    "example": "Wait one minute.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-pass",
+    "en": "pass",
+    "zhHant": "過去",
+    "example": "Time passes quickly.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-mark",
+    "en": "mark",
+    "zhHant": "標記",
+    "example": "Mark the date.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-plan",
+    "en": "plan",
+    "zhHant": "計劃",
+    "example": "Plan your week.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-tick",
+    "en": "tick",
+    "zhHant": "勾選",
+    "example": "Tick the date.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-monthly",
+    "en": "monthly",
+    "zhHant": "每月",
+    "example": "We have a monthly test.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-weekly",
+    "en": "weekly",
+    "zhHant": "每週",
+    "example": "We have a weekly quiz.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-upcoming",
+    "en": "upcoming",
+    "zhHant": "即將到來",
+    "example": "Check the upcoming dates.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-previous",
+    "en": "previous",
+    "zhHant": "先前",
+    "example": "Look at the previous week.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-whole",
+    "en": "whole",
+    "zhHant": "整個",
+    "example": "I was busy the whole day.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-exact",
+    "en": "exact",
+    "zhHant": "確實",
+    "example": "What is the exact date?",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-yesterday",
+    "en": "yesterday",
+    "zhHant": "昨天",
+    "example": "It rained yesterday.",
+    "pos": "adverb",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "middle-time_calendar-half_past",
+    "en": "half past",
+    "zhHant": "半點",
+    "example": "It is half past three.",
+    "pos": "phrase",
+    "band": "middle",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-october",
+    "en": "October",
+    "zhHant": "十月",
+    "example": "Sports Day is in October.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-november",
+    "en": "November",
+    "zhHant": "十一月",
+    "example": "The weather turns cool in November.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-december",
+    "en": "December",
+    "zhHant": "十二月",
+    "example": "December has Christmas.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-weekend",
+    "en": "weekend",
+    "zhHant": "週末",
+    "example": "I rest at the weekend.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-term",
+    "en": "term",
+    "zhHant": "學期",
+    "example": "The first term starts in September.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-appointment",
+    "en": "appointment",
+    "zhHant": "預約",
+    "example": "I have a dentist appointment.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-diary",
+    "en": "diary",
+    "zhHant": "日程日記",
+    "example": "Write plans in your diary.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-planner",
+    "en": "planner",
+    "zhHant": "計劃冊",
+    "example": "Tick tasks in your planner.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-deadline",
+    "en": "deadline",
+    "zhHant": "限期",
+    "example": "Meet the project deadline.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-schedule",
+    "en": "schedule",
+    "zhHant": "時間表",
+    "example": "Follow the exam schedule.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-postpone",
+    "en": "postpone",
+    "zhHant": "延期",
+    "example": "Postpone the picnic if it rains.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-reschedule",
+    "en": "reschedule",
+    "zhHant": "改期",
+    "example": "Reschedule the meeting please.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-arrange",
+    "en": "arrange",
+    "zhHant": "安排",
+    "example": "Arrange a time to meet.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-remind",
+    "en": "remind",
+    "zhHant": "提醒",
+    "example": "Remind me of the date.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-punctual",
+    "en": "punctual",
+    "zhHant": "準時",
+    "example": "Be punctual for the test.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-overdue",
+    "en": "overdue",
+    "zhHant": "過期未還",
+    "example": "This library book is overdue.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-available",
+    "en": "available",
+    "zhHant": "有空",
+    "example": "I am available after three.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-annual",
+    "en": "annual",
+    "zhHant": "一年一度",
+    "example": "Sports Day is an annual event.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-prompt",
+    "en": "prompt",
+    "zhHant": "迅速",
+    "example": "Please give a prompt reply.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-occasional",
+    "en": "occasional",
+    "zhHant": "偶爾",
+    "example": "We have occasional holidays.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-tomorrow",
+    "en": "tomorrow",
+    "zhHant": "明天",
+    "example": "The trip is tomorrow.",
+    "pos": "adverb",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-ahead",
+    "en": "ahead",
+    "zhHant": "提前",
+    "example": "Plan your week ahead.",
+    "pos": "adverb",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-in_advance",
+    "en": "in advance",
+    "zhHant": "預先",
+    "example": "Book the hall in advance.",
+    "pos": "phrase",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "senior-time_calendar-on_time",
+    "en": "on time",
+    "zhHant": "準時",
+    "example": "Please arrive on time.",
+    "pos": "phrase",
+    "band": "senior",
+    "theme": "time_calendar"
+  },
+  {
+    "id": "junior-daily_routines-toothbrush",
+    "en": "toothbrush",
+    "zhHant": "牙刷",
+    "example": "I use a toothbrush.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-toothpaste",
+    "en": "toothpaste",
+    "zhHant": "牙膏",
+    "example": "Put toothpaste on it.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-towel",
+    "en": "towel",
+    "zhHant": "毛巾",
+    "example": "Use a towel after the shower.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-breakfast",
+    "en": "breakfast",
+    "zhHant": "早餐",
+    "example": "I eat breakfast at seven.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-shower",
+    "en": "shower",
+    "zhHant": "淋浴",
+    "example": "Take a shower in the morning.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-bath",
+    "en": "bath",
+    "zhHant": "沐浴",
+    "example": "I take a bath at night.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-bedtime",
+    "en": "bedtime",
+    "zhHant": "就寢時間",
+    "example": "Bedtime is at nine.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-alarm",
+    "en": "alarm",
+    "zhHant": "鬧鐘",
+    "example": "The alarm rings at seven.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-nap",
+    "en": "nap",
+    "zhHant": "小睡",
+    "example": "I take a nap after lunch.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-comb",
+    "en": "comb",
+    "zhHant": "梳子",
+    "example": "Use a comb after the shower.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-sink",
+    "en": "sink",
+    "zhHant": "洗手盆",
+    "example": "Wash your face at the sink.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-lunchbox",
+    "en": "lunchbox",
+    "zhHant": "午餐盒",
+    "example": "I pack my lunchbox.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-brush",
+    "en": "brush",
+    "zhHant": "刷",
+    "example": "Brush your teeth.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-rinse",
+    "en": "rinse",
+    "zhHant": "漱洗",
+    "example": "Rinse your mouth.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-hurry",
+    "en": "hurry",
+    "zhHant": "趕忙",
+    "example": "Hurry or you will be late.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-yawn",
+    "en": "yawn",
+    "zhHant": "打哈欠",
+    "example": "I yawn at bedtime.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-sleep",
+    "en": "sleep",
+    "zhHant": "睡覺",
+    "example": "I sleep at nine.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-sleepy",
+    "en": "sleepy",
+    "zhHant": "睏倦",
+    "example": "I feel sleepy at night.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-awake",
+    "en": "awake",
+    "zhHant": "清醒",
+    "example": "I am awake at seven.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-ready",
+    "en": "ready",
+    "zhHant": "準備好",
+    "example": "I am ready for school.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-lazy",
+    "en": "lazy",
+    "zhHant": "懶惰",
+    "example": "Do not be lazy this morning.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-quick",
+    "en": "quick",
+    "zhHant": "快捷",
+    "example": "Be quick, please.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-now",
+    "en": "now",
+    "zhHant": "現在",
+    "example": "Get up now.",
+    "pos": "adverb",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-daily_routines-get_up",
+    "en": "get up",
+    "zhHant": "起床",
+    "example": "I get up at seven.",
+    "pos": "phrase",
+    "band": "junior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-homework",
+    "en": "homework",
+    "zhHant": "功課",
+    "example": "I finish my homework.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-chore",
+    "en": "chore",
+    "zhHant": "家務",
+    "example": "Sweeping is a chore.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-checklist",
+    "en": "checklist",
+    "zhHant": "核對清單",
+    "example": "Tick the checklist.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-worksheet",
+    "en": "worksheet",
+    "zhHant": "工作紙",
+    "example": "Finish the worksheet.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-reminder",
+    "en": "reminder",
+    "zhHant": "提示",
+    "example": "Set a reminder.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-mop",
+    "en": "mop",
+    "zhHant": "拖把",
+    "example": "The mop is wet.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-broom",
+    "en": "broom",
+    "zhHant": "掃帚",
+    "example": "Sweep with a broom.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-dustpan",
+    "en": "dustpan",
+    "zhHant": "簸箕",
+    "example": "Hold the dustpan.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-sponge",
+    "en": "sponge",
+    "zhHant": "海綿",
+    "example": "Clean with a sponge.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-water_bottle",
+    "en": "water bottle",
+    "zhHant": "水瓶",
+    "example": "Fill your water bottle.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-revision",
+    "en": "revision",
+    "zhHant": "溫習",
+    "example": "Do revision after dinner.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-roster",
+    "en": "roster",
+    "zhHant": "值日表",
+    "example": "I am on the roster today.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-pack",
+    "en": "pack",
+    "zhHant": "裝進",
+    "example": "Pack your bag at night.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-unpack",
+    "en": "unpack",
+    "zhHant": "取出",
+    "example": "Unpack your bag at home.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-scrub",
+    "en": "scrub",
+    "zhHant": "用力擦洗",
+    "example": "Scrub the sink.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-dust",
+    "en": "dust",
+    "zhHant": "撣塵",
+    "example": "Dust the shelf.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-prepared",
+    "en": "prepared",
+    "zhHant": "已準備",
+    "example": "I am prepared for school.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-complete",
+    "en": "complete",
+    "zhHant": "完成",
+    "example": "My checklist is complete.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-unfinished",
+    "en": "unfinished",
+    "zhHant": "未完成",
+    "example": "My homework is unfinished.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-after_school",
+    "en": "after-school",
+    "zhHant": "課後",
+    "example": "I have an after-school class.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-extra",
+    "en": "extra",
+    "zhHant": "額外",
+    "example": "I have extra homework.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-due",
+    "en": "due",
+    "zhHant": "到期應交",
+    "example": "The worksheet is due.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-afterwards",
+    "en": "afterwards",
+    "zhHant": "之後",
+    "example": "Do homework afterwards.",
+    "pos": "adverb",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "middle-daily_routines-take_out",
+    "en": "take out",
+    "zhHant": "拿出",
+    "example": "Take out your homework.",
+    "pos": "phrase",
+    "band": "middle",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-habit",
+    "en": "habit",
+    "zhHant": "習慣",
+    "example": "Sleep is a good habit.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-priority",
+    "en": "priority",
+    "zhHant": "優先事項",
+    "example": "Homework is my priority.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-goal",
+    "en": "goal",
+    "zhHant": "目標",
+    "example": "My goal is to read more.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-lifestyle",
+    "en": "lifestyle",
+    "zhHant": "生活方式",
+    "example": "A balanced lifestyle helps you.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-self_care",
+    "en": "self-care",
+    "zhHant": "自我照顧",
+    "example": "Self-care includes rest.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-screen_time",
+    "en": "screen time",
+    "zhHant": "屏幕時間",
+    "example": "Limit your screen time.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-commitment",
+    "en": "commitment",
+    "zhHant": "承諾",
+    "example": "Keep your commitment.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-routine",
+    "en": "routine",
+    "zhHant": "常規",
+    "example": "A morning routine saves time.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-distraction",
+    "en": "distraction",
+    "zhHant": "分心事物",
+    "example": "Games can be a distraction.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-well_being",
+    "en": "well-being",
+    "zhHant": "身心健康",
+    "example": "Rest helps your well-being.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-manage",
+    "en": "manage",
+    "zhHant": "管理",
+    "example": "Manage your screen time.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-prioritise",
+    "en": "prioritise",
+    "zhHant": "分出優先次序",
+    "example": "Prioritise your homework.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-develop",
+    "en": "develop",
+    "zhHant": "培養",
+    "example": "Develop a reading habit.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-skip",
+    "en": "skip",
+    "zhHant": "略過",
+    "example": "Do not skip breakfast.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-productive",
+    "en": "productive",
+    "zhHant": "有效率",
+    "example": "Mornings can be productive.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-consistent",
+    "en": "consistent",
+    "zhHant": "持之以恆",
+    "example": "Be consistent with bedtime.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-exhausted",
+    "en": "exhausted",
+    "zhHant": "筋疲力盡",
+    "example": "I feel exhausted at night.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-overwhelming",
+    "en": "overwhelming",
+    "zhHant": "難以應付",
+    "example": "Too much work is overwhelming.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-essential",
+    "en": "essential",
+    "zhHant": "必要",
+    "example": "Sleep is essential.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-optional",
+    "en": "optional",
+    "zhHant": "可選",
+    "example": "Extra games are optional.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-wisely",
+    "en": "wisely",
+    "zhHant": "明智地",
+    "example": "Use screen time wisely.",
+    "pos": "adverb",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-steadily",
+    "en": "steadily",
+    "zhHant": "穩步地",
+    "example": "Build the habit steadily.",
+    "pos": "adverb",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-stick_to",
+    "en": "stick to",
+    "zhHant": "堅持",
+    "example": "Stick to your plan.",
+    "pos": "phrase",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "senior-daily_routines-stay_up",
+    "en": "stay up",
+    "zhHant": "熬夜",
+    "example": "Do not stay up late.",
+    "pos": "phrase",
+    "band": "senior",
+    "theme": "daily_routines"
+  },
+  {
+    "id": "junior-shopping_money-shop",
+    "en": "shop",
+    "zhHant": "商店",
+    "example": "The shop is near school.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-dollar",
+    "en": "dollar",
+    "zhHant": "元",
+    "example": "This rubber is five dollars.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-coin",
+    "en": "coin",
+    "zhHant": "硬幣",
+    "example": "I have a coin.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-money",
+    "en": "money",
+    "zhHant": "金錢",
+    "example": "Keep your money safe.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-wallet",
+    "en": "wallet",
+    "zhHant": "錢包",
+    "example": "My wallet is small.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-purse",
+    "en": "purse",
+    "zhHant": "手袋",
+    "example": "Mom has a purse.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-basket",
+    "en": "basket",
+    "zhHant": "購物籃",
+    "example": "Put it in the basket.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-trolley",
+    "en": "trolley",
+    "zhHant": "手推車",
+    "example": "Push the trolley.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-supermarket",
+    "en": "supermarket",
+    "zhHant": "超級市場",
+    "example": "We go to the supermarket.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-mall",
+    "en": "mall",
+    "zhHant": "商場",
+    "example": "The mall is busy.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-stall",
+    "en": "stall",
+    "zhHant": "攤檔",
+    "example": "Buy a pencil at the stall.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-counter",
+    "en": "counter",
+    "zhHant": "櫃檯",
+    "example": "Pay at the counter.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-bookstore",
+    "en": "bookstore",
+    "zhHant": "書店",
+    "example": "The bookstore sells stories.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-buy",
+    "en": "buy",
+    "zhHant": "買",
+    "example": "I buy a pencil.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-sell",
+    "en": "sell",
+    "zhHant": "賣",
+    "example": "They sell erasers.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-pay",
+    "en": "pay",
+    "zhHant": "付款",
+    "example": "I pay with coins.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-spend",
+    "en": "spend",
+    "zhHant": "花費",
+    "example": "Do not spend all your money.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-choose",
+    "en": "choose",
+    "zhHant": "選擇",
+    "example": "Choose a cheap one.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-cheap",
+    "en": "cheap",
+    "zhHant": "便宜",
+    "example": "This rubber is cheap.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-expensive",
+    "en": "expensive",
+    "zhHant": "昂貴",
+    "example": "That bag is expensive.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-heavy",
+    "en": "heavy",
+    "zhHant": "重",
+    "example": "The trolley is heavy.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-empty",
+    "en": "empty",
+    "zhHant": "空",
+    "example": "The basket is empty.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-closed",
+    "en": "closed",
+    "zhHant": "關閉",
+    "example": "The shop is closed.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-shopping_money-too",
+    "en": "too",
+    "zhHant": "太",
+    "example": "It is too expensive.",
+    "pos": "adverb",
+    "band": "junior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-price",
+    "en": "price",
+    "zhHant": "價錢",
+    "example": "Check the price.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-change",
+    "en": "change",
+    "zhHant": "找贖",
+    "example": "Here is your change.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-receipt",
+    "en": "receipt",
+    "zhHant": "收據",
+    "example": "Keep the receipt.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-queue",
+    "en": "queue",
+    "zhHant": "隊伍",
+    "example": "The queue is long.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-checkout",
+    "en": "checkout",
+    "zhHant": "收銀處",
+    "example": "Go to the checkout.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-price_tag",
+    "en": "price tag",
+    "zhHant": "價錢牌",
+    "example": "Read the price tag.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-barcode",
+    "en": "barcode",
+    "zhHant": "條碼",
+    "example": "Scan the barcode.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-customer",
+    "en": "customer",
+    "zhHant": "顧客",
+    "example": "The customer waits.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-aisle",
+    "en": "aisle",
+    "zhHant": "通道",
+    "example": "Toys are in that aisle.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-shopping_list",
+    "en": "shopping list",
+    "zhHant": "購物清單",
+    "example": "Tick the shopping list.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-carrier_bag",
+    "en": "carrier bag",
+    "zhHant": "購物袋",
+    "example": "Use a carrier bag.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-coupon",
+    "en": "coupon",
+    "zhHant": "優惠券",
+    "example": "This coupon is for two dollars.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-cost",
+    "en": "cost",
+    "zhHant": "值",
+    "example": "This pen costs ten dollars.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-scan",
+    "en": "scan",
+    "zhHant": "掃描",
+    "example": "Scan the barcode.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-return",
+    "en": "return",
+    "zhHant": "退回",
+    "example": "Return the broken toy.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-wrap",
+    "en": "wrap",
+    "zhHant": "包裝",
+    "example": "Wrap the gift.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-reasonable",
+    "en": "reasonable",
+    "zhHant": "合理",
+    "example": "The price is reasonable.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-pricey",
+    "en": "pricey",
+    "zhHant": "價錢偏高",
+    "example": "That toy is pricey.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-reduced",
+    "en": "reduced",
+    "zhHant": "減價",
+    "example": "The book is reduced.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-necessary",
+    "en": "necessary",
+    "zhHant": "必要",
+    "example": "A pencil is necessary.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-original",
+    "en": "original",
+    "zhHant": "原價",
+    "example": "The original price was higher.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-long",
+    "en": "long",
+    "zhHant": "長",
+    "example": "The queue is long.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-separately",
+    "en": "separately",
+    "zhHant": "分開地",
+    "example": "Please pay separately.",
+    "pos": "adverb",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "middle-shopping_money-pick_out",
+    "en": "pick out",
+    "zhHant": "挑選",
+    "example": "Pick out a gift.",
+    "pos": "phrase",
+    "band": "middle",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-budget",
+    "en": "budget",
+    "zhHant": "預算",
+    "example": "Make a weekly budget.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-discount",
+    "en": "discount",
+    "zhHant": "折扣",
+    "example": "There is a discount today.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-tax",
+    "en": "tax",
+    "zhHant": "稅",
+    "example": "The tax is included.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-savings",
+    "en": "savings",
+    "zhHant": "儲蓄",
+    "example": "Put coins in your savings.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-account",
+    "en": "account",
+    "zhHant": "帳戶",
+    "example": "Mom has a bank account.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-pocket_money",
+    "en": "pocket money",
+    "zhHant": "零用錢",
+    "example": "I count my pocket money.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-value",
+    "en": "value",
+    "zhHant": "價值",
+    "example": "This book has good value.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-refund",
+    "en": "refund",
+    "zhHant": "退款",
+    "example": "Ask for a refund.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-warranty",
+    "en": "warranty",
+    "zhHant": "保用期",
+    "example": "The lamp has a warranty.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-advertisement",
+    "en": "advertisement",
+    "zhHant": "廣告",
+    "example": "Do not believe every advertisement.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-afford",
+    "en": "afford",
+    "zhHant": "負擔得起",
+    "example": "I cannot afford that toy.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-waste",
+    "en": "waste",
+    "zhHant": "浪費",
+    "example": "Do not waste money.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-overspend",
+    "en": "overspend",
+    "zhHant": "花費過多",
+    "example": "Do not overspend on toys.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-bargain",
+    "en": "bargain",
+    "zhHant": "講價",
+    "example": "We bargain at the stall.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-affordable",
+    "en": "affordable",
+    "zhHant": "負擔得起",
+    "example": "This book is affordable.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-costly",
+    "en": "costly",
+    "zhHant": "花費大",
+    "example": "The trip is costly.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-valuable",
+    "en": "valuable",
+    "zhHant": "有價值",
+    "example": "Time is valuable.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-thrifty",
+    "en": "thrifty",
+    "zhHant": "節儉",
+    "example": "Be thrifty with pocket money.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-financial",
+    "en": "financial",
+    "zhHant": "財務",
+    "example": "Keep simple financial notes.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-economical",
+    "en": "economical",
+    "zhHant": "經濟",
+    "example": "An economical choice helps.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-cheaply",
+    "en": "cheaply",
+    "zhHant": "便宜地",
+    "example": "Buy cheaply at the sale.",
+    "pos": "adverb",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-online",
+    "en": "online",
+    "zhHant": "在網上",
+    "example": "We shop online now.",
+    "pos": "adverb",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-set_aside",
+    "en": "set aside",
+    "zhHant": "預留",
+    "example": "Set aside money for books.",
+    "pos": "phrase",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "senior-shopping_money-shop_around",
+    "en": "shop around",
+    "zhHant": "貨比三家",
+    "example": "Shop around before you buy.",
+    "pos": "phrase",
+    "band": "senior",
+    "theme": "shopping_money"
+  },
+  {
+    "id": "junior-jobs_work-teacher",
+    "en": "teacher",
+    "zhHant": "老師",
+    "example": "My teacher is kind.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-doctor",
+    "en": "doctor",
+    "zhHant": "醫生",
+    "example": "The doctor helps me.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-driver",
+    "en": "driver",
+    "zhHant": "司機",
+    "example": "The driver waits.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-farmer",
+    "en": "farmer",
+    "zhHant": "農夫",
+    "example": "The farmer works in the field.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-cook",
+    "en": "cook",
+    "zhHant": "廚師",
+    "example": "The cook makes soup.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-baker",
+    "en": "baker",
+    "zhHant": "麵包師傅",
+    "example": "The baker makes bread.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-waiter",
+    "en": "waiter",
+    "zhHant": "侍應",
+    "example": "The waiter brings water.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-postman",
+    "en": "postman",
+    "zhHant": "郵差",
+    "example": "The postman brings letters.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-cleaner",
+    "en": "cleaner",
+    "zhHant": "清潔工",
+    "example": "The cleaner sweeps the floor.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-worker",
+    "en": "worker",
+    "zhHant": "工人",
+    "example": "The worker wears a hat.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-job",
+    "en": "job",
+    "zhHant": "工作",
+    "example": "Teaching is a job.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-office",
+    "en": "office",
+    "zhHant": "辦公室",
+    "example": "Dad works in an office.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-factory",
+    "en": "factory",
+    "zhHant": "工廠",
+    "example": "The factory is noisy.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-work",
+    "en": "work",
+    "zhHant": "工作",
+    "example": "They work in the day.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-teach",
+    "en": "teach",
+    "zhHant": "教導",
+    "example": "Teachers teach us English.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-drive",
+    "en": "drive",
+    "zhHant": "駕駛",
+    "example": "Drivers drive carefully.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-serve",
+    "en": "serve",
+    "zhHant": "招待",
+    "example": "Waiters serve drinks.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-deliver",
+    "en": "deliver",
+    "zhHant": "派送",
+    "example": "The postman delivers letters.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-clever",
+    "en": "clever",
+    "zhHant": "聰明",
+    "example": "The doctor is clever.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-hard",
+    "en": "hard",
+    "zhHant": "辛苦",
+    "example": "Farm work is hard.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-outdoor",
+    "en": "outdoor",
+    "zhHant": "戶外",
+    "example": "Farmers do outdoor work.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-indoor",
+    "en": "indoor",
+    "zhHant": "室內",
+    "example": "Office work is indoor.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-able",
+    "en": "able",
+    "zhHant": "有能力",
+    "example": "She is able to help.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-jobs_work-kindly",
+    "en": "kindly",
+    "zhHant": "親切地",
+    "example": "Doctors speak kindly.",
+    "pos": "adverb",
+    "band": "junior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-nurse",
+    "en": "nurse",
+    "zhHant": "護士",
+    "example": "The nurse is gentle.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-chef",
+    "en": "chef",
+    "zhHant": "主廚",
+    "example": "The chef cooks in the kitchen.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-firefighter",
+    "en": "firefighter",
+    "zhHant": "消防員",
+    "example": "Firefighters put out fires.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-dentist",
+    "en": "dentist",
+    "zhHant": "牙醫",
+    "example": "The dentist checks my teeth.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-mechanic",
+    "en": "mechanic",
+    "zhHant": "技工",
+    "example": "The mechanic fixes bikes.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-librarian",
+    "en": "librarian",
+    "zhHant": "圖書館主任",
+    "example": "The librarian finds a book.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-builder",
+    "en": "builder",
+    "zhHant": "建築工人",
+    "example": "Builders make houses.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-plumber",
+    "en": "plumber",
+    "zhHant": "水管工人",
+    "example": "The plumber fixes the tap.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-electrician",
+    "en": "electrician",
+    "zhHant": "電工",
+    "example": "The electrician fixes lights.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-reporter",
+    "en": "reporter",
+    "zhHant": "記者",
+    "example": "The reporter asks questions.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-artist",
+    "en": "artist",
+    "zhHant": "藝術家",
+    "example": "The artist paints a cat.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-workplace",
+    "en": "workplace",
+    "zhHant": "工作場所",
+    "example": "Keep the workplace tidy.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-fix",
+    "en": "fix",
+    "zhHant": "修理",
+    "example": "Mechanics fix engines.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-treat",
+    "en": "treat",
+    "zhHant": "醫治",
+    "example": "Nurses treat sick people.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-operate",
+    "en": "operate",
+    "zhHant": "操作",
+    "example": "They operate machines.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-earn",
+    "en": "earn",
+    "zhHant": "賺取",
+    "example": "They earn money by working.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-courageous",
+    "en": "courageous",
+    "zhHant": "勇敢",
+    "example": "Firefighters are courageous.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-skilled",
+    "en": "skilled",
+    "zhHant": "熟練",
+    "example": "The chef is skilled.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-trained",
+    "en": "trained",
+    "zhHant": "受過訓練",
+    "example": "The nurse is trained.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-dangerous",
+    "en": "dangerous",
+    "zhHant": "危險",
+    "example": "Firefighting is dangerous.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-tiring",
+    "en": "tiring",
+    "zhHant": "令人疲倦",
+    "example": "The job is tiring.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-medical",
+    "en": "medical",
+    "zhHant": "醫療",
+    "example": "Nurses do medical work.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-bravely",
+    "en": "bravely",
+    "zhHant": "勇敢地",
+    "example": "Firefighters act bravely.",
+    "pos": "adverb",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "middle-jobs_work-put_out",
+    "en": "put out",
+    "zhHant": "撲滅",
+    "example": "Firefighters put out fires.",
+    "pos": "phrase",
+    "band": "middle",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-career",
+    "en": "career",
+    "zhHant": "事業",
+    "example": "Teaching can be a career.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-interview",
+    "en": "interview",
+    "zhHant": "面試",
+    "example": "I have a job interview.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-responsibility",
+    "en": "responsibility",
+    "zhHant": "責任",
+    "example": "Safety is a responsibility.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-application",
+    "en": "application",
+    "zhHant": "申請",
+    "example": "Fill in the application.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-salary",
+    "en": "salary",
+    "zhHant": "薪金",
+    "example": "A salary is paid monthly.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-colleague",
+    "en": "colleague",
+    "zhHant": "同事",
+    "example": "My colleague is helpful.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-employer",
+    "en": "employer",
+    "zhHant": "僱主",
+    "example": "The employer is fair.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-skill",
+    "en": "skill",
+    "zhHant": "技能",
+    "example": "Cooking is a useful skill.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-experience",
+    "en": "experience",
+    "zhHant": "經驗",
+    "example": "Experience helps in interviews.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-occupation",
+    "en": "occupation",
+    "zhHant": "職業",
+    "example": "What occupation do you want?",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-apply",
+    "en": "apply",
+    "zhHant": "申請",
+    "example": "I apply for the post.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-employ",
+    "en": "employ",
+    "zhHant": "僱用",
+    "example": "Shops employ extra staff.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-qualify",
+    "en": "qualify",
+    "zhHant": "取得資格",
+    "example": "Study to qualify as a nurse.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-lead",
+    "en": "lead",
+    "zhHant": "領導",
+    "example": "Team leaders lead the group.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-ambitious",
+    "en": "ambitious",
+    "zhHant": "有志向",
+    "example": "She is ambitious about art.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-experienced",
+    "en": "experienced",
+    "zhHant": "有經驗",
+    "example": "The chef is experienced.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-qualified",
+    "en": "qualified",
+    "zhHant": "具備資格",
+    "example": "A qualified dentist is careful.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-official",
+    "en": "official",
+    "zhHant": "正式",
+    "example": "This is an official letter.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-part_time",
+    "en": "part-time",
+    "zhHant": "兼職",
+    "example": "She has a part-time job.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-full_time",
+    "en": "full-time",
+    "zhHant": "全職",
+    "example": "Dad has a full-time job.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-professionally",
+    "en": "professionally",
+    "zhHant": "專業地",
+    "example": "Nurses work professionally.",
+    "pos": "adverb",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-independently",
+    "en": "independently",
+    "zhHant": "獨立地",
+    "example": "Designers work independently.",
+    "pos": "adverb",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-fill_in",
+    "en": "fill in",
+    "zhHant": "填寫",
+    "example": "Fill in the form.",
+    "pos": "phrase",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "senior-jobs_work-turn_up",
+    "en": "turn up",
+    "zhHant": "出席",
+    "example": "Turn up on time for the interview.",
+    "pos": "phrase",
+    "band": "senior",
+    "theme": "jobs_work"
+  },
+  {
+    "id": "junior-health_hygiene-soap",
+    "en": "soap",
+    "zhHant": "肥皂",
+    "example": "Wash with soap.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-rest",
+    "en": "rest",
+    "zhHant": "休息",
+    "example": "I need a rest.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-germ",
+    "en": "germ",
+    "zhHant": "病菌",
+    "example": "Soap kills germs.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-tissue",
+    "en": "tissue",
+    "zhHant": "紙巾",
+    "example": "Use a tissue.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-plaster",
+    "en": "plaster",
+    "zhHant": "膠布",
+    "example": "Put a plaster on it.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-mask",
+    "en": "mask",
+    "zhHant": "口罩",
+    "example": "Wear a mask when sick.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-bandage",
+    "en": "bandage",
+    "zhHant": "繃帶",
+    "example": "The bandage is clean.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-flu",
+    "en": "flu",
+    "zhHant": "流感",
+    "example": "Flu makes you tired.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-fever",
+    "en": "fever",
+    "zhHant": "發燒",
+    "example": "Rest if you have a fever.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-health",
+    "en": "health",
+    "zhHant": "健康",
+    "example": "Sleep is good for health.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-toilet",
+    "en": "toilet",
+    "zhHant": "廁所",
+    "example": "Wash after the toilet.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-sanitiser",
+    "en": "sanitiser",
+    "zhHant": "消毒潔手液",
+    "example": "Use sanitiser after play.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-cough",
+    "en": "cough",
+    "zhHant": "咳嗽",
+    "example": "Cover a cough.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-wash",
+    "en": "wash",
+    "zhHant": "洗",
+    "example": "Wash before you eat.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-cover",
+    "en": "cover",
+    "zhHant": "掩住",
+    "example": "Cover your cough.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-sneeze",
+    "en": "sneeze",
+    "zhHant": "打噴嚏",
+    "example": "Sneeze into a tissue.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-wipe",
+    "en": "wipe",
+    "zhHant": "擦",
+    "example": "Wipe the table clean.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-stay",
+    "en": "stay",
+    "zhHant": "留在",
+    "example": "Stay at home if sick.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-sick",
+    "en": "sick",
+    "zhHant": "生病",
+    "example": "I am sick today.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-well",
+    "en": "well",
+    "zhHant": "安好",
+    "example": "I am well again.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-clean",
+    "en": "clean",
+    "zhHant": "清潔",
+    "example": "Keep your desk clean.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-better",
+    "en": "better",
+    "zhHant": "較好",
+    "example": "I feel better now.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-weak",
+    "en": "weak",
+    "zhHant": "虛弱",
+    "example": "I feel weak with flu.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-health_hygiene-away",
+    "en": "away",
+    "zhHant": "掉",
+    "example": "Wash the germs away.",
+    "pos": "adverb",
+    "band": "junior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-clinic",
+    "en": "clinic",
+    "zhHant": "診所",
+    "example": "Go to the clinic.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-medicine",
+    "en": "medicine",
+    "zhHant": "藥物",
+    "example": "Take your medicine.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-pharmacy",
+    "en": "pharmacy",
+    "zhHant": "藥房",
+    "example": "Get medicine at the pharmacy.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-injection",
+    "en": "injection",
+    "zhHant": "注射",
+    "example": "The injection is quick.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-tablet",
+    "en": "tablet",
+    "zhHant": "藥片",
+    "example": "Swallow the tablet.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-syrup",
+    "en": "syrup",
+    "zhHant": "藥糖漿",
+    "example": "The syrup tastes sweet.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-prescription",
+    "en": "prescription",
+    "zhHant": "處方",
+    "example": "The doctor writes a prescription.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-check_up",
+    "en": "check-up",
+    "zhHant": "健康檢查",
+    "example": "I have a check-up today.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-ambulance",
+    "en": "ambulance",
+    "zhHant": "救護車",
+    "example": "The ambulance is fast.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-vitamin",
+    "en": "vitamin",
+    "zhHant": "維他命",
+    "example": "Vitamins help your health.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-wound",
+    "en": "wound",
+    "zhHant": "傷口",
+    "example": "Clean the wound.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-allergy",
+    "en": "allergy",
+    "zhHant": "過敏",
+    "example": "She has a dust allergy.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-swallow",
+    "en": "swallow",
+    "zhHant": "吞下",
+    "example": "Swallow the tablet with water.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-heal",
+    "en": "heal",
+    "zhHant": "癒合",
+    "example": "The wound will heal.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-prescribe",
+    "en": "prescribe",
+    "zhHant": "開處方",
+    "example": "Doctors prescribe medicine.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-visit",
+    "en": "visit",
+    "zhHant": "到訪",
+    "example": "Visit the clinic today.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-healthy",
+    "en": "healthy",
+    "zhHant": "健康",
+    "example": "Fruit is healthy.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-unwell",
+    "en": "unwell",
+    "zhHant": "不適",
+    "example": "I feel unwell.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-painful",
+    "en": "painful",
+    "zhHant": "疼痛",
+    "example": "The wound is painful.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-contagious",
+    "en": "contagious",
+    "zhHant": "傳染",
+    "example": "Flu can be contagious.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-serious",
+    "en": "serious",
+    "zhHant": "嚴重",
+    "example": "A high fever can be serious.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-allergic",
+    "en": "allergic",
+    "zhHant": "過敏",
+    "example": "He is allergic to nuts.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-properly",
+    "en": "properly",
+    "zhHant": "正確地",
+    "example": "Wash your hands properly.",
+    "pos": "adverb",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "middle-health_hygiene-get_better",
+    "en": "get better",
+    "zhHant": "好轉",
+    "example": "I will get better soon.",
+    "pos": "phrase",
+    "band": "middle",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-symptom",
+    "en": "symptom",
+    "zhHant": "症狀",
+    "example": "Fever is a symptom.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-prevention",
+    "en": "prevention",
+    "zhHant": "預防",
+    "example": "Handwashing is prevention.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-hygiene",
+    "en": "hygiene",
+    "zhHant": "衞生",
+    "example": "Good hygiene stops germs.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-vaccine",
+    "en": "vaccine",
+    "zhHant": "疫苗",
+    "example": "The vaccine protects us.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-immunity",
+    "en": "immunity",
+    "zhHant": "免疫力",
+    "example": "Sleep helps immunity.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-infection",
+    "en": "infection",
+    "zhHant": "感染",
+    "example": "Clean cuts to stop infection.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-treatment",
+    "en": "treatment",
+    "zhHant": "治療",
+    "example": "The treatment is rest.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-recovery",
+    "en": "recovery",
+    "zhHant": "康復",
+    "example": "Recovery takes time.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-bacteria",
+    "en": "bacteria",
+    "zhHant": "細菌",
+    "example": "Bacteria can cause illness.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-virus",
+    "en": "virus",
+    "zhHant": "病毒",
+    "example": "A virus can spread.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-prevent",
+    "en": "prevent",
+    "zhHant": "預防",
+    "example": "Masks prevent the spread.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-vaccinate",
+    "en": "vaccinate",
+    "zhHant": "接種疫苗",
+    "example": "Clinics vaccinate children.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-spread",
+    "en": "spread",
+    "zhHant": "傳播",
+    "example": "Germs spread quickly.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-diagnose",
+    "en": "diagnose",
+    "zhHant": "診斷",
+    "example": "Doctors diagnose the illness.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-preventive",
+    "en": "preventive",
+    "zhHant": "預防性",
+    "example": "Handwashing is preventive.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-infectious",
+    "en": "infectious",
+    "zhHant": "傳染性",
+    "example": "The flu is infectious.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-immune",
+    "en": "immune",
+    "zhHant": "有免疫力",
+    "example": "Vaccines help you stay immune.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-hygienic",
+    "en": "hygienic",
+    "zhHant": "合乎衞生",
+    "example": "Keep the kitchen hygienic.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-physical",
+    "en": "physical",
+    "zhHant": "身體上",
+    "example": "Physical health needs rest.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-mental",
+    "en": "mental",
+    "zhHant": "心理",
+    "example": "Mental health matters too.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-thoroughly",
+    "en": "thoroughly",
+    "zhHant": "徹底地",
+    "example": "Wash thoroughly after play.",
+    "pos": "adverb",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-promptly",
+    "en": "promptly",
+    "zhHant": "及時地",
+    "example": "See a doctor promptly.",
+    "pos": "adverb",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-build_up",
+    "en": "build up",
+    "zhHant": "增強",
+    "example": "Build up your immunity.",
+    "pos": "phrase",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "senior-health_hygiene-stay_healthy",
+    "en": "stay healthy",
+    "zhHant": "保持健康",
+    "example": "Exercise to stay healthy.",
+    "pos": "phrase",
+    "band": "senior",
+    "theme": "health_hygiene"
+  },
+  {
+    "id": "junior-safety_rules-helmet",
+    "en": "helmet",
+    "zhHant": "頭盔",
+    "example": "Wear a helmet.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-traffic_light",
+    "en": "traffic light",
+    "zhHant": "交通燈",
+    "example": "Wait at the traffic light.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-pavement",
+    "en": "pavement",
+    "zhHant": "行人路",
+    "example": "Walk on the pavement.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-kerb",
+    "en": "kerb",
+    "zhHant": "路緣石",
+    "example": "Stop at the kerb.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-rule",
+    "en": "rule",
+    "zhHant": "規則",
+    "example": "Follow the safety rule.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-adult",
+    "en": "adult",
+    "zhHant": "成人",
+    "example": "Hold an adult's hand.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-fire",
+    "en": "fire",
+    "zhHant": "火",
+    "example": "Never play with fire.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-smoke",
+    "en": "smoke",
+    "zhHant": "煙",
+    "example": "Leave if you see smoke.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-exit",
+    "en": "exit",
+    "zhHant": "出口",
+    "example": "Know the exit.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-seat_belt",
+    "en": "seat belt",
+    "zhHant": "安全帶",
+    "example": "Click the seat belt.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-whistle",
+    "en": "whistle",
+    "zhHant": "哨子",
+    "example": "Blow the whistle for help.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-fence",
+    "en": "fence",
+    "zhHant": "圍欄",
+    "example": "Do not climb the fence.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-gate",
+    "en": "gate",
+    "zhHant": "大門",
+    "example": "Close the gate.",
+    "pos": "noun",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-stop",
+    "en": "stop",
+    "zhHant": "停下",
+    "example": "Stop at the red light.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-look",
+    "en": "look",
+    "zhHant": "看",
+    "example": "Look both ways.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-wait",
+    "en": "wait",
+    "zhHant": "等候",
+    "example": "Wait for the green light.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-hold",
+    "en": "hold",
+    "zhHant": "握住",
+    "example": "Hold an adult's hand.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-follow",
+    "en": "follow",
+    "zhHant": "遵守",
+    "example": "Follow the rules.",
+    "pos": "verb",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-careful",
+    "en": "careful",
+    "zhHant": "小心",
+    "example": "Be careful near the road.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-safe",
+    "en": "safe",
+    "zhHant": "安全",
+    "example": "The pavement is safe.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-slippery",
+    "en": "slippery",
+    "zhHant": "滑",
+    "example": "Wet floors are slippery.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-sharp",
+    "en": "sharp",
+    "zhHant": "鋒利",
+    "example": "Knives are sharp.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-unsafe",
+    "en": "unsafe",
+    "zhHant": "不安全",
+    "example": "Playing with fire is unsafe.",
+    "pos": "adjective",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "junior-safety_rules-never",
+    "en": "never",
+    "zhHant": "絕不",
+    "example": "Never play with fire.",
+    "pos": "adverb",
+    "band": "junior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-crossing",
+    "en": "crossing",
+    "zhHant": "行人過路線",
+    "example": "Use the crossing.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-emergency",
+    "en": "emergency",
+    "zhHant": "緊急情況",
+    "example": "Call in an emergency.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-stranger",
+    "en": "stranger",
+    "zhHant": "陌生人",
+    "example": "Do not follow a stranger.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-password",
+    "en": "password",
+    "zhHant": "密碼",
+    "example": "Keep your password secret.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-fire_exit",
+    "en": "fire exit",
+    "zhHant": "火警出口",
+    "example": "Run to the fire exit.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-assembly_point",
+    "en": "assembly point",
+    "zhHant": "集合點",
+    "example": "Wait at the assembly point.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-siren",
+    "en": "siren",
+    "zhHant": "警號",
+    "example": "A siren means danger.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-lock",
+    "en": "lock",
+    "zhHant": "鎖",
+    "example": "Use the lock at night.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-smoke_detector",
+    "en": "smoke detector",
+    "zhHant": "煙霧警報器",
+    "example": "Test the smoke detector.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-fire_drill",
+    "en": "fire drill",
+    "zhHant": "火警演習",
+    "example": "We have a fire drill.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-emergency_number",
+    "en": "emergency number",
+    "zhHant": "緊急電話",
+    "example": "999 is the emergency number.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-lifeguard",
+    "en": "lifeguard",
+    "zhHant": "救生員",
+    "example": "Listen to the lifeguard.",
+    "pos": "noun",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-cross",
+    "en": "cross",
+    "zhHant": "橫過",
+    "example": "Cross at the green light.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-knock",
+    "en": "knock",
+    "zhHant": "敲",
+    "example": "Knock before you enter.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-warn",
+    "en": "warn",
+    "zhHant": "警告",
+    "example": "Signs warn us of danger.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-escape",
+    "en": "escape",
+    "zhHant": "逃生",
+    "example": "Escape through the exit.",
+    "pos": "verb",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-unknown",
+    "en": "unknown",
+    "zhHant": "不明",
+    "example": "Do not click unknown links.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-personal",
+    "en": "personal",
+    "zhHant": "個人",
+    "example": "Keep personal information private.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-online",
+    "en": "online",
+    "zhHant": "網上",
+    "example": "Be careful with online friends.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-locked",
+    "en": "locked",
+    "zhHant": "已鎖上",
+    "example": "Keep the door locked.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-risky",
+    "en": "risky",
+    "zhHant": "有風險",
+    "example": "Shortcuts can be risky.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-suspicious",
+    "en": "suspicious",
+    "zhHant": "可疑",
+    "example": "Tell an adult about suspicious people.",
+    "pos": "adjective",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-immediately",
+    "en": "immediately",
+    "zhHant": "立刻",
+    "example": "Leave immediately if there is fire.",
+    "pos": "adverb",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "middle-safety_rules-stay_away",
+    "en": "stay away",
+    "zhHant": "遠離",
+    "example": "Stay away from strangers.",
+    "pos": "phrase",
+    "band": "middle",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-hazard",
+    "en": "hazard",
+    "zhHant": "危險物",
+    "example": "Water on the floor is a hazard.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-first_aid",
+    "en": "first aid",
+    "zhHant": "急救",
+    "example": "Learn first aid at school.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-evacuation",
+    "en": "evacuation",
+    "zhHant": "疏散",
+    "example": "Evacuation must be quick.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-procedure",
+    "en": "procedure",
+    "zhHant": "程序",
+    "example": "Follow the safety procedure.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-equipment",
+    "en": "equipment",
+    "zhHant": "裝備",
+    "example": "Wear safety equipment.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-risk",
+    "en": "risk",
+    "zhHant": "風險",
+    "example": "Running in corridors is a risk.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-precaution",
+    "en": "precaution",
+    "zhHant": "預防措施",
+    "example": "A lock is a precaution.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-instruction",
+    "en": "instruction",
+    "zhHant": "指示",
+    "example": "Read the safety instruction.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-extinguisher",
+    "en": "extinguisher",
+    "zhHant": "滅火筒",
+    "example": "Know where the extinguisher is.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-incident",
+    "en": "incident",
+    "zhHant": "事故",
+    "example": "Report the incident.",
+    "pos": "noun",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-evacuate",
+    "en": "evacuate",
+    "zhHant": "疏散",
+    "example": "We evacuate during the drill.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-obey",
+    "en": "obey",
+    "zhHant": "遵守",
+    "example": "Obey the safety rules.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-assess",
+    "en": "assess",
+    "zhHant": "評估",
+    "example": "Assess the risk first.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-respond",
+    "en": "respond",
+    "zhHant": "回應",
+    "example": "Respond quickly to alarms.",
+    "pos": "verb",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-hazardous",
+    "en": "hazardous",
+    "zhHant": "有危害",
+    "example": "Spilled oil is hazardous.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-mandatory",
+    "en": "mandatory",
+    "zhHant": "強制",
+    "example": "Helmets are mandatory here.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-illegal",
+    "en": "illegal",
+    "zhHant": "非法",
+    "example": "It is illegal to run a red light.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-cautious",
+    "en": "cautious",
+    "zhHant": "謹慎",
+    "example": "Be cautious near water.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-potential",
+    "en": "potential",
+    "zhHant": "潛在",
+    "example": "Wet floors are a potential hazard.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-blocked",
+    "en": "blocked",
+    "zhHant": "堵塞",
+    "example": "The exit is blocked.",
+    "pos": "adjective",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-calmly",
+    "en": "calmly",
+    "zhHant": "冷靜地",
+    "example": "Walk calmly to the exit.",
+    "pos": "adverb",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-cautiously",
+    "en": "cautiously",
+    "zhHant": "謹慎地",
+    "example": "Cross the road cautiously.",
+    "pos": "adverb",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-stay_calm",
+    "en": "stay calm",
+    "zhHant": "保持冷靜",
+    "example": "Stay calm in an emergency.",
+    "pos": "phrase",
+    "band": "senior",
+    "theme": "safety_rules"
+  },
+  {
+    "id": "senior-safety_rules-keep_clear",
+    "en": "keep clear",
+    "zhHant": "保持暢通",
+    "example": "Keep clear of the exit.",
+    "pos": "phrase",
+    "band": "senior",
+    "theme": "safety_rules"
+  }
+]
